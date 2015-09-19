@@ -1,0 +1,48 @@
+> freie champs
+> news archivieren ? 
+> code sortieren !!!!
+> snapchat !
+> table of Content
+> back to top link
+> autor symbole verfügra machen wenn er erklärungen macht like lolking
+> pros und cons  für champ ? 
+> verlinken auf youtube vid zu lassen ? 
+> guides nach  champs speichern 
+
+
+> manchmal keine transition bug ? SkillPrio 
+> Alle schließen btn neu machen 
+> Editor responsive machen
+> fadeout wenn schließen ?
+> interactivecontent akutalisieren 
+> wenn guide abgeschickt wird sessionStorage leeren!!!
+
+
+>Items 
+7 items immer
+
+
+> toc fixed
+> wenn meldung dann background schwarz
+> css sprite für champs und summonerSpells
+
+> Jungler guide  maybe  mit map um laufrota anzugeben dazu canvas mit map als hintergrund
+> IMPORT EIGENER MASTERIES / RUNES für autoren ermöglichen 
+> autor last games usw
+
+
+> api region aus useragent lesen 
+
+> Ajax verbindung aufbauen !
+> css sprite aus items bauen 
+
+
+> switch aus klassen tester im handle machen 
+
+> ajax objekt maybe security issue!
+
+
+> wenn items gewählt werden innerhalb einer  row nur einmalig !
+> runderer ladeCurser
+> toolTips
+> wenn itemBild dargestellt werden soll dann vor dem ajax request sonst unnötige wartezeiten 

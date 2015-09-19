@@ -1,0 +1,7 @@
+>wenn kein user dann soll sich login/logout nicht mehr verschieben
+> hover-effekt mit touch ?!
+> responsive!!
+
+> describtion meta
+> w3c 
+> www.  und gc  liefern gleiche inhalte redirect einrichten

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Und somit hat es begonnen!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900italic' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="/symbolGC2.png"/>
+        <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+        <script type="text/javascript" src="JS/index.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <div id="h_banner">
+                    <img src="symbolGC2.png" alt="test">
+                </div>
+                <div id="register_Btn" class="show buttons">registrieren</div>
+                <div id="usernameField">Pschoe</div>
+                <div id="login_logout_Btn" class="buttons">logout</div>
+                <div class="clearFix"></div>
+            </div>
+            
+            <div id="contentContainer">
+                
+                <div id="gameDropdown" class="buttons">League of Legends</div>
+                <div id="roleDropdown" class="buttons">Alle...</div>
+               <!-- <div id="dropdownMenu" >Spiele
+                    <div class="items">league of legends</div>
+                    <div class="items">Counter Strike</div>
+                    <div class="items">World of Warcraft</div>
+                    <div class="items">Dota</div>
+                    <div class="items">Monopoly</div>
+                    <div class="items">Starwars</div>
+                </div>
+                -->
+                <div id="searchbarContainer">hier kannst du nach einem Guide suchen...</div>
+                <div id="content">
+                    <div class="champIcon" id="Aatrox"><img src="RES/IMG/champIcons/AatroxSquare.png" /><div class="pickme">Aatrox</div></div>
+                    <div class="champIcon" id="Ahri"><img src="RES/IMG/champIcons/AhriSquare.png" /><div class="pickme">Ahri</div></div>
+                    <div class="champIcon" id="Akali"><img src="RES/IMG/champIcons/AkaliSquare.png" /><div class="pickme">Akali</div></div>
+                    <div class="champIcon" id="Alistar"><img src="RES/IMG/champIcons/AlistarSquare.png" /><div class="pickme">Alistar</div></div>
+                    <div class="champIcon" id="Amumu"><img src="RES/IMG/champIcons/AmumuSquare.png" /><div class="pickme">Amumu</div></div>
+                    <div class="champIcon" id="Anivia"><img src="RES/IMG/champIcons/AniviaSquare.png" /><div class="pickme">Anivia</div></div>
+                    <div class="champIcon" id="Annie"><img src="RES/IMG/champIcons/AnnieSquare.png" /><div class="pickme">Annie</div></div>
+                    <div class="champIcon" id="Ashe"><img src="RES/IMG/champIcons/AsheSquare.png" /><div class="pickme">Ashe</div></div>
+                    <div class="champIcon" id="Azir"><img src="RES/IMG/champIcons/AzirSquare.png" /><div class="pickme">Azir</div></div>
+                    <div class="champIcon" id="Bard"><img src="RES/IMG/champIcons/BardSquare.png" /><div class="pickme">Bard</div></div>
+                    <div class="champIcon" id="Bla"><img src="RES/IMG/champIcons/BeatriceSquare.png" /><div class="pickme">Bla</div></div>
+                    <div class="champIcon" id="Blitzcrank"><img src="RES/IMG/champIcons/BlitzcrankSquare.png" /><div class="pickme">Blitzcrank</div></div>
+                    <div class="champIcon" id="Brand"><img src="RES/IMG/champIcons/BrandSquare.png" /><div class="pickme">Brand</div></div>
+                    <div class="champIcon" id="Braum"><img src="RES/IMG/champIcons/BraumSquare.png" /><div class="pickme">Braum</div></div>
+                    <div class="champIcon" id="Caitlyn"><img src="RES/IMG/champIcons/CaitlynSquare.png" /><div class="pickme">Caitlyn</div></div>
+                    <div class="champIcon" id="Cassiopeia"><img src="RES/IMG/champIcons/CassiopeiaSquare.png" /><div class="pickme">Cassiopeia</div></div>
+                    <div class="champIcon" id="ChoGath"><img src="RES/IMG/champIcons/ChoGathSquare.png" /><div class="pickme">ChoGath</div></div>
+                    <div class="champIcon" id="Corki"><img src="RES/IMG/champIcons/CorkiSquare.png" /><div class="pickme">Corki</div></div>
+                    <div class="champIcon" id="Darius"><img src="RES/IMG/champIcons/DariusSquare.png" /><div class="pickme">Darius</div></div>
+                    <div class="champIcon" id="Diana"><img src="RES/IMG/champIcons/DianaSquare.png" /><div class="pickme">Diana</div></div>
+                    <div class="champIcon" id="Draven"><img src="RES/IMG/champIcons/DravenSquare.png" /><div class="pickme">Draven</div></div>
+                    <div class="champIcon" id="DrMundo"><img src="RES/IMG/champIcons/DrMundoSquare.png" /><div class="pickme">Dr. Mundo</div></div>
+                    <div class="champIcon" id="Elise"><img src="RES/IMG/champIcons/EliseSquare.png" /><div class="pickme">Elise</div></div>
+                    <div class="champIcon" id="Evelynn"><img src="RES/IMG/champIcons/EvelynnSquare.png" /><div class="pickme">Evelynn</div></div>
+                    <div class="champIcon" id="Ezreal"><img src="RES/IMG/champIcons/EzrealSquare.png" /><div class="pickme">Ezreal</div></div>
+                    <div class="champIcon" id="Fiddlesticks"><img src="RES/IMG/champIcons/FiddlesticksSquare.png" /><div class="pickme">Fiddlesticks</div></div>
+                    <div class="champIcon" id="Fiora"><img src="RES/IMG/champIcons/FioraSquare.png" /><div class="pickme">Fiora</div></div>
+                    <div class="champIcon" id="Fizz"><img src="RES/IMG/champIcons/FizzSquare.png" /><div class="pickme">Fizz</div></div>
+                    <div class="champIcon" id="Galio"><img src="RES/IMG/champIcons/GalioSquare.png" /><div class="pickme">Galio</div></div>
+                    <div class="champIcon" id="Gangplank"><img src="RES/IMG/champIcons/GangplankSquare.png" /><div class="pickme">Gangplank</div></div>
+                    <div class="champIcon" id="Garen"><img src="RES/IMG/champIcons/GarenSquare.png" /><div class="pickme">Garen</div></div>
+                    <div class="champIcon" id="Gnar"><img src="RES/IMG/champIcons/GnarSquare.png" /><div class="pickme">Gnar</div></div>
+                    <div class="champIcon" id="Gragas"><img src="RES/IMG/champIcons/GragasSquare.png" /><div class="pickme">Gragas</div></div>
+                    <div class="champIcon" id="Graves"><img src="RES/IMG/champIcons/GravesSquare.png" /><div class="pickme">Graves</div></div>
+                    <div class="champIcon" id="Hecarim"><img src="RES/IMG/champIcons/HecarimSquare.png" /><div class="pickme">Hecarim</div></div>
+                    <div class="champIcon" id="heimerdinger"><img src="RES/IMG/champIcons/HeimerdingerSquare.png" /><div class="pickme">Heimerdinger</div></div>
+                    <div class="champIcon" id="Irelia"><img src="RES/IMG/champIcons/IreliaSquare.png" /><div class="pickme">Irelia</div></div>
+                    <div class="champIcon" id="Janna"><img src="RES/IMG/champIcons/JannaSquare.png" /><div class="pickme">Janna</div></div>
+                    <div class="champIcon" id="JarvanIV"><img src="RES/IMG/champIcons/JarvanIVSquare.png" /><div class="pickme">JarvanIV</div></div>
+                    <div class="champIcon" id="Jax"><img src="RES/IMG/champIcons/JaxSquare.png" /><div class="pickme">Jax</div></div>
+                    <div class="champIcon" id="Jayce"><img src="RES/IMG/champIcons/JayceSquare.png" /><div class="pickme">Jayce</div></div>
+                    <div class="champIcon" id="Jinx"><img src="RES/IMG/champIcons/JinxSquare.png" /><div class="pickme">Jinx</div></div>
+                    <div class="champIcon" id="Kalista"><img src="RES/IMG/champIcons/KalistaSquare.png" /><div class="pickme">Kalista</div></div>
+                    <div class="champIcon" id="Karma"><img src="RES/IMG/champIcons/KarmaSquare.png" /><div class="pickme">Karma</div></div>
+                    <div class="champIcon" id="Karthus"><img src="RES/IMG/champIcons/KarthusSquare.png" /><div class="pickme">Karthus</div></div>
+                    <div class="champIcon" id="Kassadin"><img src="RES/IMG/champIcons/KassadinSquare.png" /><div class="pickme">Kassadin</div></div>
+                    <div class="champIcon" id="Katarina"><img src="RES/IMG/champIcons/KatarinaSquare.png" /><div class="pickme">Katarina</div></div>
+                    <div class="champIcon" id="Kayle"><img src="RES/IMG/champIcons/KayleSquare.png" /><div class="pickme">Kayle</div></div>
+                    <div class="champIcon" id="Kennen"><img src="RES/IMG/champIcons/KennenSquare.png" /><div class="pickme">Kennen</div></div>
+                    <div class="champIcon" id="KhaZix"><img src="RES/IMG/champIcons/KhaZixSquare.png" /><div class="pickme">KhaZix</div></div>
+                    <div class="champIcon" id="KogMaw"><img src="RES/IMG/champIcons/KogMawSquare.png" /><div class="pickme">KogMaw</div></div>
+                    <div class="champIcon" id="LeBlanc"><img src="RES/IMG/champIcons/LeBlancSquare.png" /><div class="pickme">LeBlanc</div></div>
+                    <div class="champIcon" id="LeeSin"><img src="RES/IMG/champIcons/LeeSinSquare.png" /><div class="pickme">LeeSin</div></div>
+                    <div class="champIcon" id="Leona"><img src="RES/IMG/champIcons/LeonaSquare.png" /><div class="pickme">Leona</div></div>
+                    <div class="champIcon" id="Lissandra"><img src="RES/IMG/champIcons/LissandraSquare.png" /><div class="pickme">Lissandra</div></div>
+                    <div class="champIcon" id="Lucian"><img src="RES/IMG/champIcons/LucianSquare.png" /><div class="pickme">Lucian</div></div>
+                    <div class="champIcon" id="Lulu"><img src="RES/IMG/champIcons/LuluSquare.png" /><div class="pickme">Lulu</div></div>
+                    <div class="champIcon" id="Lux"><img src="RES/IMG/champIcons/LuxSquare.png" /><div class="pickme">Lux</div></div>
+                    <div class="champIcon" id="Malphite"><img src="RES/IMG/champIcons/MalphiteSquare.png" /><div class="pickme">Malphite</div></div>
+                    <div class="champIcon" id="Malzahar"><img src="RES/IMG/champIcons/MalzaharSquare.png" /><div class="pickme">Malzahar</div></div>
+                    <div class="champIcon" id="Maokai"><img src="RES/IMG/champIcons/MaokaiSquare.png" /><div class="pickme">Maokai</div></div>
+                    <div class="champIcon" id="MasterYi"><img src="RES/IMG/champIcons/MasterYiSquare.png" /><div class="pickme">MasterYi</div></div>
+                    <div class="champIcon" id="MissFortune"><img src="RES/IMG/champIcons/MissFortuneSquare.png" /><div class="pickme">MissFortune</div></div>
+                    <div class="champIcon" id="Mordekaiser"><img src="RES/IMG/champIcons/MordekaiserSquare.png" /><div class="pickme">Mordekaiser</div></div>
+                    <div class="champIcon" id="Morgana"><img src="RES/IMG/champIcons/MorganaSquare.png" /><div class="pickme">Morgana</div></div>
+                    <div class="champIcon" id="Nami"><img src="RES/IMG/champIcons/NamiSquare.png" /><div class="pickme">Nami</div></div>
+                    <div class="champIcon" id="Nasus"><img src="RES/IMG/champIcons/NasusSquare.png" /><div class="pickme">Nasus</div></div>
+                    <div class="champIcon" id="Nautilus"><img src="RES/IMG/champIcons/NautilusSquare.png" /><div class="pickme">Nautilus</div></div>
+                    <div class="champIcon" id="Nidalee"><img src="RES/IMG/champIcons/NidaleeSquare.png" /><div class="pickme">Nidalee</div></div>
+                    <div class="champIcon" id="Nocturne"><img src="RES/IMG/champIcons/NocturneSquare.png" /><div class="pickme">Nocturne</div></div>
+                    <div class="champIcon" id="Nunu"><img src="RES/IMG/champIcons/NunuSquare.png" /><div class="pickme">Nunu</div></div>
+                    <div class="champIcon" id="Olaf"><img src="RES/IMG/champIcons/OlafSquare.png" /><div class="pickme">Olaf</div></div>
+                    <div class="champIcon" id="Orianna"><img src="RES/IMG/champIcons/OriannaSquare.png" /><div class="pickme">Orianna</div></div>
+                    <div class="champIcon" id="Pantheon"><img src="RES/IMG/champIcons/PantheonSquare.png" /><div class="pickme">Pantheon</div></div>
+                    <div class="champIcon" id="Poppy"><img src="RES/IMG/champIcons/PoppySquare.png" /><div class="pickme">Poppy</div></div>
+                    <div class="champIcon" id="Quinn"><img src="RES/IMG/champIcons/QuinnSquare.png" /><div class="pickme">Quinn</div></div>
+                    <div class="champIcon" id="Rammus"><img src="RES/IMG/champIcons/RammusSquare.png" /><div class="pickme">Rammus</div></div>
+                    <div class="champIcon" id="RekSai"><img src="RES/IMG/champIcons/RekSaiSquare.png" /><div class="pickme">RekSai</div></div>
+                    <div class="champIcon" id="Renekton"><img src="RES/IMG/champIcons/RenektonSquare.png" /><div class="pickme">Renekton</div></div>
+                    <div class="champIcon" id="Rengar"><img src="RES/IMG/champIcons/RengarSquare.png" /><div class="pickme">Rengar</div></div>
+                    <div class="champIcon" id="Riven"><img src="RES/IMG/champIcons/RivenSquare.png" /><div class="pickme">Riven</div></div>
+                    <div class="champIcon" id="Rumble"><img src="RES/IMG/champIcons/RumbleSquare.png" /><div class="pickme">Rumble</div></div>
+                    <div class="champIcon" id="Ryze"><img src="RES/IMG/champIcons/RyzeSquare.png" /><div class="pickme">Ryze</div></div>
+                    <div class="champIcon" id="Sejuani"><img src="RES/IMG/champIcons/SejuaniSquare.png" /><div class="pickme">Sejuani</div></div>
+                    <div class="champIcon" id="Shaco"><img src="RES/IMG/champIcons/ShacoSquare.png" /><div class="pickme">Shaco</div></div>
+                    <div class="champIcon" id="Shen"><img src="RES/IMG/champIcons/ShenSquare.png" /><div class="pickme">Shen</div></div>
+                    <div class="champIcon" id="Shyvana"><img src="RES/IMG/champIcons/ShyvanaSquare.png" /><div class="pickme">Shyvana</div></div>
+                    <div class="champIcon" id="Singed"><img src="RES/IMG/champIcons/SingedSquare.png" /><div class="pickme">Singed</div></div>
+                    <div class="champIcon" id="Sion"><img src="RES/IMG/champIcons/SionSquare.png" /><div class="pickme">Sion</div></div>
+                    <div class="champIcon" id="Sivir"><img src="RES/IMG/champIcons/SivirSquare.png" /><div class="pickme">Sivir</div></div>
+                    <div class="champIcon" id="Skarner"><img src="RES/IMG/champIcons/SkarnerSquare.png" /><div class="pickme">Skarner</div></div>
+                    <div class="champIcon" id="Sona"><img src="RES/IMG/champIcons/SonaSquare.png" /><div class="pickme">Sona</div></div>
+                    <div class="champIcon" id="Soraka"><img src="RES/IMG/champIcons/SorakaSquare.png" /><div class="pickme">Soraka</div></div>
+                    <div class="champIcon" id="Swain"><img src="RES/IMG/champIcons/SwainSquare.png" /><div class="pickme">Swain</div></div>
+                    <div class="champIcon" id="Syndra"><img src="RES/IMG/champIcons/SyndraSquare.png" /><div class="pickme">Syndra</div></div>
+                    <div class="champIcon" id="Talon"><img src="RES/IMG/champIcons/TalonSquare.png" /><div class="pickme">Talon</div></div>
+                    <div class="champIcon" id="Taric"><img src="RES/IMG/champIcons/TaricSquare.png" /><div class="pickme">Taric</div></div>
+                    <div class="champIcon" id="Teemo"><img src="RES/IMG/champIcons/TeemoSquare.png" /><div class="pickme">Teemo</div></div>
+                    <div class="champIcon" id="Thresh"><img src="RES/IMG/champIcons/ThreshSquare.png" /><div class="pickme">Thresh</div></div>
+                    <div class="champIcon" id="Tristana"><img src="RES/IMG/champIcons/TristanaSquare.png" /><div class="pickme">Tristana</div></div>
+                    <div class="champIcon" id="Trundle"><img src="RES/IMG/champIcons/TrundleSquare.png" /><div class="pickme">Trundle</div></div>
+                    <div class="champIcon" id="Tryndamere"><img src="RES/IMG/champIcons/TryndamereSquare.png" /><div class="pickme">Tryndamere</div></div>
+                    <div class="champIcon" id="TwistedFate"><img src="RES/IMG/champIcons/TwistedFateSquare.png" /><div class="pickme">TwistedFate</div></div>
+                    <div class="champIcon" id="Twitch"><img src="RES/IMG/champIcons/TwitchSquare.png" /><div class="pickme">Twitch</div></div>
+                    <div class="champIcon" id="Udyr"><img src="RES/IMG/champIcons/UdyrSquare.png" /><div class="pickme">Udyr</div></div>
+                    <div class="champIcon" id="Urgot"><img src="RES/IMG/champIcons/UrgotSquare.png" /><div class="pickme">Urgot</div></div>
+                    <div class="champIcon" id="Varus"><img src="RES/IMG/champIcons/VarusSquare.png" /><div class="pickme">Varus</div></div>
+                    <div class="champIcon" id="Vayne"><img src="RES/IMG/champIcons/VayneSquare.png" /><div class="pickme">Vayne</div></div>
+                    <div class="champIcon" id="Veigar"><img src="RES/IMG/champIcons/VeigarSquare.png" /><div class="pickme">Veigar</div></div>
+                    <div class="champIcon" id="VelKoz"><img src="RES/IMG/champIcons/VelKozSquare.png" /><div class="pickme">VelKoz</div></div>
+                    <div class="champIcon" id="Viktor"><img src="RES/IMG/champIcons/ViktorSquare.png" /><div class="pickme">Viktor</div></div>
+                    <div class="champIcon" id="Vi"><img src="RES/IMG/champIcons/ViSquare.png" /><div class="pickme">Vi</div></div>
+                    <div class="champIcon" id="Vladimir"><img src="RES/IMG/champIcons/VladimirSquare.png" /><div class="pickme">Vladimir</div></div>
+                    <div class="champIcon" id="Volibear"><img src="RES/IMG/champIcons/VolibearSquare.png" /><div class="pickme">Volibear</div></div>
+                    <div class="champIcon" id="Warwick"><img src="RES/IMG/champIcons/WarwickSquare.png" /><div class="pickme">Warwick</div></div>
+                    <div class="champIcon" id="Wukong"><img src="RES/IMG/champIcons/WukongSquare.png" /><div class="pickme">Wukong</div></div>
+                    <div class="champIcon" id="XinZhao"><img src="RES/IMG/champIcons/XinZhaoSquare.png" /><div class="pickme">XinZhao</div></div>
+                    <div class="champIcon" id="Yasuo"><img src="RES/IMG/champIcons/YasuoSquare.png" /><div class="pickme">Yasuo</div></div>
+                    <div class="champIcon" id="Yorick"><img src="RES/IMG/champIcons/YorickSquare.png" /><div class="pickme">Yorick</div></div>
+                    <div class="champIcon" id="Zac"><img src="RES/IMG/champIcons/ZacSquare.png" /><div class="pickme">Zac</div></div>
+                    <div class="champIcon" id="Zed"><img src="RES/IMG/champIcons/ZedSquare.png" /><div class="pickme">Zed</div></div>
+                    <div class="champIcon" id="Ziggs"><img src="RES/IMG/champIcons/ZiggsSquare.png" /><div class="pickme">Ziggs</div></div>
+                    <div class="champIcon" id="Zilean"><img src="RES/IMG/champIcons/ZileanSquare.png" /><div class="pickme">Zilean</div></div>
+                    <div class="champIcon" id="Zyra"><img src="RES/IMG/champIcons/ZyraSquare.png" /><div class="pickme">Zyra</div></div>
+                </div>
+                <div class="clearFix"></div>
+            </div>
+            <div id="newsSection">
+                <h1>Willkommen auf <b>guide-cloud.de</b></h1>
+                <hr>
+                <p>
+                    Danke f&uuml;r deinen Besuch auf unserer Seite, hier wird fleißig gearbeitet um <b>dir</b> eine Plattform zu schaffen auf der du, deine Freunde und f&uuml;r dich Fremde euch austauschen könnt &uuml;ber die neusten Trends in und um <em>League of Legends.</em>
+                </p>
+                <p>
+                    Hier findest <b>du</b> Guides zu deinem lieblings Champion, Patchnotizen, die Möglichkeit eigene Guides hochzuladen und Vieles mehr.
+                </p>
+                <p>
+                    An dieser Stelle informieren wir dich &uuml;ber etwaige Fortschritte. &Uuml;ber Feedback, Anregungen, Kritik w&uuml;rden wir uns sehr freuen.
+                    <br><br><b><i>Team Guide-Cloud</i></b>
+                </p>
+                <p>Ab sofort werden wir wieder Fortschritte machen, auf Grund des Studiums war dies leider nicht möglich. Derzeitig passiert leider noch nichts wenn ihr auf einen Champ klickt.</p>
+                <p>Wir arbeiten aber schon an dem Guide-Editor...</p>
+            </div>
+            <div id="footer">
+                <h3>Hier findest du andere Webauftritte von uns, schau doch mal vorbei!</h3>
+                <a href="https://www.youtube.com/channel/UCnFkbxqV1G-eplWrKnw54Dw" target="_blank" class="socialMediaIcons"><img src="RES/IMG/socialMediaIcons/youtubeIcon48x48.png"></a>
+                <a href="http://www.twitch.tv/plaescha" target="_blank" class="socialMediaIcons"><img src="RES/IMG/socialMediaIcons/twitchIcon48x48.png"></a>
+                <a href="https://www.facebook.com/guide.cloud2015" target="_blank" class="socialMediaIcons"><img src="RES/IMG/socialMediaIcons/facebookIcon48x48.png"></a>
+                    
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,524 @@
+body
+{
+   margin: 0 auto; 
+   font-size: 100%;
+}
+
+
+
+/*
+----------------------
+COLORS 
+gute Farbe #1e222b und für schriften #FFCD03
+----------------------
+*/
+
+
+body
+{
+    background: #111;
+    color: #ddd;
+}
+#header
+{
+    background: #222;
+}
+#usernameField
+{
+    background: #333;
+    color: #fff;
+    
+}
+.buttons
+{
+    background: linear-gradient(to bottom, #004673 0%,#0066aa 100%);
+    color: #fff;
+}
+#contentContainer
+{
+    background: rgba(50,50,50,.5);
+
+}
+#searchbarContainer
+{
+    background: #fff;
+    color: #888;
+}
+#content
+{
+    background: #333;
+}
+#newsSection
+{
+     background: #333;
+}
+#footer
+{
+    background: #222;
+}
+
+
+
+/*
+----------------------
+HEADER
+----------------------
+*/
+
+#header
+{
+    width: 100%;
+    height: 50%;
+}
+#h_banner
+{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#h_banner img
+{
+    max-width: 100%;
+    margin-left: 5%;
+    margin-top: 8%;
+}
+#register_Btn
+{
+    float: left;
+    font-weight: bold;
+    margin-top: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    line-height: 1.5em;
+    margin-left: 61.5%;
+    display: inline-block;
+}
+#usernameField
+{    
+    float: left;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-right: 5%;
+    line-height: 1.5em;
+    margin-left: 51%;
+    margin-top: 1.9%;
+    border-radius: 0.313em;
+    display: inline-block;
+    
+}
+#login_logout_Btn
+{
+    float: left;
+    font-weight: bold;
+    line-height: 1.5em;
+    display: inline-block;
+}
+
+
+
+
+/*
+----------------------
+CONTENT
+----------------------
+*/
+
+#contentContainer
+{
+    border: 0.063em solid black;
+    border-radius: 0.313em;
+    text-align: center;
+    padding: 0.5em;
+}
+#contentContainer .buttons
+{
+  
+}
+#searchbarContainer
+{
+    width: 20em;
+    float: left;
+    margin-top: 2em;
+    margin-left: 19em;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 1.5em;
+    border: 0.156em solid #000;
+    border-radius: 0.250em;
+}
+#searchbarContainer:hover
+{
+    box-shadow: 0 0 0.625em #f00; 
+}
+#content
+{
+    width: 90%;
+    height: auto;
+    float: left;
+    margin: 1.5%;
+    padding: 2%;
+    border: 0.063em solid #000;
+    border-radius: 0.313em;
+}
+
+#dropdownMenu
+{
+    position: relative;
+    background: rgba(255,255,255,1);
+    transition: all 500ms;
+    overflow: hidden;
+}
+#dropdownMenu:hover
+{
+    background: rgba(255,255,255,0.3);
+}
+
+ul
+{
+    list-style: none;
+}
+.items
+{
+    background: rgba(255,255,255,.7);
+    margin: 0.625em 0em 0.625em 0em;
+    padding: 0em 0.313em 0em 0.313em;
+    border: 0.250em solid #000;
+    
+    
+}
+.champIcon
+{
+    display: inline-block;
+    border: 0.125em solid #000;
+    margin: 0.125em;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    
+}
+.pickme
+{
+    position: absolute;
+    left: 0;
+    top: 9.375em;
+    background: rgba(255,255,255,.7);
+    transition: all 500ms ease-out 100ms;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0.313em;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 1.125em;
+    color: #000;
+}
+.champIcon:hover .pickme
+{
+    top: 3.125em;
+}
+img
+{
+   max-width: 100%;
+}
+.champIcon:hover
+{
+    border: 0.125em solid #f00;
+}
+#newsSection
+{
+  float: left;
+  margin-top: 1%;
+  border: 0.063em solid #000;
+  border-radius: 0.313em;
+  width: 24%;
+  text-align: justify;
+  padding: 1%;
+}
+#newsSection p
+{
+    margin-bottom: 5%;
+    color: #e0e0e0;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding: 0.5em;
+    
+}
+#newsSection h1
+{
+    text-align: center;
+}
+/*
+----------------------
+FOOTER
+----------------------
+*/
+
+#footer
+{
+    width: 100%;
+    height: 9.375em;
+    float: left;
+}
+#iframe
+{
+    width:100%; 
+    height:635px; 
+    border:2px solid grey; 
+    overflow:hidden;
+}
+/*
+----------------------
+RNDSTUFF
+----------------------
+*/
+
+h1
+{
+    color: #FFCD03;
+    font-size: 2.0em;
+    margin-bottom: 50px;
+}
+h2
+{
+    color: #FFCD03;
+    font-size: 1.5em;
+}
+h3
+{
+    color: #FFCD03;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em;
+}
+h4
+{
+    color: #FFCD03;
+    font-size: 1em;
+}
+.socialMediaIcons
+{
+    margin: 0.5em;
+}
+.socialMeiaIcons img{
+    max-width: 100%;
+}
+.hide
+{
+    visibility: hidden;
+}
+.show
+{
+    visibility: visible;
+}
+.clearFix
+{
+    clear: both;
+}
+.buttons
+{
+    float: left;
+    margin: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border-radius: 0.313em;
+    box-shadow: inset 0 0 0.313em #000, 0 0 0.188em #fff;
+}
+/*
+----------------------
+MEDIAQUERIES
+----------------------
+*/
+
+@media only screen and (max-width: 1650px)
+{
+    #contentContainer .buttons
+    {
+        width: 8.5em;
+        float: left;
+        margin: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 0.313em;
+        box-shadow: inset 0 0 0.313em #000, 0 0 0.188em #fff;
+    }
+    #searchbarContainer
+    {
+        width: 18em;
+        float: left;
+        margin-top: 0.8em;
+        margin-left: 7.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        line-height: 1.5em;
+        border: 0.156em solid #000;
+        border-radius: 0.250em;
+    }
+}
+@media only screen and (max-width: 1024px)
+{
+    body
+    {
+        font-size: 90%;
+    }
+    #contentContainer .buttons
+    {
+        width: 8.5em;
+        float: left;
+        margin: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 0.313em;
+        box-shadow: inset 0 0 0.313em #000, 0 0 0.188em #fff;
+    }
+    #searchbarContainer
+    {
+        width: 18em;
+        float: left;
+        margin-top: 1em;
+        margin-left: 1.2em;
+        padding-left: 1em;
+        padding-right: 1em;
+        line-height: 1.5em;
+        border: 0.156em solid #000;
+        border-radius: 0.250em;
+    }
+}
+
+
+@media only screen and (max-width: 767px)
+{
+    body
+    {
+        font-size: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 480px)
+{
+    body
+    {
+        font-size: 78%;
+    }
+    #header
+    {
+        margin-bottom: 0.25em;
+    }
+    #contentContainer
+    {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+    #newsSection
+    {
+        width: 99%;
+        float: none;
+        margin: 0.25em 0em 0em 0em;
+    }
+    #searchbarContainer
+    {
+        width: 20em;
+        float: none;
+        margin-top: 1.8em;
+        margin-left: 3em;
+        padding-left: 1em;
+        padding-right: 1em;
+        line-height: 1.5em;
+        border: 0.156em solid #000;
+        border-radius: 0.250em;
+    }
+   
+    #contentContainer .buttons
+    {
+        float: none;
+        margin: 1em;
+        width: 80%
+    }
+    #register_Btn
+    {
+        display: none;
+    }
+    #login_logout_Btn
+    {
+        display: none;
+    }
+    #usernameField
+    {
+        margin-top: 2em;
+    }
+    .pickme
+    {
+        top: 5.125em;
+    }
+    .champIcon:hover .pickme
+    {
+        top: 5.125em;
+    }
+}
+.loadAnimation
+{
+    
+    position: fixed;
+    top: 45%;
+    left:45%;
+    width: 100px;
+    height: 100px;
+    z-index: 6666;
+    animation: spin .75s linear infinite;
+    border: 5px inset #FFCD03;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px #FFCD03,0px 0px 20px #fff;
+}
+.loadAnimation2
+{
+    background: url(../RES/IMG/loader3.png)no-repeat;
+    position: fixed;
+    top: 45%;
+    left:45%;
+    width: 100px;
+    height: 100px;
+    z-index: 6666;
+    animation: spin 2.5s linear infinite;
+}
+.loadAnimationPulse
+{
+    position: fixed;
+    top: 45%;
+    left:45%;
+    width: 100px;
+    height: 100px;
+    z-index: 6666;
+    animation: pulse 1s linear infinite;
+    border: 5px solid #FFCD03;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px #FFCD03,0px 0px 20px #fff;
+}
+
+@keyframes spin{
+    10%{transform: rotate(15deg);}
+    50%{transform: rotate(100deg);}
+    75%{transform: rotate(250deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes spin2{100%{transform: rotate(360deg);}}
+
+@keyframes pulse{
+        0%{transform: scale(0.1);}
+        15%{transform: scale(0.5);}
+        25%{transform: scale(1);}
+        
+        50%{transform: scale(1.5);}
+        65%{transform: scale(1);}
+        75%{transform: scale(0.5);}
+        100%{transform: scale(0.1);}}
+
+/*
+    TODO
+    
+    min, max width 
+    Tablets:
+    768px bis 1024px
+    Computer-Desktop:
+    1024px+
+*/

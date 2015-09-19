@@ -1,0 +1,438 @@
+.s-1001, .s-1004, .s-1006, .s-1011, .s-1018, .s-1026, .s-1027, .s-1028, .s-1029, .s-1031, .s-1033, .s-1036, .s-1037, .s-1038, .s-1039, .s-1042, .s-1043, .s-1051, .s-1052, .s-1053, .s-1054, .s-1055, .s-1056, .s-1057, .s-1058, .s-1062, .s-1063, .s-1074, .s-1075, .s-1076, .s-2003, .s-2004, .s-2009, .s-2010, .s-2041, .s-2043, .s-2044, .s-2045, .s-2047, .s-2049, .s-2050, .s-2051, .s-2052, .s-2053, .s-2054, .s-2137, .s-2138, .s-2139, .s-2140, .s-3001, .s-3003, .s-3004, .s-3006, .s-3007, .s-3008, .s-3009, .s-3010, .s-3020, .s-3022, .s-3023, .s-3024, .s-3025, .s-3026, .s-3027, .s-3028, .s-3029, .s-3031, .s-3035, .s-3040, .s-3041, .s-3042, .s-3043{
+	background: url(../RES/IMG/items/sprites.png) no-repeat;
+        display: inline-block;
+        cursor: pointer;
+}
+
+.s-1001{
+	background-position: 0 -1px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1004{
+	background-position: -65px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1006{
+	background-position: -130px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1011{
+	background-position: -195px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1018{
+	background-position: -260px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1026{
+	background-position: -325px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1027{
+	background-position: -391px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1028{
+	background-position: -457px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1029{
+	background-position: -522px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1031{
+	background-position: -1px -66px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1033{
+	background-position: -66px -66px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1036{
+	background-position: -131px -66px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1037{
+	background-position: -197px -67px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1038{
+	background-position: -264px -67px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1039{
+	background-position: -330px -68px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1042{
+	background-position: -397px -69px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1043{
+	background-position: -463px -69px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1051{
+	background-position: -529px -70px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1052{
+	background-position: 0 -131px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1053{
+	background-position: -66px -131px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1054{
+	background-position: -132px -131px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1055{
+	background-position: -198px -132px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1056{
+	background-position: -263px -133px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1057{
+	background-position: -330px -133px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1058{
+	background-position: -397px -135px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1062{
+	background-position: -464px -135px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1063{
+	background-position: -530px -135px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1074{
+	background-position: 0 -197px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1075{
+	background-position: -66px -196px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-1076{
+	background-position: -132px -197px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2003{
+	background-position: -198px -197px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2004{
+	background-position: -264px -198px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2009{
+	background-position: -330px -199px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2010{
+	background-position: -397px -200px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2041{
+	background-position: -464px -201px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2043{
+	background-position: -530px -200px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2044{
+	background-position: 0 -263px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2045{
+	background-position: -66px -263px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2047{
+	background-position: -133px -264px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2049{
+	background-position: -199px -263px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2050{
+	background-position: -265px -264px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2051{
+	background-position: -331px -265px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2052{
+	background-position: -397px -266px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2053{
+	background-position: -464px -267px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2054{
+	background-position: -530px -267px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2137{
+	background-position: 0 -330px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2138{
+	background-position: -66px -331px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2139{
+	background-position: -133px -331px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-2140{
+	background-position: -200px -330px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3001{
+	background-position: -268px -331px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3003{
+	background-position: -335px -332px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3004{
+	background-position: -402px -332px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3006{
+	background-position: -469px -334px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3007{
+	background-position: -536px -334px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3008{
+	background-position: 0 -397px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3009{
+	background-position: -66px -396px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3010{
+	background-position: -132px -396px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3020{
+	background-position: -197px -397px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3022{
+	background-position: -264px -397px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3023{
+	background-position: -332px -397px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3024{
+	background-position: -401px -398px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3025{
+	background-position: -467px -399px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3026{
+	background-position: -534px -400px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3027{
+	background-position: 0 -463px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3028{
+	background-position: -67px -463px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3029{
+	background-position: -133px -463px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3031{
+	background-position: -200px -462px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3035{
+	background-position: -266px -463px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3040{
+	background-position: -332px -463px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3041{
+	background-position: -399px -464px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3042{
+	background-position: -467px -466px ;
+	width: 64px;
+	height: 64px;
+}
+
+.s-3043{
+	background-position: -533px -466px ;
+	width: 64px;
+	height: 64px;
+}
+

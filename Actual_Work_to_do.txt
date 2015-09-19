@@ -1,0 +1,8 @@
+17.09.2015
+	> Email-versenden via code (- 4 std -)
+
+18.05.2015
+ 	> Leistungsanforderungen identifizieren (- 3 std -)
+	> Anforderungen in logisches Datenbankschema umwandeln (- 3 std -)
+	> Github einrichten (- 1 std -)
+	> Andre Zugang zum FTP geben (- 0.5 std -)
