@@ -1,0 +1,204 @@
+
+/*General Style*/
+body {
+	 margin: 0;
+	 padding: 0;
+	 background: #2A2929;
+	 font-size: 100%;
+}
+
+/*On Top Bar*/
+
+.on_top_bar {
+	 margin: 0;
+	 padding: 0;
+	 background: #2A2929;
+     height: 4em;
+}
+.menu_btn_container {
+	 width: 2em;
+	 height: 2em;
+	 float: left;
+	 clear: both;
+	 margin-top: 1.3em;
+	 margin-left: 1em;
+	 display: none;
+}
+.top_nav_bar {
+	 background: #2A2929;
+	 height: 4em;
+	 float: right;
+}
+.top_nav_bar ul {
+	 list-style: none;
+	 margin: 0;
+	 padding: 0em;
+}
+.top_nav_bar ul li {
+	 display: inline-block;
+	 background: linear-gradient(to bottom, #004673 0%, #0066aa 100%);
+	 width: 8em;
+	 text-align: center;
+	 font-family: Helvetica;
+	 margin-right: 1em;
+	 margin-top: 0.4em;
+	 font-size: 1.5em;
+	 padding: 0.2em 0em 0.2em 0em;
+	 border-radius: 0.3em;
+	 box-shadow: inset 0 0 0.313em #000, 0 0 0.188em #fff;
+}
+.top_nav_bar ul li a {
+	 text-decoration: none;
+	 color: white;
+}
+.top_nav_bar ul li:hover {
+	 background: #004673;
+}
+.login_container {
+	 display: none;
+	 position: relative;
+	 background: linear-gradient(to bottom, #5C5A5A 0%, #363131 50%, #0D0D0D 100%);
+	 height: 185px;
+	 width: 272px;
+	 float: right;
+	 z-index: 1;
+	 margin-right: 4em;
+	 margin-top: 1em;
+	 border: 0.1em solid #000;
+	 border-radius: 0.4em;
+	 box-shadow: 30px 30px 30px #000;
+}
+.login_field label {
+	 float: left;
+	 width: 6em;
+	 font-size: 1.3em;
+	 text-align: right;
+	 margin-top: 2em;
+	 margin-left: 0.5em;
+	 margin-right: 0.5em;
+	 color: #FFF;
+}
+.login_field input {
+	 width: 12em;
+	 margin-top: 1.8em;
+	 font-size: 1.3em;
+}
+.cancel_input {
+	 margin: 2em 1em 1em 6.5em;
+}
+.cancel_input:hover {
+	 color: #FFF;
+	 background: #000;
+}
+.submit_input:hover {
+	 color: #FFF;
+	 background: #000;
+}
+/*Header*/
+.header img {
+	 width: 250px;
+	 height: 150px;
+	 padding: 0.2em 0em 0.2em 0.5em;
+	 float: left;
+}
+.header {
+	 background: #545353;
+	 position: absolute;
+	 width: 100%;
+	 margin: 0;
+}
+
+
+
+
+
+
+
+	 
+/*On Top Bar/Header for Mobile Devices*/
+@media screen and (max-width:768px) {
+	 body {
+		 font-size: 85%;
+	 }
+	 .menu_btn_container {
+		 display: block;
+		 margin-top: 1.5em;
+	 }
+	 .on_top_bar {
+		 height: 7em;
+	 }
+	 .top_nav_bar ul li {
+		 display: block;
+		 margin-right: 0.5em;
+		 margin-top: 0.4em;
+	 }
+	 .login_container {
+		 width: 225px;
+		 height: 145px;
+	 }
+	 .cancel_input {
+		 margin: 1.5em 1em 0.5em 6em;
+	 }
+	 .web_btn_container {
+		 padding: 0;
+		 margin-right: -1.2em;
+	 }
+	 .user_container a {
+		 margin-top: 0.9em;
+		 margin-right: -0.8em;
+		 font-size: 1.5em;
+	 }
+	 .user_container img {
+		 border: 0.2em solid #000;
+	 }
+	 
+}
+@media screen and (max-width:560px) {
+	 .user_container {
+		 display: none;
+	 }
+	 .web_btn_container {
+		 padding-top: 16.5em;
+	 }
+}
+@media screen and (max-width:480px) {
+	 .header img {
+		  width: 170px;
+		  height: 120px;
+		  float: left;
+		  clear: right;
+	 }
+	 .web_btn_container {
+		 padding: 0;
+		 margin-top: 11em;
+	 }
+	 .web_btn_container img {
+		 height: 32px;
+	 }
+	 .web_btn_container img.twitter_btn_pic {
+		 height: 20px;
+		 width: 25px;
+		 margin-right: 0.1em;
+	 }
+	 .web_btn_container img.fb_btn_pic {
+		 height: 20px;
+		 width: 25px;
+		 margin-right: 0.1em;
+	 }
+	 .web_btn_container img.fb_like_pic {
+		 height: 20px;
+		 width: 45px;
+	 }
+}
+@media screen and (max-width:320px) {
+	 .header img.gc_logo {
+		 width: 260px;
+		 height: 150px;
+		 margin-left: 4%;
+	 }
+	 .web_btn_container {
+		 margin-bottom: 0.5em;
+		 margin-top: 0.5em;
+	 }
+}
+

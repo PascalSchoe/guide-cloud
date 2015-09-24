@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8"/>
+	 <title>Willkommen auf guide-cloud.de</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	 <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <!-- Optional theme -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+     <!-- Eigene CSS Datei -->
+	 <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+     <!-- On Top Bar -->
+	 <div class="container-fluid">
+	     <div class="row">
+		     <div class="col-lg-12 on_top_bar">
+			     <div class="menu_btn_container">
+				     <a class="menu_btn" href="#"><img src="bilder/menuButtonTrans.png"/></a>
+				 </div>
+				     <nav class="top_nav_bar">
+					     <ul>
+				             <li class="on_top_btn reg_btn"><a href="#">Registrieren</a></li>
+					         <li class="on_top_btn login_btn"><a href="#">Einloggen</a></li>
+				         </ul>
+				     </nav>
+			 </div>
+		 </div>
+	 </div>
+	 <div class="login_container">
+	     <form action="startseite.html" method="get">
+		     <fieldset class="login_field">
+		         <p>
+			         <label for="user_name">Username:</label>
+				     <input type="text" name="user_name" id="user_name">
+			     </p>
+			     <p>
+			         <label for="pw_input">Passwort:</label>
+				     <input type="text, number" name="pw_input" id="pw_input">
+			     </p>
+			 </fieldset>
+			 <input class="cancel_input"type="submit" value="Abbrechen">
+		     <input class="submit_input" type="submit" value="Einloggen">
+		 </form>
+	 </div>
+	 <div class="container-fluid">
+	     <div class="row">
+		     <div class="col-lg-12 header">
+			     <div class="gc_logo_container">
+			         <img src="bilder/gcLogoTrans.png" class="gc_logo"/>
+				 </div>
+		     </div>
+		 </div>
+	 </div>
+	 
+				     
+	 
+	
+	 
+	 
+	 
+	
+	 
+    
+
+
+
+
+
+
+     <!-- jQuery Google CDN -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <!-- Latest compiled and minified JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	 <script type="text/javascript">
+	     $(document).ready(function() {
+		     $('.login_btn').click(function() {
+			     $('.login_container').fadeToggle();
+			 });
+		 });
+	 </script>
+</body>
+
+</html>
