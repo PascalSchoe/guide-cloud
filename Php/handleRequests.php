@@ -13,7 +13,7 @@
 
 
         echo "Jup !";
-        /*
+        
         $user = new User();
         $user->registerUser(
             $_POST['firstnameInput'],
@@ -28,10 +28,11 @@
             $_POST['cityInput'],
             $_POST['zipcodeInput']
         );
-    */
+    /*
         $userT = new UserTable();
 
         $userT->insertRecord($_POST);
+		*/
     }
 
 
