@@ -16,17 +16,17 @@
         
         $user = new User();
         $user->registerUser(
-            $_POST['firstnameInput'],
-            $_POST['emailInput'],
-            $_POST['passwordInput'],
-            $_POST['usernameInput'],
-            $_POST['lastnameInput'],
-            $_POST['dobInput'],
-            $_POST['genderInput'],
-            $_POST['countryInput'],
-            $_POST['stateInput'],
-            $_POST['cityInput'],
-            $_POST['zipcodeInput']
+            $_POST['firstname'],
+            $_POST['email'],
+            $_POST['password'],
+            $_POST['username'],
+            $_POST['lastname'],
+            $_POST['dateOfBirth'],
+            $_POST['gender'],
+            $_POST['country'],
+            $_POST['state'],
+            $_POST['city'],
+            $_POST['zipCode']
         );
     /*
         $userT = new UserTable();

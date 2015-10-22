@@ -243,7 +243,7 @@ class DBManager
                 }
                 break;
             default:
-                echo"Error - PrepareQuery!...";
+                echo"Error - Pimmelgewitter!...";
         }
     }
 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	 <title>Willkommen auf guide-cloud.de</title>
+	 <!-- Latest compiled and minified CSS (CDN) -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <!-- Optional theme -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+     <!-- Eigene CSS Datei -->
+	 <link rel="stylesheet" href="CSS/style_a.css" type="text/css">
+	 <!--Google Fonts-->
+	  <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+ </head>
+ 
+     <div class="container-fluid">
+	 <!-- row 1: top navigationsbar -->
+	     <div class="row">
+		     <nav class="navbar navbar-default navbar-inverse nav_bar" role="navigation">
+			     <div class="navbar-header">
+				     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+					     <span class="sr-only">Toggle Navigation</span>
+					     <span class="icon-bar"></span>
+					     <span class="icon-bar"></span>
+					     <span class="icon-bar"></span>
+					 </button>
+				 </div>
+				 <div class="collapse navbar-collapse" id="collapse">
+				     <ul class="nav navbar-nav nav_bar">
+					     <li><a href="home.html">Startseite</a></li>
+						 <li class="dropdown spiele_btn"><a class="active_btn" href="#" data-toggle="dropdown">League of Legends <span class="caret"></span></a>
+						     <ul class="dropdown-menu dropdown_menu">
+						         <li><a href="#"><span><img src="bilder/lol_logo.png" class="img-responsive game_icon"></span>League of Legends</a></li>               
+								 <li class="disabled"><a href="#"><span><img src="RES/bilder/hs_logo.png" class="img-responsive game_icon"></span>Hearthstone</a></li>
+								 <li class="disabled"><a href="#"><span><img src="RES/bilder/wow_logo.png" class="img-responsive game_icon"></span>World of Warcraft</a></li>
+								 <li class="disabled"><a href="#"><span><img src="RES/bilder/sc2_logo.png" class="img-responsive game_icon"></span>Starcraft 2</a></li>
+								 <li class="disabled"><a href="#"><span><img src="RES/bilder/hots_logo.png" class="img-responsive game_icon"></span>Heroes of the Storm</a></li>
+						     </ul>
+						 </li>
+						 <li><a href="#">Guide-Cloud Cup</a></li>
+						 <li><a href="#">Streams</a></li>
+						 <li class="dropdown ent_btn"><a href="#" data-toggle="dropdown">Entertainment <span class="caret"></span></a>
+						     <ul class="dropdown-menu dropdown_menu">
+						         <li><a href="#">Plays / Montagen</a></li>               
+								 <li><a href="#">Fanarts / Cosplays</a></li>
+								 <li><a href="#">Memes</a></li>
+						     </ul></li>
+						 <li class="league_btn"><a href="#">Leagues <span class="caret"></span></a>
+						 <li class="reg_btn"><a class="register_btn" href="#">REGISTRIEREN</a></li>
+						 <li class="login_btn"><a class="log_btn" href="#">EINLOGGEN</a></li>
+					 </ul>
+				 </div>
+			 </nav>
+		 </div>
+		 
+		 <!--Competetive League of Legends Icon Container-->
+		 <div class="comp_container">
+		     <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			     <img src="RES/bilder/eu_lcs.png" class="comp_pic"></img>
+				 <p class="comp_title">EU LCS</p>
+			 </div>
+			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			     <img src="RES/bilder/na_lcs.png" class="comp_pic_na"></img>
+				 <p class="comp_title">NA LCS</p>
+			 </div>
+			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			     <img src="RES/bilder/lck_logo.png" class="comp_pic_lck"></img>
+				 <p class="comp_title_lck">LCK KOREA</p>
+			 </div>
+			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			     <img src="RES/bilder/lpl_logo.png" class="comp_pic"></img>
+				 <p class="comp_title_lpl">LPL CHINA</p>
+			 </div>
+			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			     <img src="RES/bilder/lms_logo.png" class="comp_pic_lms"></img>
+				 <p class="comp_title_lms">LMS TAIWAN</p>
+			 </div>
+			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			     <img src="RES/bilder/eu_cs.png" class="comp_pic"></img>
+				 <p class="comp_title_euCS">EU CHALLENGER SERIES</p>
+			 </div>
+			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			     <img src="RES/bilder/na_cs.png" class="comp_pic_naCS"></img>
+				 <p class="comp_title_euCS">NA CHALLENGER SERIES</p>
+			 </div>
+			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			     <img src="RES/bilder/msi_logo.png" class="comp_pic_msi"></img>
+				 <p class="comp_title_msi">MID-SEASON INVITATIONAL</p>
+			 </div>
+			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
+			      <img src="RES/bilder/wm_logo.png" class="comp_pic_wm"></img>
+				 <p class="comp_title_wm">WELTMEISTERSCHAFT</p>
+			 </div>
+		 </div>
+		 
+		 <!--Login Container-->
+		 <div class="login_container">
+		     <form action="home.html" method="get">
+		         <fieldset class="login_field">
+		             <p>
+			             <label for="user_name">E-mail:</label>
+				         <input type="email" name="email" id="e_mail">
+			         </p>
+			         <p>
+			             <label for="pw_input">Passwort:</label>
+				         <input type="password" name="pw_input" id="pw_input">
+			         </p>
+			     </fieldset>
+			     <input class="cancel_input" type="submit" value="Abbrechen">
+		         <input class="submit_input" type="submit" value="Einloggen">
+		     </form>
+		 </div>
+		 
+		  <!--row 2: header-->
+		 <div class="row">
+		     <div class="header col-sm-12">
+			     <img src="RES/bilder/gcLogoTrans.png" class="img-responsive gc_pic"></img>
+				 <h1 class="gc_heading">Guide-Cloud</h1>
+				 <div class="clearfix"></div>
+			 </div>
+		 </div>
+		 
+     </div>
+ 
+     
+ 
+ <body>
+ 
+     <!-- jQuery Google CDN -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <!-- Latest compiled and minified JavaScript (CDN) -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	 <!-- My personal Javascript -->
+	 <script type="text/javascript">
+	     $(document).ready(function() {
+		     $('.login_btn').click(function() {
+			     $('.login_container').fadeToggle();
+			 });
+		 });
+	 </script>
+	  <script type="text/javascript">
+	     $(document).ready(function() {
+		     $('.league_btn').click(function() {
+			     $('.comp_container').fadeToggle();
+			 });
+		 });
+	 </script>
+	 
+	  
+</body>
+
+</html>

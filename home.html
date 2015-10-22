@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	 <title>Willkommen auf guide-cloud.de</title>
+	 <!-- Latest compiled and minified CSS (CDN) -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <!-- Optional theme -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+     <!-- Eigene CSS Datei -->
+	 <link rel="stylesheet" href="CSS/style_a.css" type="text/css">
+	 <!--Google Fonts-->
+	 <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+ </head>
+ 
+     <div class="container-fluid">
+	 <!-- row 1: Navigationbar -->
+	     <div class="row">
+		     <nav class="navbar navbar-default navbar-inverse nav_bar" role="navigation">
+			     <div class="navbar-header">
+				     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+					     <span class="sr-only">Toggle Navigation</span>
+					     <span class="icon-bar"></span>
+					     <span class="icon-bar"></span>
+					     <span class="icon-bar"></span>
+					 </button>
+				 </div>
+				 <div class="collapse navbar-collapse" id="collapse">
+				     <ul class="nav navbar-nav nav_bar">
+					     <li><a class="active_btn" href="home.html">Startseite</a></li>
+						 <li class="dropdown spiele_btn"><a href="#" data-toggle="dropdown">Spiele <span class="caret"></span></a>
+						     <ul class="dropdown-menu dropdown_menu"> <!--Über 480px KEIN dropdown menu mehr sondern einen div mit Bildern-->
+						         <li><a href="lol.html" class="lol_a_text"><span><img src="bilder/lol_logo.png" class="img-responsive game_icon lol_icon"></span>League of Legends</a></li>               
+								 <li class="disabled"><a href="#"><span><img src="RES/bilder/hs_logo.png" class="img-responsive game_icon"></span>Hearthstone</a></li>
+								 <li class="disabled"><a href="#"><span><img src="RES/bilder/wow_logo.png" class="img-responsive game_icon wow_icon"></span>World of Warcraft</a></li>
+								 <li class="disabled"><a href="#"><span><img src="RES/bilder/sc2_logo.png" class="img-responsive game_icon"></span>Starcraft 2</a></li>
+								 <li class="disabled"><a href="#"><span><img src="RES/bilder/hots_logo.png" class="img-responsive game_icon"></span>Heroes of the Storm</a></li>
+						     </ul>
+						 </li>
+						 <li><a href="#">Guide-Cloud Cup</a></li>
+						 <li><a href="#">Streams</a></li>
+						 <li class="dropdown spiele_btn"><a href="#" data-toggle="dropdown">Entertainment <span class="caret"></span></a>
+						     <ul class="dropdown-menu dropdown_menu">
+						         <li><a href="#">Plays / Montagen</a></li>               
+								 <li><a href="#">Fanarts / Cosplays</a></li>
+								 <li><a href="#">Memes</a></li>
+						     </ul>
+						 </li>
+						 <li class="reg_btn"><a class="register_btn" href="#">REGISTRIEREN</a></li>
+						 <li class="login_btn"><a class="log_btn" href="#">EINLOGGEN</a></li>
+					 </ul>
+				 </div>
+			 </nav>
+		 </div>
+		 <!--Login Container-->
+		 <div class="login_container">
+		     <form action="home.html" method="get">
+		         <fieldset class="login_field">
+		             <p>
+			             <label for="user_name">E-mail:</label>
+				         <input type="email" name="email" id="e_mail">
+			         </p>
+			         <p>
+			             <label for="pw_input">Passwort:</label>
+				         <input type="password" name="pw_input" id="pw_input">
+			         </p>
+			     </fieldset>
+			     <input class="cancel_input" type="submit" value="Abbrechen">
+		         <input class="submit_input" type="submit" value="Einloggen">
+		     </form>
+		 </div>
+		 
+		 <!--row 2: header-->
+		 <div class="row">
+		     <div class="header col-sm-12">
+			     <img src="bilder/gcLogoTrans.png" class="img-responsive gc_pic"></img>
+				 <h1 class="gc_heading">Guide-Cloud</h1>
+				 <div class="clearfix"></div>
+			 </div>
+		 </div>
+		 
+		 <!--Main Content-->
+		 <div class="row">
+		     <div class="col-sm-6 col-sm-offset-1 main_content">
+			     <a class="heading_link" href="#"><h2 class="article_heading">"Kennst du schon...???"</h2></a>
+				 <div class="col-sm-12 article_pic_div" onclick="location" href="#" style="cursor: pointer">
+				     <img src="RES/bilder/fragezeichen.png" class="article_pic img-responsive">
+					 <img src="RES/bilder/fragezeichen.png" class="article_pic img-responsive">
+					 <img src="RES/bilder/fragezeichen.png" class="article_pic img-responsive">
+				 </div>
+				 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			     <a class="heading_link" href="#"><h2 class="article_heading f2p_heading">League of Legends, Champion-Rotation, 27.10.2015 - 04.11.2015</h2></a>
+			
+				 <div class="row">
+				     <div class="col-sm-12 f2p_container">
+				         <div class="col-sm-2 col-sm-offset-1 col-xs-6 champ_div champ_1" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 champ_div champ_2" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 champ_div champ_3" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 champ_div champ_4" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 champ_div champ_5" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 col-sm-offset-1 champ_div champ_6" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 champ_div champ_7" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 champ_div champ_8" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 champ_div champ_9" onclick="location" style="cursor: pointer">
+					     </div>
+					     <div class="col-sm-2 col-xs-6 champ_div champ_10" onclick="location" style="cursor: pointer">
+					     </div>
+			         </div>
+				 </div>
+				 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			 </div>
+			 <!--Side Content-->
+			 <div class="col-sm-2 side_content">
+			     <h3 class="side_heading">Willkommen auf guide-cloud.de</h3>
+				 <hr></hr>
+				 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                 <h3 class="side_heading">Streams</h3>
+				 <hr></hr>
+				 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			 </div>
+			 <!--Reklame Content-->
+			 <div class="col-sm-2 reklame_content">
+			     <h3 class="side_heading">Reklame</h3>
+			     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</p>
+			 </div>
+		 </div>
+		 
+		 <!--Bottom Navigationbar-->
+		 <div class="row">
+		     <nav class="navbar navbar-default navbar-inverse nav_bar" role="navigation">
+			     <div class="navbar-header">
+				     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse1">
+					     <span class="sr-only">Toggle Navigation</span>
+					     <span class="icon-bar"></span>
+					     <span class="icon-bar"></span>
+					     <span class="icon-bar"></span>
+					 </button>
+				 </div>
+				 <div class="collapse navbar-collapse" id="collapse1">
+				     <ul class="nav navbar-nav nav_bar">
+					     <li><a>&copyGuide-Cloud</a></li>
+						 <li><a href="#">Forum</a></li>
+						 <li><a href="#">Über Uns</a></li>
+						 <li><a href="#">Kontakt</a></li>
+                         <li><a href="#">Datenschutz</a></li>
+						 <li><a href="#">Archiv</a></li>
+                     </ul>	
+                 </div>	
+			 </nav>
+		 </div>
+		 <a href="#"><img src="RES/bilder/fb_btn.png" class="fb_like_btn img-responsive"></a>
+	
+				 
+		 
+		 
+	 </div>
+ 
+     
+ 
+ <body>
+ 
+     <!-- jQuery Google CDN -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <!-- Latest compiled and minified JavaScript (CDN) -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	 <!-- My personal Javascript -->
+	 <script type="text/javascript">
+	     $(document).ready(function() {
+		     $('.login_btn').click(function() {
+			     $('.login_container').fadeToggle();
+			 });
+		 });
+	 </script>
+</body>
+
+</html>
