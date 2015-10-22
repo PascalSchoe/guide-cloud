@@ -1,0 +1,71 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Registrierung</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/regStyle.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    <form action="Php/handleRequests.php" method="post" id="registerBox">
+        <div class="form-group">
+            <label for="firstname">Vorname</label>
+            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="..." required>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Nachname</label>
+            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="...">
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="..." required>
+        </div>
+        <div class="form-group">
+            <label for="dateOfBirth">Geburtstag</label>
+            <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="...">
+        </div>
+        <div class="form-group">
+            <label for="country">Land</label>
+            <input type="text" class="form-control" name="country" id="country" placeholder="...">
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" name="state" id="state" placeholder="...">
+        </div>
+        <div class="form-group">
+            <label for="city">Stadt</label>
+            <input type="text" class="form-control" name="city" id="city" placeholder="...">
+        </div>
+        <div class="form-group">
+            <label for="zipCode">Zipcode</label>
+            <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="...">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control"  name="email" id="email" placeholder="..." required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="..." required>
+        </div>
+        <div class="form-group">
+            <label for="test">hacki unso</label>
+            <input type="text" class="form-control" name="test" id="test" placeholder="uuups!" required>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="radio" name="gender" value="female"> weiblich
+            </label>
+            <label>
+                <input type="radio" name="gender" value="male"> männlich
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default" name="regBtn">Registrieren</button>
+    </form>
+    </body>
+</html>

@@ -2,9 +2,42 @@
 
     include('usefulStuff.php');
     include('riotAPI.php');
+    include('user.php');
+    include('userTable.php');
     
     $rApi = new RiotApi("euw");
-/*    
+
+
+    if(isset($_POST['regBtn']))
+    {
+
+
+        echo "Jup !";
+        /*
+        $user = new User();
+        $user->registerUser(
+            $_POST['firstnameInput'],
+            $_POST['emailInput'],
+            $_POST['passwordInput'],
+            $_POST['usernameInput'],
+            $_POST['lastnameInput'],
+            $_POST['dobInput'],
+            $_POST['genderInput'],
+            $_POST['countryInput'],
+            $_POST['stateInput'],
+            $_POST['cityInput'],
+            $_POST['zipcodeInput']
+        );
+    */
+        $userT = new UserTable();
+
+        $userT->insertRecord($_POST);
+    }
+
+
+
+
+/*
     //$request = $rApi ->getStaticData("specificItem","3089");
     $request = $rApi ->getStaticData("items","");
     
@@ -30,7 +63,7 @@
             
         }
     }
-  */
+
 
     if(isset($_GET["getStaticData"]))
     {
@@ -61,4 +94,5 @@
                break;
        }
     }
+  */
 ?>
