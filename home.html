@@ -49,7 +49,7 @@
 								 <li><a href="#">Memes</a></li>
 						     </ul>
 						 </li>
-						 <li class="reg_btn"><a class="register_btn" href="#">REGISTRIEREN</a></li>
+						 <li class="reg_btn"><a class="register_btn" href="registration.html">REGISTRIEREN</a></li>
 						 <li class="login_btn"><a class="log_btn" href="#">EINLOGGEN</a></li>
 					 </ul>
 				 </div>
@@ -57,19 +57,19 @@
 		 </div>
 		 <!--Login Container-->
 		 <div class="login_container">
-		     <form action="home.html" method="get">
+		     <form action="Php/handleRequests.php" method="post">
 		         <fieldset class="login_field">
 		             <p>
-			             <label for="user_name">E-mail:</label>
+			             <label for="e_mail">E-mail:</label>
 				         <input type="email" name="email" id="e_mail">
 			         </p>
 			         <p>
 			             <label for="pw_input">Passwort:</label>
-				         <input type="password" name="pw_input" id="pw_input">
+				         <input type="password" name="password" id="pw_input">
 			         </p>
 			     </fieldset>
 			     <input class="cancel_input" type="submit" value="Abbrechen">
-		         <input class="submit_input" type="submit" value="Einloggen">
+		         <input class="submit_input" type="submit" value="Einloggen" name="loginBtn">
 		     </form>
 		 </div>
 		 

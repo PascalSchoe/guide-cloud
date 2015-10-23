@@ -2,49 +2,38 @@
 
 abstract class BaseTable
 {
-    protected $tablename;
     protected $fieldList;
     protected $serverResponse;
     protected $errors;
+    protected $dbm;
+    protected $signature;
 
     /*
      * hier  musss ich mal schauen wie ich das hinbekomme:
      *
      * kann man die Where clause als ? substituieren oder nur teile der Where-clause ?
+     * Diese Funktion soll für alle  Fälle funktionieren, egal welcher parameter als suchkriterium eingegeben wird
+     * egal welche Table abgefragt wird!
+     * Hier bei ist zu beachten das die Anzahl an feldern variable ist ....
+     *
+     * Zu erst müsste eine predesignedQuery ausgewähl und prepared werden, anschließen müssten die variablen Parameter gebunden werden...
+     *
+     * SELECT * FROM table (WHERE)
+     *
+     * Um die projektion zu filtern gäbe es zwei möglichkeiten:
+     *  > Alles aus der Row zurückgeben lassen und anschließend nur Entsprechende Fields auslesen
+     *  > Oder Query : SELECT ? FROM table (WHERE)
+     *          > Hierbei wird aber dem zu viele parameter übergeben und die Query lässt zu viele möglichkeiten des missbrauchs zu
      */
-    public function getData($where)
-    {
-        $this->serverResponse = array();
+    abstract function getData($searchCol, $value);
 
-        if(empty($where))
-        {
-            
-        }
-    }
-    public function insertRecord($fieldArray)
-    {
-        $evilUwe= "";
-        //Hier muss die übergabe des $_POST gefiltert werden mit hilfe der $fieldList
-        //---> unset array[now]  if !in_arrayFieldList
-        //print_r($fieldArray);
-        foreach($fieldArray as $field => $fieldValue)
-        {
-            if(!in_array($field,$this->fieldList))
-            {
-                echo "Ne man das  gehört hier echt nicht rein!..." . $fieldArray[$field] ."... raus ey!<br />";
-            }
-            else
-            {
-                echo "Moinsen: " . $fieldArray[$field]. "<br />";
-            }
-        }
-    }
-    public function updateRecord($fieldArray)
-    {
+    abstract function insertRecord($obj);
 
-    }
-    public function deleteRecord($fieldArray)
-    {
+    abstract function updateRecord($oID, $changeCol,$newValue);
+
+    abstract function deleteRecord($fieldArray);
+
+    public function checkInputs(){
 
     }
 }

@@ -7,13 +7,17 @@
     
     $rApi = new RiotApi("euw");
 
+    if(isset($_POST['loginBtn']))
+    {
+        $user = new User();
+        $user->login($_POST['email'],$_POST['password']);
+        //header("Location: ../home.html");
+        exit;
+    }
 
     if(isset($_POST['regBtn']))
     {
-
-
-        echo "Jup !";
-        
+        echo " hier war ich aber auch drinne";
         $user = new User();
         $user->registerUser(
             $_POST['firstname'],

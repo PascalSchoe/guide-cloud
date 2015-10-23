@@ -23,7 +23,10 @@ class User
     private $email;
     private $password;
 
-    public $remoteAccess;
+    public $remoteAccess=false;
+
+    private $userTable;
+    private $sys;
 
     public function __construct()
     {
@@ -65,24 +68,15 @@ class User
         $this->password = $sys->createPassword($email,$pw);
         unset($sys);
 
-        $dbm = new DBManager($this);
-        $dbm->prepareQuery("addUser");
-        $dbm->doQuery();
-        unset($dbm);
+        $ut = new UserTable($this);
+        $ut->insertRecord($this);
+        unset($ut);
     }
 
     public function login($email,$password)
     {
-        $sys = new System();
-        if($sys->checkPassword($email,$password))
-        {
-            echo "Willkommen du hast dich erfolgreich eingeloggt...";
-            $this->loadUserData($email);
-        }
-        else
-        {
-            echo "Die angegebene Password/Email - Kombination ist uns unbekannt...";
-        }
+        $sys = new System($this);
+        $sys->checkPassword($email,$password);
         unset($sys);
 
     }
@@ -90,19 +84,20 @@ class User
     // Eig sollte hier die ID verwendet  werden da diese den Pk darstellt
     public function loadUserData($email)
     {
-        $dbm = new DBManager($this);
-        $dbm->prepareQuery("loadUserData",$email);
-        $dbm->doQuery();
-        unset($dbm);
+        $this->userTable = new UserTable($this);
+        $this->userTable->getData("Email",$email);
+        unset($this->userTable);
     }
-    public function savaUserData($changedField)
+    public function saveUserData($changedCol,$newValue)
     {
-        echo __CLASS__ . " - saveUserData()<br />";
+        if(!$this->remoteAccess)
+        {
+            echo __CLASS__ . " - saveUserData()<br />";
 
-        $dbm = new DBManager($this);
-        $dbm->prepareQuery("modifyUser"+ $changedField,$this->uID);
-        $dbm->doQuery();
-        unset($dbm);
+            $this->userTable = new UserTable();
+            $this->userTable->updateRecord($this->uID, $changedCol, $newValue);
+            unset($this->userTable);
+        }
     }
     public function __toString()
     {
@@ -125,6 +120,7 @@ class User
         echo "state: " .$this->state . "<br />";
         echo "zicode: " .$this->zip . "<br />";
         echo "email: " .$this->email . "<br />";
+        echo "password: " .$this->password . "<br />";
     }
 
     //__________Setter
@@ -146,6 +142,7 @@ class User
     public function setDor($dor)
     {
         $this->dor = $dor;
+
     }
     public function setEmail($eml)
     {
@@ -159,51 +156,62 @@ class User
     {
         $this->fname = $fn;
 
-        if(!$this->remoteAccess) $this->savaUserData("FName");
+        $this->saveUserData("Firstname", $fn);
     }
     public function setLastname($ln)
     {
         $this->lname = $ln;
-        if(!$this->remoteAccess)$this->savaUserData("LName");
+        $this->saveUserData("Lastname",$ln);
     }
     public function setCountry($ctry)
     {
         $this->country = $ctry;
-        if(!$this->remoteAccess)$this->savaUserData("Country");
+        $this->saveUserData("Country",$ctry);
     }
     public function setState($st)
     {
         $this->state = $st;
-        if(!$this->remoteAccess)$this->savaUserData("State");
+        $this->saveUserData("State",$st);
 
     }
     public function setCity($c)
     {
         $this->city = $c;
-        if(!$this->remoteAccess)$this->savaUserData("City");
+        $this->saveUserData("City",$c);
 
     }
     public function setZip($z)
     {
         $this->zip = $z;
-        if(!$this->remoteAccess)$this->savaUserData("Zip");
+        $this->saveUserData("ZIP",$z);
     }
     public function setGender($g)
     {
         $this->gender = $g;
-        if(!$this->remoteAccess)$this->savaUserData("Gender");
+        $this->saveUserData("Gender",$g);
     }
     public function setPassword($pw)
     {
-        $this->password = $pw;
-        if(!$this->remoteAccess)$this->savaUserData("PW");
+
+        if(!$this->remoteAccess)
+        {
+            $sys = new System();
+            $this->password = $sys->createPassword($this->email, $pw);
+            unset($sys);
+
+            $this->saveUserData("Password", $this->password);
+        }
+        else
+        {
+            $this->password = $pw;
+        }
     }
     public function setDob($dob)
     {
         //ONLY ONCE !
         if($this->dob == null) {
             $this->dob = $dob;
-            if (!$this->remoteAccess) $this->savaUserData("DOB");
+            if (!$this->remoteAccess) $this->saveUserData("DOB");
         }
         else
         {
@@ -287,4 +295,6 @@ $andrew = new User();
 $andrew->login('aclau@guide-cloud.de','a');
 $andrew->setFirstname("andy");
 */
+$nU = new User();
+
 ?>

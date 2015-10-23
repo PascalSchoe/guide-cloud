@@ -3,8 +3,7 @@ require_once("../private/serverConfig.php");
 
 class DBManager
 {
-    private $mysqli;
-    private $sql;
+    public $mysqli;
 
     private $callOrign;
     private $operation;
@@ -31,8 +30,10 @@ class DBManager
      *
      * @var array This Array contains a bunch of Sql-Queries, it saves processing time and prevents SQL-Injection
      */
-    private $predesignQueries = array(
+    /*
+    private $predesignedQueries = array(
         "addUser"           => "INSERT INTO Users (firstname, lastname,username,dateOfBirth,dateOfReg,gender,country,state,city,zipCode,email,password) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+        "insertRecord"           => "INSERT INTO ? ? VALUES ?",
         "modifyUserFName"   => "UPDATE Users SET firstname = ? WHERE userID = ?",
         "modifyUserLName"   => "UPDATE Users SET lastname = ? WHERE userID = ?",
         "modifyUserDOB"     => "UPDATE Users SET dateOfBirth = ? WHERE userID = ?",
@@ -43,9 +44,33 @@ class DBManager
         "modifyUserZIP"     => "UPDATE Users SET zipCode = ? WHERE userID = ?",
         "modifyUserPW"      => "UPDATE Users SET password = ? WHERE userID = ?",
         "loadUserData"      => "SELECT * FROM Users WHERE email = ?",
+        "getData"      => "SELECT ? FROM ? WHERE ?",
         "getUserPW"         => "SELECT password FROM Users WHERE email = ?"
     );
+    */
 
+    private $predesignedQueries = array(
+        "UserQueries" => array(
+            "findUserByID"          => "SELECT * FROM Users WHERE userID=?",
+            "findUserByEmail"       => "SELECT * FROM Users WHERE email=?",
+            "findUserByUsername"    => "SELECT * FROM Users WHERE username=?",
+            "addUser"               => "INSERT INTO Users VALUES('null',?,?,?,?,?,?,?,?,?,?,?,?)",
+            "modifyUserFirstname"   => "UPDATE Users SET firstname = ? WHERE userID = ?",
+            "modifyUserLastname"    => "UPDATE Users SET lastname = ? WHERE userID = ?",
+            "modifyUserDOB"         => "UPDATE Users SET dateOfBirth = ? WHERE userID = ?",
+            "modifyUserGender"      => "UPDATE Users SET gender = ? WHERE userID = ?",
+            "modifyUserCountry"     => "UPDATE Users SET country = ? WHERE userID = ?",
+            "modifyUserState"       => "UPDATE Users SET state = ? WHERE userID = ?",
+            "modifyUserCity"        => "UPDATE Users SET city = ? WHERE userID = ?",
+            "modifyUserZIP"         => "UPDATE Users SET zipCode = ? WHERE userID = ?",
+            "modifyUserPassword"    => "UPDATE Users SET password = ? WHERE userID = ?",
+            "getUserPassword"       => "SELECT password FROM Users WHERE email = ?"
+
+        ),
+        "GuideQueries" => array(
+            //Here will be all the queries for Guides such as "findGuideByID ...etc
+        )
+    );
     public $stmt;
 
     public function __construct($callOrign=null)
@@ -69,14 +94,39 @@ class DBManager
 
     public function __destruct()
     {
-        $this->stmt->close();
+
+        if(isset($this->stmt))
+        {
+            $this->stmt->close();
+        }
         $this->mysqli->close();
     }
 
+    /**
+     * This Method builds the SQL-Statement using the parameters given by call. It is called only from X-Table classes.
+     *
+     *DEPRECATED!
+     *
+     * @param $request String Contains an index of the predesignQueries Array
+     * @param $fieldArray Array Contains all information to be stored in the DB
+     * @param $whereClause Integer/String If specified selects a certain Record
+     */
+    public function prepareQuery($request,$fieldArray)
+    {
+        $this->stmt = $this->mysqli->prepare($this->predesignedQueries[$request]);
+        $this->operation = $request;
 
+        foreach($fieldArray as $key => $value)
+        {
+
+        }
+    }
+
+
+    /*
     public function prepareQuery($queryToDo,$search_key=null)
     {
-        $this->stmt = $this->mysqli->prepare($this->predesignQueries[$queryToDo]);
+        $this->stmt = $this->mysqli->prepare($this->predesignedQueries[$queryToDo]);
         $this->operation = $queryToDo;
         echo $queryToDo . " wurde übergeben, Suchkriterium ist: $search_key<br />";
         switch($queryToDo) {
@@ -178,7 +228,7 @@ class DBManager
                 echo"Error - PrepareQuery!...";
         }
     }
-
+*/
     /**
      * Used to do the actual query on database.
      *
@@ -245,6 +295,11 @@ class DBManager
             default:
                 echo"Error - Pimmelgewitter!...";
         }
+    }
+
+    public function getPredesignedQueries()
+    {
+        return $this->predesignedQueries;
     }
 }
 ?>
