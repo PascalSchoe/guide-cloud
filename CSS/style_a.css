@@ -244,6 +244,10 @@ p {
 a.heading_link {
 	 text-decoration: none;
 }
+.heading_link:hover .small_text
+{
+	color:#fff;
+}
 .f2p_heading {
 	 font-size: 1.2em;
 }
@@ -254,8 +258,13 @@ a.heading_link {
 	 margin-bottom: 1em;
 	 border-radius: 0.5em;
 }
+.f2p_description
+{
+	margin: .5em;
+	margin-top: 2em;
+	padding: 1em;
+}
 .champ_div {
-	 width: ;
 	 height: 150px;
 	 background: #111;
 	 float: left;
@@ -268,9 +277,6 @@ a.heading_link {
 }
 .small_text {
 	 color: #F5D900;
-}
-.small_text:hover {
-	 color: #fff;
 }
 
 /*Side Content*/
@@ -389,9 +395,7 @@ a.heading_link {
 .filter {
 	 margin-bottom: 1em;
 	 color: yellow;
-}
-.filter input {
-	 margin-left: 1em;
+	font-size: 1em;
 }
 
 
@@ -474,13 +478,9 @@ a.heading_link {
 	     color: white;
      }
 	 .article_heading {
-		  font-size: 1.3em;
+		 font-size: 1.3em;
 	 }
-}
-@media screen and (min-width:320px) and (max-width:1500px) {
-	 .filter {
-		 display: none;
-	 }
+
 }
 
 

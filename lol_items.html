@@ -14,7 +14,6 @@
 	 <!--Google Fonts-->
 	  <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
  </head>
- 
      <div class="container-fluid">
 	 <!-- row 1: top navigationsbar -->
 	     <div class="row">
@@ -58,65 +57,65 @@
 		 <!--Competetive League of Legends Icon Container-->
 		 <div class="comp_container">
 		     <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/eu_lcs.png" class="comp_pic"></img>
+			     <img src="RES/bilder/eu_lcs.png" class="comp_pic">
 				 <p class="comp_title">EU LCS</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/na_lcs.png" class="comp_pic_na"></img>
+			     <img> src="RES/bilder/na_lcs.png" class="comp_pic_na">
 				 <p class="comp_title">NA LCS</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/lck_logo.png" class="comp_pic_lck"></img>
+			     <img src="RES/bilder/lck_logo.png" class="comp_pic_lck">
 				 <p class="comp_title comp_title_lck">LCK KOREA</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/lpl_logo.png" class="comp_pic"></img>
+			     <img src="RES/bilder/lpl_logo.png" class="comp_pic">
 				 <p class="comp_title comp_title_lpl">LPL CHINA</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/lms_logo.png" class="comp_pic_lms"></img>
+			     <img src="RES/bilder/lms_logo.png" class="comp_pic_lms">
 				 <p class="comp_title comp_title_lms">LMS TAIWAN</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/eu_cs.png" class="comp_pic"></img>
+			     <img src="RES/bilder/eu_cs.png" class="comp_pic">
 				 <p class="comp_title comp_title_euCS">EU CHALLENGER SERIES</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/na_cs.png" class="comp_pic_naCS"></img>
+			     <img src="RES/bilder/na_cs.png" class="comp_pic_naCS">
 				 <p class="comp_title comp_title_euCS">NA CHALLENGER SERIES</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/msi_logo.png" class="comp_pic_msi"></img>
+			     <img src="RES/bilder/msi_logo.png" class="comp_pic_msi">
 				 <p class="comp_title comp_title_msi">MID-SEASON INVITATIONAL</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			      <img src="RES/bilder/wm_logo.png" class="comp_pic_wm"></img>
+			      <img src="RES/bilder/wm_logo.png" class="comp_pic_wm">
 				 <p class="comp_title comp_title_wm">WELTMEISTERSCHAFT</p>
 			 </div>
 		 </div>
 		 
 		 <!--Login Container-->
 		 <div class="login_container">
-		     <form action="home.html" method="get">
-		         <fieldset class="login_field">
-		             <p>
-			             <label for="user_name">E-mail:</label>
-				         <input type="email" name="email" id="e_mail">
-			         </p>
-			         <p>
-			             <label for="pw_input">Passwort:</label>
-				         <input type="password" name="pw_input" id="pw_input">
-			         </p>
-			     </fieldset>
-			     <input class="cancel_input" type="submit" value="Abbrechen">
-		         <input class="submit_input" type="submit" value="Einloggen">
-		     </form>
+			 <form action="Php/handleRequests.php" method="post">
+				 <fieldset class="login_field">
+					 <p>
+						 <label for="e_mail">E-mail:</label>
+						 <input type="email" name="email" id="e_mail">
+					 </p>
+					 <p>
+						 <label for="pw_input">Passwort:</label>
+						 <input type="password" name="password" id="pw_input">
+					 </p>
+				 </fieldset>
+				 <input class="cancel_input" type="submit" value="Abbrechen">
+				 <input class="submit_input" type="submit" value="Einloggen" name="loginBtn">
+			 </form>
 		 </div>
 		 
 		  <!--row 2: header-->
 		 <div class="row">
 		     <div class="header col-sm-12">
-			     <img src="RES/bilder/gcLogoTrans.png" class="img-responsive gc_pic"></img>
+			     <img src="RES/bilder/gcLogoTrans.png" class="img-responsive gc_pic">
 				 <h1 class="gc_heading">Guide-Cloud</h1>
 				 <div class="clearfix"></div>
 			 </div>
@@ -125,7 +124,7 @@
 		 <!--row 3: Main Content-->
 		 <div class="row">
 		     <div class="col-sm-8 col-sm-offset-1 main_content">
-			     <form action="lol.html">
+				 <form action="lol.html">
                      <input class="search_input" type="search" name="search">
                      <input class="search_value" type="submit" value="Suchen">
                  </form>
@@ -139,24 +138,64 @@
 				 <!--Champion Icons-->
 				 <div class="row">
 				     <div class="col-sm-10 col-sm-offset-1 icon_container">
-					 
+
 				 <!--Filter for the items-->
 					 <form class="filter">
-                         <input type="radio" name="sex" value="leben"> Leben
-                         <input type="radio" name="sex" value="magieresistenz"> Magieresistenz
-					     <input type="radio" name="sex" value="rüstung"> Rüstung
-					     <input type="radio" name="sex" value="regeneration"> Regeneration
-					     <input type="radio" name="sex" value="schaden"> Schaden
-					     <input type="radio" name="sex" value="kritische_treffer"> Kritische Treffer
-					     <input type="radio" name="sex" value="angriffstempo"> Angriffstempo
-						 <br>
-					     <input type="radio" name="sex" value="lebensraub"> Lebensraub
-						 <input type="radio" name="sex" value="fähigkeitsstärke"> Fähigkeitsstärke
-						 <input type="radio" name="sex" value="mana"> Mana
-						 <input type="radio" name="sex" value="mana_regeneration"> Mana Regeneration
-						 <input type="radio" name="sex" value="bewegung"> Bewegung
-						 <input type="radio" name="sex" value="traenke/augen"> Tränke/Augen
-                     </form>
+						 <div class="row">
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="life" id="life" value="leben">
+								 <label for="life">Leben</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="mr" id="mr" value="magieresistenz">
+								 <label for="mr">Magieresistenz</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="amor" id="amor" value="rüstung">
+								 <label for="amor">Rüstung</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="reg_life" id="reg_life" value="regeneration">
+								 <label for="reg_life">Regeneration</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="dmg" id="dmg" value="schaden">
+								 <label for="dmg">Angriffstempo</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="crit" id="crit" value="kritische_treffer">
+								 <label for="crit">Kritische Treffer</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="haste" id="haste" value="angriffstempo">
+								 <label for="haste">Angriffstempo</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="lifesteal" id="lifesteal" value="lebensraub">
+								 <label for="lifesteal">Lebensraub</label>
+							 </div>
+							 <div class="col-xs-4">
+								 <input type="checkbox" name="ap" id="ap" value="fähigkeitsstärke">
+								 <label for="ap">Fähigkeitsstärke</label>
+							 </div>
+							 <div class="col-xs-4">
+								 <input type="checkbox" name="mana" id="mana" value="mana"> Mana
+								 <label for="mana">Mana</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="reg_mana" id="reg_mana" value="mana_regeneration">
+								 <label for="reg_mana">Mana Regeneration</label>
+							 </div>
+							 <div class="col-xs-4">
+								 <input type="checkbox" name="movement" id="movement" value="bewegung">
+								 <label for="movement">Bewegung</label>
+							 </div>
+							 <div class="col-xs-4">
+							 	<input type="checkbox" name="consumable" id="consumable" value="traenke/augen">
+								 <label for="consumable">Tränke/Augen</label>
+							 </div>
+						 </div>
+					 </form>
 					     <div class="row">
 						     <div class="col-xs-2 col-sm-1 itemIcon"></div>
 							 <div class="col-xs-2 col-sm-1 itemIcon"></div>
