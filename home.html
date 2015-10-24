@@ -2,18 +2,20 @@
 <html>
 
 <head>
-     <meta charset="UTF-8"/>
+	 <meta charset="UTF-8"/>
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	 <title>Willkommen auf guide-cloud.de</title>
 	 <!-- Latest compiled and minified CSS (CDN) -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-     <!-- Optional theme -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-     <!-- Eigene CSS Datei -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	 <!-- Optional theme -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	 <!-- Eigene CSS Datei -->
 	 <link rel="stylesheet" href="CSS/style_a.css" type="text/css">
 	 <!--Google Fonts-->
 	 <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
 	 <link href='https://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="JS/handleUI.js"></script>
  </head>
  
      <div class="container-fluid">
@@ -49,14 +51,14 @@
 								 <li><a href="#">Memes</a></li>
 						     </ul>
 						 </li>
-						 <li class="reg_btn"><a class="register_btn" href="registration.html">REGISTRIEREN</a></li>
-						 <li class="login_btn"><a class="log_btn" href="#">EINLOGGEN</a></li>
+						 <li class="reg_btn" id="reg_btn"><a class="register_btn" href="registration.html">REGISTRIEREN</a></li>
+						 <li class="login_btn" id="login_btn"><a class="log_btn" href="#">EINLOGGEN</a></li>
 					 </ul>
 				 </div>
 			 </nav>
 		 </div>
 		 <!--Login Container-->
-		 <div class="login_container">
+		 <div class="login_container" id="login_container">
 		     <form action="Php/handleRequests.php" method="post">
 		         <fieldset class="login_field">
 		             <p>
@@ -68,7 +70,7 @@
 				         <input type="password" name="password" id="pw_input">
 			         </p>
 			     </fieldset>
-			     <input class="cancel_input" type="submit" value="Abbrechen">
+				 <input class="cancel_input" id="cancelLogin" type="button" value="Abbrechen">
 		         <input class="submit_input" type="submit" value="Einloggen" name="loginBtn">
 		     </form>
 		 </div>
@@ -176,13 +178,7 @@
      <!-- Latest compiled and minified JavaScript (CDN) -->
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	 <!-- My personal Javascript -->
-	 <script type="text/javascript">
-	     $(document).ready(function() {
-		     $('.login_btn').click(function() {
-			     $('.login_container').fadeToggle();
-			 });
-		 });
-	 </script>
+
 </body>
 
 </html>
