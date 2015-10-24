@@ -1,19 +1,21 @@
 $(document).ready(function(){
+
     /**
      * BUTTONS
      */
+
+
+
 
     /**
      * OPENING Elements
      */
     $('#login_btn').on('click',function() {
         $('#login_container').fadeIn();
-        console.log("Es wird das login fenster geöffnet!");
     });
 
     $('#league_btn').on('click', function() {
         $('#comp_container').fadeIn();
-        console.log("Es wird das League fenster geöffnet!");
     });
 
 
