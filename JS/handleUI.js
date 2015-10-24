@@ -37,7 +37,8 @@ $(document).ready(function(){
         {
             $('#login_container').fadeOut();
         }
-        else if($('#comp_container').is(':visible') && !$('#comp_container').is(e.target) && !$('#comp_container').has(e.target).length && !$(e.target).is('#league_btn'))
+        //Beware of caret !
+        else if($('#comp_container').is(':visible') && !$('#comp_container').is(e.target) && !$('#comp_container').has(e.target).length && !$(e.target).is('#league_btn') && !$('#league_btn').has(e.target).length)
         {
             $('#comp_container').fadeOut();
         }
