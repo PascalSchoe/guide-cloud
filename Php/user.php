@@ -295,6 +295,5 @@ $andrew = new User();
 $andrew->login('aclau@guide-cloud.de','a');
 $andrew->setFirstname("andy");
 */
-$nU = new User();
 
 ?>

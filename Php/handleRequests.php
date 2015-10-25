@@ -32,12 +32,31 @@
             $_POST['city'],
             $_POST['zipCode']
         );
+
+    }
+
+    if(isset($_POST['getRiotContents']))
+    {
+        $answer="";
+
+        switch($_POST['getRiotContents'])
+        {
+            case "F2PC":
+                $champions = file_get_contents('http://ddragon.leagueoflegends.com/cdn/5.20.1/data/de_DE/champion.json');
+                $f2pChampions = $rApi->getF2PChampions();
+                echo $f2pChampions;
+                break;
+            default:
+                return __FILE__ . "Fehler in der getRiotContents Abfrage...";
+        }
+    }
+
     /*
         $userT = new UserTable();
 
         $userT->insertRecord($_POST);
 		*/
-    }
+
 
 
 
