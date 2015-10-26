@@ -83,60 +83,128 @@
 
         public function getF2PChampions()
         {
-            return file_get_contents('https://euw.api.pvp.net/api/lol/euw/v1.2/champion?freeToPlay=true&api_key=bfb0aa10-8915-4713-aa6f-cf24c8a05700');
+            $f2pc = json_decode(file_get_contents('https://euw.api.pvp.net/api/lol/euw/v1.2/champion?freeToPlay=true&api_key=bfb0aa10-8915-4713-aa6f-cf24c8a05700'),true);
+            $f2pcData = array();
+            //print_r($f2pc["champions"]);
+            foreach($f2pc["champions"] as $champ)
+            {
+
+                $cID = $champ["id"];
+                $name = $this->getChampionsData("name","$cID");
+                $imageData = $this->getChampionsData("image","$cID");
+
+                //echo $champ["id"] . " ist: ". $name . "<br />";
+
+                $f2pcData[] = array(
+                    "cID" => $cID,
+                    "imageData" => array(
+                    "full"=>$imageData["full"],
+                    "sprite"=>$imageData["sprite"],
+                    "group"=>$imageData["group"],
+                    "x"=>$imageData["x"],
+                    "y"=>$imageData["y"],
+                    "w"=>$imageData["w"],
+                    "h"=>$imageData["h"]
+                    )
+            );
+                /**
+                 * Hier muss ich ein Array bauen das folgende Struktur hat:
+                 *  >F2pData
+                 *      > Index Champ(z.b. 0) => array()
+                 *          > "imageData" => array("sprite" =>val, koords....)
+                 *          > später  eventuell Champion information!
+                 */
+            }
+
+            //print_r($f2pcData);
+            return json_encode($f2pcData);
         }
 
         //______________SEARCH_KI__________________________
 
         /**
+         * Welche Suchen werden stattfinden ?
+         *      > Suche eines Champions mit Hilfe von der ID oder dem Namen:
+         *          > Ausgabe nur der ID / Namen
+         *          > Ausgabe des gesamten Arrays des Champions
+         *          > Ausgabe der Image Daten
+         *          > Ausgabe der Infos
+         *          > Ausgabe der Stats
+         *          > Ausgabe der Tags
+         *          > Ausgabe der Champres
+         *      > Suche eines Champs mit Hilfe von Tags
+         *          > Hier wird nicht nach dem ersten Treffer die Suche beendet es sollen alle Champs die eine Entsprechung haben ausgegeben werden
+         *
+         *
+         * -->UMSETZUNG DERZEIT
+         *  Man kann suchen mit der id(Name ohne sonderzeichen), dem Namen und dem Key (z.b. 53 )
+         *
          * @param $property string Specifies the desired property
          * @param $condition string Specifies the value of the desired property
          */
-        public function getChampionsData($property,$condition)
+        public function getChampionsData($wantedProperty,$condition)
         {
             /**
              * Diese Funktion lädt ein JSON-Objekt zu Champions und durchsucht dieses nach gewissen Gesichtspunkten...
              */
 
-            switch($property)
-            {
-                case "key":
-            }
-
             $championsExtended = $this->getChampions();
 
             $championsExtended= json_decode($championsExtended,true)["data"];
 
-            //print_r($championsExtended);
+            $foundChampion = false;
 
             foreach($championsExtended as $champion)
             {
                 foreach($champion as $prop => $val)
                 {
+                    if(($prop === "id" || $prop === "name" || $prop === "key")&& $val === $condition)
+                    {
+                        if(is_array($champion[$wantedProperty]))
+                        {
+                            //print_r($champion[$wantedProperty]);
+                        }
+                        else
+                        {
+                            //echo $champion[$wantedProperty];
+                        }
+
+                        return $champion[$wantedProperty];
+                    }
+
                     /**
                      * Occurs when reaching:  info, image, tags and stats
+                     *
+                     * UNUSED maybe used in future if i want to return sprite or x/y coords, now this function returns all image-data via array....
                      */
-                    if(is_array($val))
+                    if($prop !== $wantedProperty && is_array($val))
                     {
                         foreach($val as $k => $v)
                         {
-                            echo $k . " : " . $v . "<br />";
+                            if($k === $wantedProperty && $foundChampion)
+                            {
+                                //echo "Deine Suche ergab: " . $val[$wantedProperty];
+                                return;
+                            }
                         }
                     }
-                    else
-                    {
-                        echo $prop . " : " . $val . "<br />";
-                    }
                 }
-                echo "___________________________________ <br />";
+            }
+
+            if(!$foundChampion)
+            {
+                echo "Leider kein Treffer für deinen Suchbegriff...";
             }
 
         }
 
     }
+/*
+$riot = new RiotAPI("euw");
+$test = $riot->getChampionsData("name","42");
+echo $test;
+*/
 
-$riot = new RiotAPI("EUW");
-$riot->getChampionsData("key", "266");
 ?>
 
 

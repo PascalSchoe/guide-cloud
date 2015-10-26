@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    displayF2PChamps();
+});
+
+function displayF2PChamps()
+{
     $.ajax(
         {
             url: 'Php/handleRequests.php',
@@ -6,21 +11,23 @@ $(document).ready(function(){
             {
                 'getRiotContents': 'F2PC'
             },
-            type: 'POST',
-            timeout: 2000,
+            type: 'get',
+            timeout: 10000,
             dataType: 'text',
             success: function(data)
             {
-                /**
-                 * Hier muss abgefragt werden welche Champs diese woche f2p sind
-                 * anschließend muss anhand der id der name aufgelöst und
-                 *
-                 * @type {any}
-                 */
-
-                var d = JSON.parse(data);
-                //console.log("Die Daten wurden angefordert und auch erhalten... " + d.data.Warwick.image.sprite + " ist das zu verwendende Sprite und ");
-                //$('#f2p_container').html(d);
+                var counter = 0;
+                var JSONArray = $.parseJSON( data );
+                $.each(JSONArray, function(){
+                    $("#champ_" + counter).css({
+                        "background-image":"url('RES/IMG/champIcons/" + this.imageData.sprite +"')",
+                        "background-repeat":"no-repeat",
+                        "background-position": "-" + this.imageData.x + "px -" + this.imageData.y + "px",
+                        "width": this.imageData.w + "px",
+                        "height": this.imageData.h + "px"
+                    });
+                    counter++;
+                });
             }
         });
-});
+}
