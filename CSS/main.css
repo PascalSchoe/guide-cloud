@@ -1,8 +1,10 @@
-body
-{
-   margin: 0 auto; 
-   font-size: 100%;
-}
+/*Generel*/
+body {
+	 margin: 0;
+	 padding: 0;
+	 background: #333;
+}   
+
 
 
 
@@ -14,11 +16,8 @@ gute Farbe #1e222b und für schriften #FFCD03
 */
 
 
-body
-{
-    background: #111;
-    color: #ddd;
-}
+
+
 #header
 {
     background: #222;
@@ -272,29 +271,7 @@ RNDSTUFF
 ----------------------
 */
 
-h1
-{
-    color: #FFCD03;
-    font-size: 2.0em;
-    margin-bottom: 50px;
-}
-h2
-{
-    color: #FFCD03;
-    font-size: 1.5em;
-}
-h3
-{
-    color: #FFCD03;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 1em;
-}
-h4
-{
-    color: #FFCD03;
-    font-size: 1em;
-}
+
 .socialMediaIcons
 {
     margin: 0.5em;

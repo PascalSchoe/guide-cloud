@@ -1,32 +1,194 @@
+/*Präfixe*/
 *
 {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
-
 }
-.editorComponents
-{
-    background: #333;
-}
-#guideInfos p{
-    text-align: left;
-}
-.editorComponents
-{
-    width: 95%;
-    border: 1px solid #000;
-    border-radius: 5px;
-    margin-bottom: 10%;
-    margin-left: 1%;
-    padding: 15px;
-}
-
+/*Generell*/
 h1
 {
-    text-align: center;
+    color: #FFCD03;
+    font-size: 3em;
+	font-weight: bold;
 }
+h2
+{
+    color: #FFCD03;
+    font-size: 1.5em;
+	font-weight: bold;
+	margin: 1.2em;
+	text-align: center;
+}
+h3
+{
+    color: #FFCD03;
+    font-size: 1.2em;
+    font-weight: bold;
+	margin: 1em;
+	text-align: center;
+}
+h4
+{
+    color: #FFCD03;
+    font-size: 1em;
+}
+
+/*Umliegende Divs*/
+
+.wrapper {
+	 background: #222;
+	 border-radius: 0.5em;
+	 margin-top: 2em;
+}
+.attitudes {
+	 background: #111;
+	 border-radius: 0.5em;
+	 border: 0.2em solid #000;
+	 margin-top: 2em;
+}
+.attitudes h1 {
+	 text-align: left;
+}
+.attitudes p {
+	 font-size: 2em;
+}
+.attitudes label {
+	 width: 7em;
+	 text-align: right;
+}
+.attitudesField {
+	 text-align: center;
+	 margin-bottom: 1.5em;
+}
+.attitudesField input {
+	 color: #000;
+}
+.author {
+	 font-weight: bold;
+	 font-size: 1.4em;
+}
+.contentTable {
+	 background: transparent;
+	 border: 0.2em solid #000;
+	 position: relative;
+	 margin-bottom: 1.5em;
+	 border-radius: 0.5em;
+}
+.contentTable ul {
+	 font-size: 1.7em;
+	 text-align: left;
+	 color: #6B81FF;
+}
+.contentTable ul a {
+	 color: #6B81FF;
+}
+.champIcon {
+	 float: left;
+	 margin-top: 1em;
+}
+.champName {
+	 font-weight: bold;
+	 font-size: 1.2em;
+	 float: left;
+	 margin-left: 1em;
+	 margin-top: 3.5em;
+	 color: orange;
+}
+.editorNavigation {
+	 border: 0.2em solid #000;
+	 border-radius: 0.5em;
+	 background: #111;
+	 background-image: url("annieSplashArt.jpg");
+	 background-size: 100% 100%;
+	 margin-top: 2em;
+}
+.navigationText {
+	 font-size: 1.1em;
+	 color: #fff;
+	 margin-top: 1em;
+	 margin-bottom: 0;
+}
+hr {
+	 margin-top: 0;
+	 margin-bottom: 1.5em;
+}
+
+
+
+
+
+
+
+.editorComponents
+{
+    border: 0.2em solid #000;
+    border-radius: 0.5em;
+	background: #111;
+	margin-top: 2.5em;
+}
+
+
+
+
+
+
+
+
+.editorComponents2 {
+	 border: 0.3em solid #000;
+	 border-radius: 0.5em;
+	 background: #333;
+	 margin-top: 0.5em;
+}
+.editorComponents3 {
+	 border: 0.3em solid #000;
+	 border-radius: 0.5em;
+	 background: #333;
+	 margin-top: 2.5em;
+	 margin-bottom: 1.5em;
+}
+#guideInfos p {
+	 float: left;
+	 margin-top: 0.5em;
+}
+#summonerSpell1 {
+	 float: left;
+}
+#summonerSpell2 {
+	 float: left;
+}
+#alternative {
+	 float: left;
+}
+#summonerSpell3 {
+	 float: left;
+}
+#summonerSpell4 {
+	 float: left;
+}
+.summonerSpellContainer, .itemContainers
+{
+    width: 67px;
+    height: 67px;
+    background: #000;
+    cursor: pointer;
+    display: inline-block;
+    border: 0.2em solid #000;
+    border-radius: 0.3em;
+    position: relative;
+	margin-top: 1em;
+}
+.sSpellWrapper, .itemWrappers
+{
+    display: inline-block;
+}
+
+
+
+
+
 img
 {
     max-width: 100%;
@@ -199,21 +361,7 @@ img
     margin: 1%;
 }
 
-.summonerSpellContainer, .itemContainers
-{
-    width: 67px;
-    height: 67px;
-    background: #000;
-    cursor: pointer;
-    display: inline-block;
-    border: 3px solid #000;
-    border-radius: 5px;
-    position: relative;
-}
-.summonerSpellContainer + p
-{
-    margin-top: 15%;
-}
+
 
 .sSpellWrapper, .itemWrappers
 {
@@ -330,8 +478,8 @@ img
 }
 .matchUps_synergiesDescription
 {
-  margin: 50px 0px 25px 0px;
-  width: 80%;
+  margin: 2em 1em;
+  position: relative;
   float: right;
   text-align: left;
 }
