@@ -1,5 +1,13 @@
 $(document).ready(function(){
-    displayF2PChamps();
+    if($("#f2p_container").length)
+    {
+        displayF2PChamps();
+    }
+    if($(".champIcon").length)
+    {
+        displayChampions(null);
+    }
+
 });
 
 function displayF2PChamps()
@@ -30,4 +38,45 @@ function displayF2PChamps()
                 });
             }
         });
+}
+
+function displayChampions(filter)
+{
+    var championDivs = $(".champIcon");
+    var championImages;
+    var counter = 0;
+
+    $.ajax(
+        {
+            url:'Php/handleRequests.php',
+            data:
+            {
+                'getRiotContents': 'allChampImages'
+            },
+            type: 'get',
+            timeout: 10000,
+            dataType: 'text',
+            success: function(data)
+            {
+                var championImages = $.parseJSON( data );
+                console.log(championImages[counter].sprite);
+                $(".champIcon").each(function(){
+                    $(this).css({
+                        "background-image":"url('RES/IMG/champIcons/" +championImages[counter].sprite +"')",
+                        "background-repeat":"no-repeat",
+                        "background-position": "-" + championImages[counter].x + "px -" + championImages[counter].y + "px",
+                        "width": championImages[counter].w+5 + "px",
+                        "height": championImages[counter].h+5 + "px"
+                    });
+                    console.log(counter);
+                    counter++;
+
+                });
+            }
+        }
+    );
+    if(filter === "all")
+    {
+
+    }
 }

@@ -44,6 +44,9 @@
             case "F2PC":
                 echo $rApi->getF2PChampions();
                 break;
+            case "allChampImages":
+                echo $rApi->getAllChampionIcons();
+                break;
             default:
                 return __FILE__ . "Fehler in der getRiotContents Abfrage...";
         }

@@ -81,6 +81,11 @@
             $this->region = $region;
         }
 
+        public function getAllChampionIcons()
+        {
+            //print_r($this->getChampionsData("image"));
+            return json_encode($this->getChampionsData("image"));
+        }
         public function getF2PChampions()
         {
             $f2pc = json_decode(file_get_contents('https://euw.api.pvp.net/api/lol/euw/v1.2/champion?freeToPlay=true&api_key=bfb0aa10-8915-4713-aa6f-cf24c8a05700'),true);
@@ -142,7 +147,7 @@
          * @param $property string Specifies the desired property
          * @param $condition string Specifies the value of the desired property
          */
-        public function getChampionsData($wantedProperty,$condition)
+        public function getChampionsData($wantedProperty,$condition=null)
         {
             /**
              * Diese Funktion lädt ein JSON-Objekt zu Champions und durchsucht dieses nach gewissen Gesichtspunkten...
@@ -150,60 +155,58 @@
 
             $championsExtended = $this->getChampions();
 
-            $championsExtended= json_decode($championsExtended,true)["data"];
+            $championsExtended = json_decode($championsExtended, true)["data"];
+            $outputArr = array();
 
-            $foundChampion = false;
+            if ($condition !== null) {
+                $foundChampion = false;
 
-            foreach($championsExtended as $champion)
-            {
-                foreach($champion as $prop => $val)
-                {
-                    if(($prop === "id" || $prop === "name" || $prop === "key")&& $val === $condition)
-                    {
-                        if(is_array($champion[$wantedProperty]))
-                        {
-                            //print_r($champion[$wantedProperty]);
+                foreach ($championsExtended as $champion) {
+                    foreach ($champion as $prop => $val) {
+                        if (($prop === "id" || $prop === "name" || $prop === "key") && $val === $condition) {
+                            if (is_array($champion[$wantedProperty])) {
+                                //print_r($champion[$wantedProperty]);
+                            } else {
+                                //echo $champion[$wantedProperty];
+                            }
+
+                            return $champion[$wantedProperty];
                         }
-                        else
-                        {
-                            //echo $champion[$wantedProperty];
-                        }
 
-                        return $champion[$wantedProperty];
-                    }
-
-                    /**
-                     * Occurs when reaching:  info, image, tags and stats
-                     *
-                     * UNUSED maybe used in future if i want to return sprite or x/y coords, now this function returns all image-data via array....
-                     */
-                    if($prop !== $wantedProperty && is_array($val))
-                    {
-                        foreach($val as $k => $v)
-                        {
-                            if($k === $wantedProperty && $foundChampion)
-                            {
-                                //echo "Deine Suche ergab: " . $val[$wantedProperty];
-                                return;
+                        /**
+                         * Occurs when reaching:  info, image, tags and stats
+                         *
+                         * UNUSED maybe used in future if i want to return sprite or x/y coords, now this function returns all image-data via array....
+                         */
+                        if ($prop !== $wantedProperty && is_array($val)) {
+                            foreach ($val as $k => $v) {
+                                if ($k === $wantedProperty && $foundChampion) {
+                                    //echo "Deine Suche ergab: " . $val[$wantedProperty];
+                                    return;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            if(!$foundChampion)
+                if (!$foundChampion) {
+                    echo "Leider kein Treffer für deinen Suchbegriff...";
+                }
+
+            }
+            else // if no Condition this method returns an array!
             {
-                echo "Leider kein Treffer für deinen Suchbegriff...";
+                foreach ($championsExtended as $champion)
+                {
+                    $outputArr[] = $champion[$wantedProperty];
+                }
+                return $outputArr;
             }
-
         }
-
     }
-/*
-$riot = new RiotAPI("euw");
-$test = $riot->getChampionsData("name","42");
-echo $test;
-*/
+
+//$riot = new RiotAPI("euw");
+//$test = $riot->getAllChampionIcons("all");
 
 ?>
 
