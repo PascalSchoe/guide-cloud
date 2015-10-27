@@ -125,44 +125,29 @@
 			 </div>
 		 </div>
 		 
-		 <!-- row 1: Main Content -->
+		 <!-- Main Content -->
          <div class="container-fluid">
 		     <div class="row"> <!-- row 1 starts-->
 			     <div class="col-sm-8 col-sm-offset-2 wrapper"><!--wrapper starts-->
-				     <div class="row"><!-- row 2 starts -->
-					     <div class="col-sm-10 col-sm-offset-1 attitudes">
-						     <h1>Guide Editor</h1>
-							 <hr>
-							 <form class="attitudesField">
-		                         <p>
-			                     <label for="title">Guide Titel:</label>
-				                 <input type="text" name="title" id="guide_title">
-			                     </p>
-								 <br>
-			                     <p>
-								 <label for="champions">Champion:</label>
-				                 <input type="text" name="champion" id="championChoice">
-			                     </p>
-								  <br>
-								 <p>
-								 <label for="role">Rolle/Position:</label>
-								 <input type="text" name="role" id="championRole">
-								 </p>
-								 <br>
-								 <p>
-								 <label for="username">Username:</label>
-								 <input type="text" name="username" id="userName">
-								 </p>
-			                 </form>
-						 </div>
-						 <div class="col-sm-10 col-sm-offset-1 editorNavigation">
-						     <h2 class="yourGuideTitle">Hier steht dein Guide Titel ...</h2>
+				     <div class="row"><!-- row 2 starts -->					     
+						 <div class="col-sm-10 col-sm-offset-1 editorNavigation" id="guideInfos">
+						     <h2 id="guideTitle" class="editables">Hier gibst du deinem Guide einen Titel!</h2>
 						     <hr>
 							 <p class="author">Author: Pläscha</p>
-							 <div class="row">
+							 <input class="splashArtInput" type="button" value="Splash Art ändern">
+							 <div class="row"> <!-- row 3 starts -->
 							     <div class="col-sm-4 col-sm-offset-4 contentTable">
 								     <img src="RES/IMG/champIcons/AnnieSquare.png" class="img-responsive champIcon"/>
-								     <p class="champName">Annie - Das Kind der Finsternis</p>
+								     <p class="champName">Annie - <br> Das Kind der Finsternis</p>
+									 <li class="dropdown"><a class="champName role" data-toggle="dropdown">Support<span class="caret"></span></a>
+									     <ul class="dropdown-menu">
+										     <li><a>Support</a></li>
+											 <li><a>ADC</a></li>
+											 <li><a>Midlane</a></li>
+											 <li><a>Jungle</a></li>
+											 <li><a>Toplane</a></li>
+											 <li><a>Generell</a></li>
+										 </ul></li>								     
 									 <div class="clearfix"></div>
 									 <p class="navigationText">Navigation</p>
 									 <hr>
@@ -176,422 +161,412 @@
 										 <li><a href="#">7.Fazit</a></li>
 									 </ul>
 								 </div>
-							 </div>
-							 
-						 </div>
-						 
-						 
-						 
-						 
-						 
-						 
-						 
-						 
-						 
-					 </div> <!-- row 2 ends -->
-					 
-					 
-					 
-			         <!-- guide info -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents" id="guideInfos">
-				         <p>Autor: Pläscha</p>
-					     <p id="timeStamp"></p>
-                         <h3 id="guideTitle" class="editables">Hier kannst du deinem Guide einen Namen geben...</h3>
-                     </div>
-			         <!-- summoner spells choice -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents" id="summonerSpells">
-                         <h2>Beschwörerzauber</h2>
-				         <div class="sSpellWrapper">
-                             <div id="summonerSpell1" class="summonerSpellContainer">
+							 </div>	 <!-- row 3 ends -->					 
+						 </div>	
+						 <!-- summoner spells choice -->
+						 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="summonerSpells">
+						     <h2>Beschwörerzauber</h2>
+							 <div class="row"><!-- row 4 starts -->
+							     <div class="col-sm-4 col-sm-offset-2 spellChoice">
+								     <p class="optionA">Option A</p>								     
+								     <div id="summonerSpell1" class="summonerSpellContainer">
+								     </div>
+								     <div id="summonerSpell2" class="summonerSpellContainer">
+									 </div>
+								 </div>
+								 <div class="col-sm-4 spellChoiceAlternative">								     
+								     <p class="optionA">Option B</p>
+								     <div id="summonerSpell3" class="summonerSpellContainer">
+									 </div>
+									 <div id="summonerSpell4" class="summonerSpellContainer">
+									 </div>	 
+								 </div>
+							 </div> <!-- row 4 ends -->	
+						 </div>	 
+			             <!-- summoner spells description -->
+                         <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="summonerSpellDescriptionContainer">
+                             <h3>Erklärung zu den Beschwörerzaubern</h3>
+                             <p id="summonerSpellDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                             </p>
+                         </div>
+				         <!-- runes choice -->
+                         <div class="col-sm-10 col-sm-offset-1 editorComponents" id="runenContainer">
+                             <h3>Runen</h3>
+                             <div id="zeichen">
+					         </div>
+                             <div id="siegel">
+					         </div>
+                             <div id="glyphen">
+					         </div>
+                             <div id="essenzen">
+					         </div>
+                             <div id="runenEffects">
                              </div>
-                             <p>Spell #1</p>
+                         </div>		 
+			             <!-- runes description -->
+                         <div  class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="runenDescriptionContainer">
+                             <h3>Erklärung zu der Runenwahl</h3>
+                             <p id="runenDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                             </p>
                          </div>
-                         <div class="sSpellWrapper">
-                             <div id="summonerSpell2" class="summonerSpellContainer">
-						     </div>
-                             <p>Spell #2</p>
-                         </div>
-                         <div class="sSpellWrapper">
-                             <p id="alternative">alternativ: </p>
-                         </div>
-                         <div class="sSpellWrapper">
-                             <div id="summonerSpell3" class="summonerSpellContainer">
-						     </div>
-                             <p>Spell #1</p>
-                         </div>
-                         <div class="sSpellWrapper">
-                             <div id="summonerSpell4" class="summonerSpellContainer">
-						     </div>
-                             <p>Spell #2</p>
-                         </div>
-				     </div>
-			     </div><!--wrapper ends-->
+				         <!-- masteries -->
+                         <div class="col-sm-10 col-sm-offset-1 editorComponents" id="masteries">
+                             <h2>Masteries</h2>
+                                 <div class="dropdown">
+                                     <button class="btn btn-default dropdown-toggle" type="button" id="masteryBGChooser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Lieblings Splashart <span class="caret"></span></button>
+                                         <ul class="dropdown-menu" aria-labelledby="masteryBGChooser">
+                                             <li><a href="#" id="_0" class="skinOptions">Klassich</a></li>
+                                             <li><a href="#" id="_1" class="skinOptions">Frostfeuer - Annie</a></li>
+                                             <li><a href="#" id="_2" class="skinOptions">Rollentausch - Annie</a></li>
+                                             <li><a href="#" id="_3" class="skinOptions">Panda - Annie</a></li>
+                                             <li><a href="#" id="_4" class="skinOptions">Herzblatt - Annie</a></li>
+                                         </ul>
+                                 </div>
+								 <div class="row"> <!-- row 5 starts -->
+                                     <div id="offTree" class="col-xs-12 col-sm-4 trees">
+						             </div>
+                                     <div id="deffTree" class="col-xs-12 col-sm-4 trees">
+						             </div>
+                                     <div id="utilTree" class="col-xs-12 col-sm-4 trees">
+						             </div>
+								     </div>                    
+                                 </div> <!-- row 5 ends -->
+				                 <!-- mastery description -->
+                                 <div  class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="masteryDescriptionContainer">
+                                     <h3>Erklärung zu den Masteries</h3>
+                                     <p id="masteryDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                     </p>
+                                 </div>	
+				                 <!-- early game items -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="items">
+                                     <h2>Start-Items</h2>
+									 <div class="row"> <!-- row 6 starts -->
+									     <div class="col-sm-10 col-sm-offset-1">
+										     <div class="itemWrapperContainer">
+                                                 <div class="itemWrappers">
+                                                     <div id="item1early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item2early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item3early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item4early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item5early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item6early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item7early" class="itemContainers">
+							                         </div>
+                                                </div>
+										     </div>
+										 </div>
+								     </div> <!-- row 6 ends -->
+								 </div>
+					             <!-- early game items description -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="startItemsDescriptionContainer">
+                                     <h3>Erklärung zu den Start-Items</h3>
+                                     <p id="startItemsDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                     </p>
+                                 </div>	 
+					             <!-- mid game items -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="midItems">
+                                     <h2>Midgame-Items</h2>
+									 <div class="row"> <!-- row 7 starts -->
+									     <div class="col-sm-10 col-sm-offset-1">
+										     <div class="itemWrapperContainer">
+                                                 <div class="itemWrappers">
+                                                     <div id="item1mid" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item2mid" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item3mid" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item4mid" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item5mid" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item6mid" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item7mid" class="itemContainers">
+							                         </div>
+                                                 </div>
+						                     </div>
+                                         </div>	
+					                 </div> <!-- row 7 ends -->
+					             </div>
+					             <!-- mid game items description -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="midItemsDescriptionContainer">
+                                     <h3>Erklärung zu den Midgame-Items</h3>
+                                     <p id="midItemsDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                     </p>
+                                 </div>	 
+					             <!-- late game items -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="lateItems">
+                                     <h2>Lategame-Items</h2>
+									 <div class="row"> <!-- row 8 starts -->
+									     <div class="col-sm-10 col-sm-offset-1">
+										     <div class="itemWrapperContainer">
+                                                 <div class="itemWrappers">
+                                                     <div id="item1late" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item2late" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item3late" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item4late" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item5late" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                      <div id="item6late" class="itemContainers">
+							                          </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item7late" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                             </div>	
+                                         </div>	
+                                     </div>	 <!-- row 8 ends -->
+                                 </div>					  
+					             <!-- late game items description -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="lateItemsDescriptionContainer">
+                                     <h3>Erklärung zu den Lategame-Items</h3>
+                                     <p id="lateItemsDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                     </p>
+                                 </div>		
+					             <!-- alternative late game items -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="lateAlternativItems">
+                                     <h2>Alternative Items</h2>
+									 <div class="row"> <!-- row 9 starts -->
+									     <div class="col-sm-10 col-sm-offset-1">
+										     <div class="itemWrapperContainer">
+                                                 <div class="itemWrappers">
+                                                     <div id="item1altLate" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item2altLate" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item3altLate" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item4altLate" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item5altLate" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item6altLate" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item7altLate" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                             </div>
+					                     </div>
+					                 </div> <!-- row 9 ends -->
+					             </div>
+					             <!-- alternative late game items description -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="lateAlternativItemsDescriptionContainer">
+                                     <h3>Erklärung zu den alternativen Items</h3>
+                                     <p id="lateAlternativItemsDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                     </p>
+                                 </div>			 
+                                 <!-- ability skillorder -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="champAbilities">
+                                     <h2>Skill-Reihenfolge</h2>
+									 <div class="row"> <!-- row 10 starts -->
+									     <div class="col-sm-10 col-sm-offset-1">
+										     <div class="row"> <!-- row 11 starts -->
+                                                 <div id="explanation">
+											         <div class="col-sm-12 table">
+												         <tr>
+                                                             <th><div class="labelAbilities">Fähigkeit</div></th>
+                                                             <th><div class="level1">Lvl 1</div></th>
+                                                             <th><div class="level2">Lvl 2</div></th>
+                                                             <th><div class="level3">Lvl 3</div></th>
+                                                             <th><div class="level3">Lvl 4</div></th>
+                                                             <th><div class="level3">Lvl 5</div></th>
+                                                             <th><div class="level3">Lvl 6</div></th>
+                                                             <th><div class="level3">Lvl 7</div></th>
+                                                             <th><div class="level3">Lvl 8</div></th>
+                                                             <th><div class="level3">Lvl 9</div></th>
+                                                             <th><div class="level3">Lvl 10</div></th>
+                                                             <th><div class="level3">Lvl 11</div></th>
+                                                             <th><div class="level3">Lvl 12</div></th>
+                                                             <th><div class="level3">Lvl 13</div></th>
+                                                             <th><div class="level3">Lvl 14</div></th>
+                                                             <th><div class="level3">Lvl 15</div></th>
+                                                             <th><div class="level3">Lvl 16</div></th>
+                                                             <th><div class="level3">Lvl 17</div></th>
+                                                             <th><div class="level3">Lvl 18</div></th>
+												         </tr>
+                                                         <div class="clearFix"></div>
+											         </div>	
+												 </div>
+												 <!-- q skill -->
+                                                 <div id="qRow">
+												     <div class="col-sm-12">
+												         <tr>
+                                                             <td><div class="labelAbilities">Q-Skill</div></td>
+                                                             <td><div class="level1"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level2"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level3"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level4"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level5"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level6"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level7"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level8"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level9"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level10"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level11"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level12"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level13"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level14"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level15"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level16"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level17"><div class="checkItems unchecked"></div></div></td>
+                                                             <td> <div class="level18"><div class="checkItems unchecked"></div></div></td>
+						                                 </tr>
+                                                         <div class="clearFix"></div>
+						                             </div>
+                                                 </div>
+												 <!-- w skill -->
+                                                 <div id="wRow">
+												     <div class="col-sm-12">
+													     <tr>
+                                                             <td><div class="labelAbilities">W-Skill</div></td>
+                                                             <td><div class="level1"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level2"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level3"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level4"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level5"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level6"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level7"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level8"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level9"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level10"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level11"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level12"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level13"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level14"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level15"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level16"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level17"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level18"><div class="checkItems unchecked"></div></div></td>
+						                                 </tr>
+                                                         <div class="clearFix"></div>
+						                             </div>
+                                                 </div>
+					                             <!-- e skill -->
+                                                 <div id="eRow">
+					                                 <div class="col-sm-12">
+													     <tr>
+                                                             <td><div class="labelAbilities">E-Skill</div></td>
+                                                             <td><div class="level1"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level2"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level3"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level4"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level5"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level6"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level7"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level8"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level9"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level10"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level11"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level12"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level13"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level14"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level15"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level16"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level17"><div class="checkItems unchecked"></div></div></td>
+                                                             <td><div class="level18"><div class="checkItems unchecked"></div></div></td>
+						                                 </tr>
+                                                         <div class="clearFix"></div>
+						                             </div>
+                                                 </div> 
+					                             <!-- r skill --> 
+                                                 <div id="rRow">
+												     <div class="col-sm-12">
+													     <tr>
+                                                             <div class="labelAbilities">R-Skill</div>
+                                                             <div class="level1"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level2"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level3"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level4"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level5"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level6"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level7"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level8"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level9"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level10"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level11"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level12"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level13"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level14"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level15"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level16"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level17"><div class="checkItems unchecked"></div></div>
+                                                             <div class="level18"><div class="checkItems unchecked"></div></div>
+						                                 </tr>
+                                                         <div class="clearFix"></div>
+                                                     </div>
+					                             </div>
+												 </div> <!-- row 11 ends -->
+												 </div> 
+					                 </div><!-- row 10 ends -->
+					             </div>	
+
+		         </div> <!-- row 2 ends -->
+				 </div><!-- wrapper ends -->
+
+
+
+
+
+
 				 
-				 
-				 
-			     <!-- summoner spells description -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents2" id="summonerSpellDescriptionContainer">
-                     <h3>Erklärung zu den Beschwörerzaubern</h3>
-                     <p id="summonerSpellDescription" class="editables">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                     </p>
-                 </div>
-			     <!-- runes choice -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents" id="runenContainer">
-                     <h3>Runen</h3>
-                     <div id="zeichen">
-					 </div>
-                     <div id="siegel">
-					 </div>
-                     <div id="glyphen">
-					 </div>
-                     <div id="essenzen">
-					 </div>
-                     <div id="runenEffects">
-                     </div>
-                 </div>
-			 
-			     <!-- runes description -->
-                 <div  class="col-sm-8 col-sm-offset-2 editorComponents2" id="runenDescriptionContainer">
-                     <h3>Erklärung zu der Runenwahl</h3>
-                     <p id="runenDescription" class="editables">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                     </p>
-                 </div>
-			 
-				 <!-- masteries -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents" id="masteries">
-                     <h3>Masteries</h3>
-                     <div class="row">
-                         <div class="dropdown">
-                             <button class="btn btn-default dropdown-toggle" type="button" id="masteryBGChooser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Lieblings Splashart <span class="caret"></span></button>
-                             <ul class="dropdown-menu" aria-labelledby="masteryBGChooser">
-                                 <li><a href="#" id="_0" class="skinOptions">Skin0</a></li>
-                                 <li><a href="#" id="_1" class="skinOptions">Skin1</a></li>
-                                 <li><a href="#" id="_2" class="skinOptions">Skin2</a></li>
-                                 <li><a href="#" id="_3" class="skinOptions">Skin3</a></li>
-                                 <li><a href="#" id="_4" class="skinOptions">Skin4</a></li>
-                             </ul>
-                         </div>
-                         <div id="offTree" class="col-xs-12 col-sm-4 trees">
-						 </div>
-                         <div id="deffTree" class="col-xs-12 col-sm-4 trees">
-						 </div>
-                         <div id="utilTree" class="col-xs-12 col-sm-4 trees">
-						 </div>
-                     </div>
-                 </div>
-				 
-				 <!-- mastery description -->
-                 <div  class="col-sm-8 col-sm-offset-2 editorComponents2" id="masteryDescriptionContainer">
-                     <h3>Erklärung zu den Masteries</h3>
-                     <p id="masteryDescription" class="editables">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                     </p>
-                 </div>	 
-				 
-				 <!-- early game items -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents" id="items">
-                     <div id="startItems">
-                         <h3>Start-Items</h3>
-                         <div class="itemWrappers">
-                             <div id="item1early" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item2early" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item3early" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item4early" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item5early" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item6early" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item7early" class="itemContainers">
-							 </div>
-                         </div>
-                     </div>	
-                 </div>					 
-					 
-					 <!-- early game items description -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents2" id="startItemsDescriptionContainer">
-                         <h3>Erklärung zu den Start-Items</h3>
-                         <p id="startItemsDescription" class="editables">
-                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                         </p>
-                     </div>
-					 
-					 <!-- mid game items -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents" id="midItems">
-                         <h3>Midgame-Items</h3>
-                         <div class="itemWrappers">
-                             <div id="item1mid" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item2mid" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item3mid" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item4mid" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item5mid" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item6mid" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item7mid" class="itemContainers">
-							 </div>
-                         </div>
-                     </div>		 
-					 
-					 <!-- mid game items description -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents2" id="midItemsDescriptionContainer">
-                         <h3>Erklärung zu den Midgame-Items</h3>
-                         <p id="midItemsDescription" class="editables">
-                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                         </p>
-                     </div>		 
-					 
-					 <!-- late game items -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents" id="lateItems">
-                         <h3>Lategame-Items</h3>
-                         <div class="itemWrappers">
-                             <div id="item1late" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item2late" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item3late" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item4late" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item5late" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item6late" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item7late" class="itemContainers">
-							 </div>
-                         </div>
-                     </div>		 
-					 
-					 <!-- late game items description -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents2" id="lateItemsDescriptionContainer">
-                         <h3>Erklärung zu den Lategame-Items</h3>
-                         <p id="lateItemsDescription" class="editables">
-                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                         </p>
-                     </div>		 
-					 
-					 <!-- alternative late game items -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents" id="lateAlternativItems">
-                         <h3>Alternative Lategame-Items</h3>
-                         <div class="itemWrappers">
-                             <div id="item1altLate" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item2altLate" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item3altLate" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item4altLate" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item5altLate" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item6altLate" class="itemContainers">
-							 </div>
-                         </div>
-                         <div class="itemWrappers">
-                             <div id="item7altLate" class="itemContainers">
-							 </div>
-                         </div>
-                     </div>
-					 
-					 <!-- alternative late game items description -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents2" id="lateAlternativItemsDescriptionContainer">
-                         <h3>Erklärung zu den alternativen Lategame-Items</h3>
-                         <p id="lateAlternativItemsDescription" class="editables">
-                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                         </p>
-                     </div>		 
-					 
-                 <!-- ability skillorder -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents" id="champAbilities">
-                     <h3>Skillreihenfolge</h3>
-                     <div id="explanation">
-                         <div class="labelAbilities">Ability</div>
-                         <div class="level1">Level 1</div>
-                         <div class="level2">Level 2</div>
-                         <div class="level3">Level 3</div>
-                         <div class="level3">Level 4</div>
-                         <div class="level3">Level 5</div>
-                         <div class="level3">Level 6</div>
-                         <div class="level3">Level 7</div>
-                         <div class="level3">Level 8</div>
-                         <div class="level3">Level 9</div>
-                         <div class="level3">Level 10</div>
-                         <div class="level3">Level 11</div>
-                         <div class="level3">Level 12</div>
-                         <div class="level3">Level 13</div>
-                         <div class="level3">Level 14</div>
-                         <div class="level3">Level 15</div>
-                         <div class="level3">Level 16</div>
-                         <div class="level3">Level 17</div>
-                         <div class="level3">Level 18</div>
-                         <div class="clearFix"></div>
-                     </div>
-                     <div id="qRow">
-                         <div class="labelAbilities">Q-Skill</div>
-                         <div class="level1"></div>
-                         <div class="level2"></div>
-                         <div class="level3"></div>
-                         <div class="level4"></div>
-                         <div class="level5"></div>
-                         <div class="level6"></div>
-                         <div class="level7"></div>
-                         <div class="level8"></div>
-                         <div class="level9"></div>
-                         <div class="level10"></div>
-                         <div class="level11"></div>
-                         <div class="level12"></div>
-                         <div class="level13"></div>
-                         <div class="level14"></div>
-                         <div class="level15"></div>
-                         <div class="level16"></div>
-                         <div class="level17"></div>
-                         <div class="level18"></div>
-                         <div class="clearFix"></div>
-                     </div>
-                     <div id="wRow">
-                         <div class="labelAbilities">W-Skill</div>
-                         <div class="level1"><div class="checkItems unchecked"></div></div>
-                         <div class="level2"><div class="checkItems unchecked"></div></div>
-                         <div class="level3"><div class="checkItems unchecked"></div></div>
-                         <div class="level4"><div class="checkItems unchecked"></div></div>
-                         <div class="level5"><div class="checkItems unchecked"></div></div>
-                         <div class="level6"><div class="checkItems unchecked"></div></div>
-                         <div class="level7"><div class="checkItems unchecked"></div></div>
-                         <div class="level8"><div class="checkItems unchecked"></div></div>
-                         <div class="level9"><div class="checkItems unchecked"></div></div>
-                         <div class="level10"><div class="checkItems unchecked"></div></div>
-                         <div class="level11"><div class="checkItems unchecked"></div></div>
-                         <div class="level12"><div class="checkItems unchecked"></div></div>
-                         <div class="level13"><div class="checkItems unchecked"></div></div>
-                         <div class="level14"><div class="checkItems unchecked"></div></div>
-                         <div class="level15"><div class="checkItems unchecked"></div></div>
-                         <div class="level16"><div class="checkItems unchecked"></div></div>
-                         <div class="level17"><div class="checkItems unchecked"></div></div>
-                         <div class="level18"><div class="checkItems unchecked"></div></div>
-                         <div class="clearFix"></div>
-                     </div>
-                     <div id="eRow">
-                         <div class="labelAbilities">E-Skill</div>
-                         <div class="level1"><div class="checkItems unchecked"></div></div>
-                         <div class="level2"><div class="checkItems unchecked"></div></div>
-                         <div class="level3"><div class="checkItems unchecked"></div></div>
-                         <div class="level4"><div class="checkItems unchecked"></div></div>
-                         <div class="level5"><div class="checkItems unchecked"></div></div>
-                         <div class="level6"><div class="checkItems unchecked"></div></div>
-                         <div class="level7"><div class="checkItems unchecked"></div></div>
-                         <div class="level8"><div class="checkItems unchecked"></div></div>
-                         <div class="level9"><div class="checkItems unchecked"></div></div>
-                         <div class="level10"><div class="checkItems unchecked"></div></div>
-                         <div class="level11"><div class="checkItems unchecked"></div></div>
-                         <div class="level12"><div class="checkItems unchecked"></div></div>
-                         <div class="level13"><div class="checkItems unchecked"></div></div>
-                         <div class="level14"><div class="checkItems unchecked"></div></div>
-                         <div class="level15"><div class="checkItems unchecked"></div></div>
-                         <div class="level16"><div class="checkItems unchecked"></div></div>
-                         <div class="level17"><div class="checkItems unchecked"></div></div>
-                         <div class="level18"><div class="checkItems unchecked"></div></div>
-                         <div class="clearFix"></div>
-                     </div>
-                     <div id="rRow">
-                         <div class="labelAbilities">R-Skill</div>
-                         <div class="level1"><div class="checkItems unchecked"></div></div>
-                         <div class="level2"><div class="checkItems unchecked"></div></div>
-                         <div class="level3"><div class="checkItems unchecked"></div></div>
-                         <div class="level4"><div class="checkItems unchecked"></div></div>
-                         <div class="level5"><div class="checkItems unchecked"></div></div>
-                         <div class="level6"><div class="checkItems unchecked"></div></div>
-                         <div class="level7"><div class="checkItems unchecked"></div></div>
-                         <div class="level8"><div class="checkItems unchecked"></div></div>
-                         <div class="level9"><div class="checkItems unchecked"></div></div>
-                         <div class="level10"><div class="checkItems unchecked"></div></div>
-                         <div class="level11"><div class="checkItems unchecked"></div></div>
-                         <div class="level12"><div class="checkItems unchecked"></div></div>
-                         <div class="level13"><div class="checkItems unchecked"></div></div>
-                         <div class="level14"><div class="checkItems unchecked"></div></div>
-                         <div class="level15"><div class="checkItems unchecked"></div></div>
-                         <div class="level16"><div class="checkItems unchecked"></div></div>
-                         <div class="level17"><div class="checkItems unchecked"></div></div>
-                         <div class="level18"><div class="checkItems unchecked"></div></div>
-                         <div class="clearFix"></div>
-                     </div>
-                     <div id="abilityPrio">
-                         <div class="labelAbilities">Skillreihenfolge</div>
-                         <div class="level1"></div>
-                         <div class="level2"></div>
-                         <div class="level3"></div>
-                         <div class="level4"></div>
-                         <div class="level5"></div>
-                         <div class="level6"></div>
-                         <div class="level7"></div>
-                         <div class="level8"></div>
-                         <div class="level9"></div>
-                         <div class="level10"></div>
-                         <div class="level11"></div>
-                         <div class="level12"></div>
-                         <div class="level13"></div>
-                         <div class="level14"></div>
-                         <div class="level15"></div>
-                         <div class="level16"></div>
-                         <div class="level17"></div>
-                         <div class="level18"></div>
-                         <div class="clearFix"></div>
-                     </div>
-                 </div>		 
 				 
 				 <!-- skillorder description -->
                  <div class="col-sm-8 col-sm-offset-2 editorComponents2">
@@ -1281,6 +1256,36 @@
              </div>
              <div id="tooltipContainer" class="hide">
              </div>
+			 
+			  <!-- guide info -->
+                     <div class="col-sm-8 col-sm-offset-2 editorComponents" id="guideInfos">
+				         <p>Autor: Pläscha</p>
+					     <p id="timeStamp"></p>
+                         <h3 id="guideTitle" class="editables">Hier kannst du deinem Guide einen Namen geben...</h3>
+                     </div>
+					 
+					     <div id="abilityPrio">
+                         <div class="labelAbilities">Skillreihenfolge</div>
+                         <div class="level1"></div>
+                         <div class="level2"></div>
+                         <div class="level3"></div>
+                         <div class="level4"></div>
+                         <div class="level5"></div>
+                         <div class="level6"></div>
+                         <div class="level7"></div>
+                         <div class="level8"></div>
+                         <div class="level9"></div>
+                         <div class="level10"></div>
+                         <div class="level11"></div>
+                         <div class="level12"></div>
+                         <div class="level13"></div>
+                         <div class="level14"></div>
+                         <div class="level15"></div>
+                         <div class="level16"></div>
+                         <div class="level17"></div>
+                         <div class="level18"></div>
+                         <div class="clearFix"></div>
+                     </div>
 			 
 	     <!--Bottom Navigationbar-->
 		 <div class="row">

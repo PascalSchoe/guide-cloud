@@ -52,7 +52,7 @@ h4
 	 text-align: left;
 }
 .attitudes p {
-	 font-size: 2em;
+	 font-size: 1.2em;
 }
 .attitudes label {
 	 width: 7em;
@@ -67,7 +67,8 @@ h4
 }
 .author {
 	 font-weight: bold;
-	 font-size: 1.4em;
+	 font-size: 1.2em;
+	 margin-left: 0.2em;
 }
 .contentTable {
 	 background: transparent;
@@ -77,7 +78,7 @@ h4
 	 border-radius: 0.5em;
 }
 .contentTable ul {
-	 font-size: 1.7em;
+	 font-size: 1.4em;
 	 text-align: left;
 	 color: #6B81FF;
 }
@@ -90,17 +91,30 @@ h4
 }
 .champName {
 	 font-weight: bold;
-	 font-size: 1.2em;
 	 float: left;
-	 margin-left: 1em;
 	 margin-top: 3.5em;
+	 margin-left: 0.2em;
 	 color: orange;
 }
+.role {
+	 margin-top: 0.4em;
+	 border: 0.1em solid #000;
+	 border-radius: 0.5em;
+	 background: rgba(255, 255, 255, 0.2);
+	 color: #fff;
+	 padding: 0.2em 0.1em 0.1em 0.3em;
+	 text-decoration: none;
+}
+.role:hover {
+	 text-decoration: none;
+	 color: #fff;
+	 box-shadow: 0px 0px 5px #fff;
+}
 .editorNavigation {
-	 border: 0.2em solid #000;
+	 border: 0.1em solid #000;
 	 border-radius: 0.5em;
 	 background: #111;
-	 background-image: url("annieSplashArt.jpg");
+	 background-image: url("../RES/bilder/annieSplashArt.jpg");
 	 background-size: 100% 100%;
 	 margin-top: 2em;
 }
@@ -114,34 +128,137 @@ hr {
 	 margin-top: 0;
 	 margin-bottom: 1.5em;
 }
-
-
-
-
-
-
-
+.splashArtInput {
+	 font-family: Helvetica;
+	 font-weight: bold;
+	 color: #000;
+	 background: #5564FF;
+	 border: 0.1em solid #000;
+	 border-radius: 0.5em;
+	 padding: 0.2em 0.4em;
+}
+.splashArtInput:hover {
+	 box-shadow: 0px 0px 10px #fff;
+	 color: #fff;
+}
+.summonerSpellContainer {
+	 width: 80px;
+	 height: 80px;
+	 background: #000;
+	 cursor: pointer;
+	 float: left;
+     display: inline-block;
+     border: 0.1em solid #fff;
+     border-radius: 0.5em;
+     position: relative;
+	 margin: 1em 1em 1em 0;
+}
+.summonerSpellContainer:hover {
+	 box-shadow: 0px 0px 15px red;
+}
+.optionA {
+	 text-align: center;
+}
+#summonerSpell1 {
+	 margin-left: 20%;
+}
+#summonerSpell3 {
+	 margin-left: 20%;
+}
 .editorComponents
 {
-    border: 0.2em solid #000;
-    border-radius: 0.5em;
-	background: #111;
-	margin-top: 2.5em;
+     border: 0.1em solid #000;
+     border-radius: 0.5em;
+	 background: #111;
+	 margin-top: 2.5em;
+	 padding-bottom: 1em;
 }
-
-
-
-
-
-
-
-
-.editorComponents2 {
-	 border: 0.3em solid #000;
+.editorComponentsDescription {
+	 border: 0.1em solid #000;
 	 border-radius: 0.5em;
-	 background: #333;
+	 background: #949495;
 	 margin-top: 0.5em;
 }
+#summonerSpellDescription {
+	 color: #fff;
+}
+#masteryBGChooser {
+	 text-align: center;
+     background: #333;
+     color: #444;
+     margin: 1em auto;
+}
+.itemContainers
+{
+    width: 80px;
+    height: 80px;
+    background: #000;
+    cursor: pointer;
+	float: left;
+    display: inline-block;
+    border: 0.1em solid #fff;
+    border-radius: 0.5em;
+    position: relative;
+}
+.itemContainers:hover {
+	 box-shadow: 0px 0px 15px red;
+}
+.itemWrapperContainer {
+	 text-align: center;
+}
+.itemWrappers {
+	 display: inline-block;
+	 margin-bottom: 1em;
+}
+.level1, .level2, .level3, .level4, .level5, .level6, .level7, .level8
+, .level9, .level10, .level11, .level12, .level13, .level14, .level15, .level16, .level17
+, .level18
+{  
+    width: 35px;
+    height: 35px;
+	font-size: 0.9em;
+    background: #2d2d2d;
+    box-shadow: 0px 0px 15px #000;
+    border: 0.1em solid #fff;
+    border-radius: 0.5em;
+    margin: 1px;
+    text-align: center;
+    float: left;
+	color: white;
+}
+.level1:hover, .level2:hover, .level3:hover, .level4:hover, .level5:hover, .level6:hover, .level7:hover, .level8:hover
+, .level9:hover, .level10:hover, .level11:hover, .level12:hover, .level13:hover, .level14:hover, .level15:hover, .level16:hover, .level17:hover
+, .level18:hover {
+	 box-shadow: 0px 0px 10px #fff;
+}
+.labelAbilities 
+{
+    width: 100px;
+    height: 35px;
+    background: #2d2d2d;
+    box-shadow: 0px 0px 15px #000;
+    border: 0.1em solid #fff;
+    border-radius: 0.5em;
+    margin: 1px;
+    text-align: center;
+    float: left;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .editorComponents3 {
 	 border: 0.3em solid #000;
 	 border-radius: 0.5em;
@@ -149,10 +266,7 @@ hr {
 	 margin-top: 2.5em;
 	 margin-bottom: 1.5em;
 }
-#guideInfos p {
-	 float: left;
-	 margin-top: 0.5em;
-}
+
 #summonerSpell1 {
 	 float: left;
 }
@@ -168,19 +282,8 @@ hr {
 #summonerSpell4 {
 	 float: left;
 }
-.summonerSpellContainer, .itemContainers
-{
-    width: 67px;
-    height: 67px;
-    background: #000;
-    cursor: pointer;
-    display: inline-block;
-    border: 0.2em solid #000;
-    border-radius: 0.3em;
-    position: relative;
-	margin-top: 1em;
-}
-.sSpellWrapper, .itemWrappers
+
+.sSpellWrapper
 {
     display: inline-block;
 }
@@ -363,7 +466,7 @@ img
 
 
 
-.sSpellWrapper, .itemWrappers
+.sSpellWrapper
 {
     display: inline-block;
 }
@@ -372,32 +475,7 @@ img
     padding: 0px 50px;
     font-size: 30px; 
 }
-.level1, .level2, .level3, .level4, .level5, .level6, .level7, .level8
-, .level9, .level10, .level11, .level12, .level13, .level14, .level15, .level16, .level17
-, .level18
-{  
-    width: 40px;
-    height: 40px;
-    background: #2d2d2d;
-    box-shadow: 0px 0px 15px #000;
-    border: 1px solid #111;
-    border-radius: 3px;
-    margin: 1px;
-    text-align: center;
-    float: left;
-}
-.labelAbilities
-{
-    width: 160px;
-    height: 40px;
-    background: #2d2d2d;
-    box-shadow: 0px 0px 15px #000;
-    border: 1px solid #111;
-    border-radius: 3px;
-    margin: 1px;
-    text-align: center;
-    float: left;
-}
+
 /*
     Betrifft AbilitySelect
 */
@@ -642,10 +720,5 @@ img
     -o-box-shadow: inset 0 0 1000px rgba(0,255,0,0.5);
     box-shadow: inset 0 0 1000px rgba(0,255,0,0.5);
 }
-#masteryBGChooser
-{
-    background: #333;
-    color: #444;
-    margin: 15px;
-}
+
 
