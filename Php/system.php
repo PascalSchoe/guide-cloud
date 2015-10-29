@@ -59,5 +59,63 @@ class System
 
 
     }
+
+    public function checkUserInput($rawData, $dbCol)
+    {
+        $colMaxLength = 0;
+        $_rawData = null;
+
+        /*
+         * HARDCODED ...
+         * Later I mma fix this and get me the col length from the right *Table class obj
+         */
+        switch ($dbCol) {
+            case "firstname":
+            case "lastname":
+            case "username":
+                $colMaxLength = 50;
+                break;
+            case "country":
+            case "state":
+            case "city":
+                $colMaxLength = 100;
+                break;
+            case "zip":
+                $colMaxLength = 11;
+                break;
+            case "email":
+                $colMaxLength = 256;
+                break;
+            default:
+                echo __METHOD__ . " - Error when setting length auf column";
+                break;
+
+        }
+
+
+
+        if (isset($rawData))
+        {
+            $_rawData = $rawData;
+            //stl check
+            if (strlen($_rawData) <= $colMaxLength)
+            {
+                //Striptags
+                if (true)
+                {
+                    //$data = new
+                    //trim
+                    if (true)
+                    {
+                        //$data = new
+                        //return data
+
+                    }
+                }
+            }
+
+            return false;
+        }
+    }
 }
 ?>
