@@ -101,6 +101,7 @@
 		 
 		 <!--Login Container-->
 		 <div class="login_container" id="login_container">
+			 <a class="closeBtn">X</a>
 			 <form action="Php/handleRequests.php" method="post">
 				 <fieldset class="login_field">
 					 <p>
@@ -112,11 +113,10 @@
 						 <input type="password" name="password" id="pw_input">
 					 </p>
 				 </fieldset>
-				 <input class="cancel_input" id="cancelLogin" type="button" value="Abbrechen">
 				 <input class="submit_input" type="submit" value="Einloggen" name="loginBtn">
 			 </form>
 		 </div>
-		 
+
 		  <!--row 2: header-->
 		 <div class="row">
 		     <div class="header col-sm-12">
@@ -316,9 +316,6 @@
 						 <div class="row">
 							 <h1>Werde Teil einer Bewegung</h1>
 							 <hr>
-							 <!--prevent Chrome from autofillin...-->
-							 <input type="email" style="display:none">
-							 <input type="password" style="display:none" >
 
 							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
 								 <input type="text"  name="firstname" id="firstname" placeholder="Vorname *" required>
@@ -332,14 +329,14 @@
 							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
 								 <input type="date"  name="dateOfBirth" id="dateOfBirth" placeholder="default">
 							 </div>
-							 <!-- erstmal raus
-                              <input type="text" class="form-control" name="state" id="state" placeholder="...">
-                            <input type="text" class="form-control" name="city" id="city" placeholder="...">
-                            <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="...">-->
 							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+								 <!--prevent Chrome from autofillin...-->
+								 <input type="email" style="display:none">
 								 <input type="email"  name="email" id="email" placeholder="Maxmustermann@test.de*"required>
 							 </div>
 							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+								 <!--prevent Chrome from autofillin...-->
+								 <input type="password" style="display:none" >
 								 <input type="password" name="password" id="password" placeholder="Passwort*" required >
 							 </div>
 							 <hr>
@@ -349,6 +346,7 @@
 				 </div>
 				 <div class="col-xs-4" id="regInfo">
 					 <h2>Wieso solltest du dich registrieren?</h2>
+					 <br>
 					 <ul>
 						 <li>Guides erstellen</li>
 						 <li>Teil einer wunderbaren Community</li>
@@ -362,6 +360,7 @@
 				 </div>
 			 </div>
 	 </div>
+ </div>
      <!-- jQuery Google CDN -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
      <!-- Latest compiled and minified JavaScript (CDN) -->

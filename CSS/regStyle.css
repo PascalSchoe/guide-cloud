@@ -2,7 +2,7 @@
 {
     position:absolute;
     left: 10%;
-    top: 5%;
+    top: 2%;
     width: 75%;
     display: none;
     border: 1px solid #000;
@@ -76,8 +76,9 @@ a[class^="closeBtn"]
     dann aber  keinen text-shadow
     */
     text-shadow: 1px 1px 0px #444;
-    position: relative;
-    left: 48%;
+    position: absolute;
+    right: 2%;
+    top: 1%;
     text-decoration: none;
     cursor: pointer;
 }
@@ -106,7 +107,7 @@ a[class^="closeBtn"]
 
     margin: 1.5em 0;
     text-align: center;
-    line-height: 2em;
+    line-height: 1.2em;
     color: #aaa;
     width: 100%;
 
