@@ -24,7 +24,7 @@ h2
 h3
 {
     color: #FFCD03;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
 	margin: 1em;
 	text-align: center;
@@ -32,7 +32,8 @@ h3
 h4
 {
     color: #FFCD03;
-    font-size: 1em;
+	font-weight: bold;
+    font-size: 1.1em;
 }
 
 /*Umliegende Divs*/
@@ -151,7 +152,7 @@ hr {
      border: 0.1em solid #fff;
      border-radius: 0.5em;
      position: relative;
-	 margin: 1em 1em 1em 0;
+	 margin: 1em 1em 0 0;
 }
 .summonerSpellContainer:hover {
 	 box-shadow: 0px 0px 15px red;
@@ -171,13 +172,14 @@ hr {
      border-radius: 0.5em;
 	 background: #111;
 	 margin-top: 2.5em;
-	 padding-bottom: 1em;
+	 padding-bottom: 1.5em;
 }
 .editorComponentsDescription {
 	 border: 0.1em solid #000;
 	 border-radius: 0.5em;
-	 background: #949495;
+	 background: #7B7077;
 	 margin-top: 0.5em;
+	 padding-bottom: 1em;
 }
 #summonerSpellDescription {
 	 color: #fff;
@@ -208,7 +210,6 @@ hr {
 }
 .itemWrappers {
 	 display: inline-block;
-	 margin-bottom: 1em;
 }
 .level1, .level2, .level3, .level4, .level5, .level6, .level7, .level8
 , .level9, .level10, .level11, .level12, .level13, .level14, .level15, .level16, .level17
@@ -219,10 +220,10 @@ hr {
 	font-size: 0.9em;
     background: #2d2d2d;
     box-shadow: 0px 0px 15px #000;
-    border: 0.1em solid #fff;
+    border: 0.1em solid #6F6E6F;
     border-radius: 0.5em;
-    margin: 1px;
-    text-align: center;
+	margin: 0.1em;
+	text-align: center;
     float: left;
 	color: white;
 }
@@ -236,14 +237,60 @@ hr {
     width: 100px;
     height: 35px;
     background: #2d2d2d;
-    box-shadow: 0px 0px 15px #000;
-    border: 0.1em solid #fff;
+    box-shadow: 0px 0px 15px #FF9C21;
+    border: 0.1em solid #6F6E6F;
     border-radius: 0.5em;
     margin: 1px;
     text-align: center;
     float: left;
 	color: white;
 }
+.summaryOverview {
+	 box-shadow: 0px 0px 15px #A00161;
+}
+.skillShortCut {
+	 font-size: 1.2em;
+	 margin-top: 0.2em;
+	 color: #FF9C21;
+}
+.shortSummary {
+	 color: #A00161;
+}
+.abilityDescription {
+	 font-style: italic;
+	 text-decoration: underline;
+	 color: #000;
+}
+.labelEmpty {
+	 border: none;
+	 background: #111;
+	 box-shadow: none;
+}
+.summary {
+	 border: 0.1em solid #A00161;
+}
+.synergyRowWrapper {
+    
+    padding-top: 5%;
+    background: #2d2d2d;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 12px #000;
+    border-radius: 5px;
+    position: relative;
+    transition: all 500ms;
+ }
+
+
+.synergyRowWrapper img {
+    margin: 0px 0px 50px 50px;
+    box-shadow: 0px 0px 10px #fff;
+    float: left;
+}
+.asheHiddenPicContainer {
+	 background: blue;
+}
+
+
 
 
 
@@ -304,14 +351,12 @@ img
 
 .sliderSuitable
 {
-    width: 78%;
-    height: 20px;
+    height: 25px;
     position: relative;
     float: left;
-    margin: 50px 0px 0px 42px;
-    border: 2px solid #777;
+    border: 0.1em solid #777;
     border-radius: 5px;
-   
+	margin-top: 45px;
 }
 .sliderSteps
 {
@@ -409,6 +454,62 @@ img
 {
     background: #FF0000;
 }
+.champIconHiddenContainer  {
+	 background: red;
+	 margin: 0;
+	 padding: 0;
+}
+.asheHiddenPicContainer {
+	 height: 100px;
+	 background-image: url("../RES/IMG/adc/AsheSquare.png");
+	 background-size: 100% 100%;
+	 background-repeat: no-repeat;
+	 margin-top: 1em;
+}
+.caitlynHiddenPicContainer {
+	 height: 100px;
+	 background-image: url("../RES/IMG/adc/CaitlynSquare.png");
+	 background-size: 100% 100%;
+	 background-repeat: no-repeat;
+	 margin-top: 1em;
+}
+#synergyAsheDiscription {
+	 width: 100%;
+	
+}
+#synergyCaitlynDiscription {
+	 width: 100%;
+}
+.synergy_heading {
+	 text-align: left;
+	 margin: 0.2em 0 0.2em 0.2em;
+	 padding: 0;
+}
+.championContainerHiddenAshe {
+	 background-image: url("../RES/IMG/asheTrans_1.png");
+	 background-size: 50% 120%;
+	 background-repeat: no-repeat;
+	 background-position: center;
+}
+.championContainerHiddenCaitlyn {
+	 background-image: url("../RES/IMG/caitlynTrans_1.png");
+	 background-size: 80% 113%;
+	 background-repeat: no-repeat;
+	 background-position: left;
+}
+.wrapper {
+	 margin-bottom: 1.5em;
+	 padding-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+
 #interactiveContent
 {
     background: rgba(20,20,20,.9);
@@ -503,8 +604,8 @@ img
 
 .synergyRowWrapper
  {
-    width: 100%;
-    padding-top: 5%;
+    
+    
     background: #2d2d2d;
     border: 1px solid #000;
     box-shadow: 0px 0px 12px #000;
@@ -548,7 +649,9 @@ img
 }
 .champsHidden
 {
-    display: none;
+	 margin: 0;
+	 padding: 0;
+    display: block;
 }
 .grayed
 {
@@ -556,18 +659,18 @@ img
 }
 .matchUps_synergiesDescription
 {
-  margin: 2em 1em;
   position: relative;
-  float: right;
-  text-align: left;
+  float: left;
+  text-align: center;
+  
 }
 .matchUps_synergiesDescription p
 {
-    padding: 1%;
+    padding: 0.5em;
 }
 .matchUps_synergiesDescription h4
 {
-  padding: 1%;
+  padding: 0.5em;
 }
 .rotate
 {

@@ -419,28 +419,29 @@
 									 <div class="row"> <!-- row 10 starts -->
 									     <div class="col-sm-10 col-sm-offset-1">
 										     <div class="row"> <!-- row 11 starts -->
+											  <div class="table"> <!-- table starts -->
                                                  <div id="explanation">
-											         <div class="col-sm-12 table">
+											         <div class="col-sm-12">
 												         <tr>
-                                                             <th><div class="labelAbilities">Fähigkeit</div></th>
-                                                             <th><div class="level1">Lvl 1</div></th>
-                                                             <th><div class="level2">Lvl 2</div></th>
-                                                             <th><div class="level3">Lvl 3</div></th>
-                                                             <th><div class="level3">Lvl 4</div></th>
-                                                             <th><div class="level3">Lvl 5</div></th>
-                                                             <th><div class="level3">Lvl 6</div></th>
-                                                             <th><div class="level3">Lvl 7</div></th>
-                                                             <th><div class="level3">Lvl 8</div></th>
-                                                             <th><div class="level3">Lvl 9</div></th>
-                                                             <th><div class="level3">Lvl 10</div></th>
-                                                             <th><div class="level3">Lvl 11</div></th>
-                                                             <th><div class="level3">Lvl 12</div></th>
-                                                             <th><div class="level3">Lvl 13</div></th>
-                                                             <th><div class="level3">Lvl 14</div></th>
-                                                             <th><div class="level3">Lvl 15</div></th>
-                                                             <th><div class="level3">Lvl 16</div></th>
-                                                             <th><div class="level3">Lvl 17</div></th>
-                                                             <th><div class="level3">Lvl 18</div></th>
+                                                             <th><div class="labelAbilities labelEmpty"></div></th>
+                                                             <th><div class="level1">Level 1</div></th>
+                                                             <th><div class="level2">Level 2</div></th>
+                                                             <th><div class="level3">Level 3</div></th>
+                                                             <th><div class="level3">Level 4</div></th>
+                                                             <th><div class="level3">Level 5</div></th>
+                                                             <th><div class="level3">Level 6</div></th>
+                                                             <th><div class="level3">Level 7</div></th>
+                                                             <th><div class="level3">Level 8</div></th>
+                                                             <th><div class="level3">Level 9</div></th>
+                                                             <th><div class="level3">Level 10</div></th>
+                                                             <th><div class="level3">Level 11</div></th>
+                                                             <th><div class="level3">Level 12</div></th>
+                                                             <th><div class="level3">Level 13</div></th>
+                                                             <th><div class="level3">Level 14</div></th>
+                                                             <th><div class="level3">Level 15</div></th>
+                                                             <th><div class="level3">Level 16</div></th>
+                                                             <th><div class="level3">Level 17</div></th>
+                                                             <th><div class="level3">Level 18</div></th>
 												         </tr>
                                                          <div class="clearFix"></div>
 											         </div>	
@@ -449,7 +450,7 @@
                                                  <div id="qRow">
 												     <div class="col-sm-12">
 												         <tr>
-                                                             <td><div class="labelAbilities">Q-Skill</div></td>
+                                                             <td><div class="labelAbilities"><p class="skillShortCut">Q-Skill</p></div></td>
                                                              <td><div class="level1"><div class="checkItems unchecked"></div></div></td>
                                                              <td><div class="level2"><div class="checkItems unchecked"></div></div></td>
                                                              <td><div class="level3"><div class="checkItems unchecked"></div></div></td>
@@ -476,7 +477,7 @@
                                                  <div id="wRow">
 												     <div class="col-sm-12">
 													     <tr>
-                                                             <td><div class="labelAbilities">W-Skill</div></td>
+                                                             <td><div class="labelAbilities"><p class="skillShortCut">W-Skill</p></div></td>
                                                              <td><div class="level1"><div class="checkItems unchecked"></div></div></td>
                                                              <td><div class="level2"><div class="checkItems unchecked"></div></div></td>
                                                              <td><div class="level3"><div class="checkItems unchecked"></div></div></td>
@@ -503,7 +504,7 @@
                                                  <div id="eRow">
 					                                 <div class="col-sm-12">
 													     <tr>
-                                                             <td><div class="labelAbilities">E-Skill</div></td>
+                                                             <td><div class="labelAbilities"><p class="skillShortCut">E-Skill</p></div></td>
                                                              <td><div class="level1"><div class="checkItems unchecked"></div></div></td>
                                                              <td><div class="level2"><div class="checkItems unchecked"></div></div></td>
                                                              <td><div class="level3"><div class="checkItems unchecked"></div></div></td>
@@ -530,7 +531,7 @@
                                                  <div id="rRow">
 												     <div class="col-sm-12">
 													     <tr>
-                                                             <div class="labelAbilities">R-Skill</div>
+                                                             <div class="labelAbilities"><p class="skillShortCut">R-Skill</p></div>
                                                              <div class="level1"><div class="checkItems unchecked"></div></div>
                                                              <div class="level2"><div class="checkItems unchecked"></div></div>
                                                              <div class="level3"><div class="checkItems unchecked"></div></div>
@@ -553,109 +554,143 @@
                                                          <div class="clearFix"></div>
                                                      </div>
 					                             </div>
+												 <!-- skillorder summary -->
+												 <div id="abilityPrio">
+												     <div class="col-sm-12">
+													     <tr>
+														     <div class="labelAbilities summaryOverview"><p class="skillShortCut shortSummary">Übersicht</p></div>
+															 <div class="level1 summary"></div>
+															 <div class="level2 summary"></div>
+                                                             <div class="level3 summary"></div>
+                                                             <div class="level4 summary"></div>
+                                                             <div class="level5 summary"></div>
+                                                             <div class="level6 summary"></div>
+                                                             <div class="level7 summary"></div>
+                                                             <div class="level8 summary"></div>
+                                                             <div class="level9 summary"></div>
+                                                             <div class="level10 summary"></div>
+                                                             <div class="level11 summary"></div>
+                                                             <div class="level12 summary"></div>
+                                                             <div class="level13 summary"></div>
+                                                             <div class="level14 summary"></div>
+                                                             <div class="level15 summary"></div>
+                                                             <div class="level16 summary"></div>
+                                                             <div class="level17 summary"></div>
+                                                             <div class="level18 summary"></div>
+														 </tr>
+														 <div class="clearfix"></div>
+													 </div>
+												 </div>
+												 </div> <!-- table ends -->
 												 </div> <!-- row 11 ends -->
 												 </div> 
 					                 </div><!-- row 10 ends -->
-					             </div>	
-
-		         </div> <!-- row 2 ends -->
-				 </div><!-- wrapper ends -->
-
-
-
-
-
-
-				 
-				 
-				 <!-- skillorder description -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents2">
-                     <h3>Erklärung zu der Skillreihenfolge</h3>
-                     <p id="champSkillsDescription" class="editables">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                     </p>
-                 </div>		 
-				 
-				 <!-- matchups/synergies -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents" id="matchUps_synergies">
-                     <h3>Synergien</h3>
-					 <!-- Ashe -->
-                     <div id="synergyAshe" class="synergyRowWrapper minimized">
-                         <h4>Ashe</h4>
-                         <img src="RES/IMG/adc/AsheSquare.png" class="champsHidden" alt="Ashe picture">
-                        
-                         <div id="synergyAsheSlider" class="sliderSuitable">
-                             <div class="sliderField1 sliderSteps">
-							 </div>
-                             <div class="sliderField2 sliderSteps">
-							 </div>
-                             <div class="sliderField3 sliderSteps">
-							 </div>
-                             <div class="sliderField4 sliderSteps">
-							 </div>
-                             <div class="sliderField5 sliderSteps">
-							 </div>
-                             <div class="sliderField6 sliderSteps">
-							 </div>
-                             <div class="sliderField7 sliderSteps">
-							 </div>
-                             <div class="sliderField8 sliderSteps">
-							 </div>
-                             <div class="sliderField9 sliderSteps">
-							 </div>
-                             <div class="sliderField10 sliderSteps">
-							 </div>
-                         </div>
-                        
-                         <div class="minimizeMaximizeSynergyBtns"><img src="RES/IMG/arrowDown_.png" alt="arrow down" class="downArrows">
-						 </div>
-					     <div class="matchUps_synergiesDescription">
-                             <h4>Erklärung zu den Synergien mit Ashe</h4>
-                             <p id="synergyAsheDiscription" class="editables">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                             </p>
-                         </div>
-					     <div class="clearFix">
-						 </div>
-                     </div>
-					 <!-- Caitlyn -->
-                     <div id="synergyCaitlyn" class="synergyRowWrapper minimized">
-                         <h4>Caitlyn</h4>
-                         <img src="RES/IMG/adc/CaitlynSquare.png" class="champsHidden" alt="Caitlyn picture" >
-                        
-                         <div id="synergyCaitlynSlider" class="sliderSuitable">
-                             <div class="sliderField1 sliderSteps">
-							 </div>
-                             <div class="sliderField2 sliderSteps">
-							 </div>
-                             <div class="sliderField3 sliderSteps">
-							 </div>
-                             <div class="sliderField4 sliderSteps">
-							 </div>
-                             <div class="sliderField5 sliderSteps">
-							 </div>
-                             <div class="sliderField6 sliderSteps">
-							 </div>
-                             <div class="sliderField7 sliderSteps">
-							 </div>
-                             <div class="sliderField8 sliderSteps">
-							 </div>
-                             <div class="sliderField9 sliderSteps">
-							 </div>
-                             <div class="sliderField10 sliderSteps">
-							 </div>
-                         </div>
-                         <div  class="minimizeMaximizeSynergyBtns"><img src="RES/IMG/arrowDown_.png" alt="arrow down" class="downArrows">
-						 </div>
-                         <div class="matchUps_synergiesDescription">
-                             <h4>Erklärung zu den Synergien mit Caitlyn</h4>
-                             <p id="synergyCaitlynDiscription" class="editables">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                             </p>
-                         </div>
-                         <div class="clearFix">
-						 </div>
-                     </div>
+					             </div>     	 
+			                     <!-- skillorder description -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription">
+                                     <h3>Erklärung zu der Skillreihenfolge</h3>
+                                     <p id="champSkillsDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                     </p>
+                                 </div>
+								 <!-- matchups/synergies -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="matchUps_synergies">
+                                     <h2>Synergien</h2>
+					                 <!-- Ashe -->
+									 <div class="row"> <!-- row 12 starts -->
+									      <div class="col-sm-10 col-sm-offset-1 championAsheSynergyContainer">
+                                             <div id="synergyAshe" class="synergyRowWrapper minimized">
+                                                 <h4 class="synergy_heading">Ashe</h4>
+												 <div class="minimizeMaximizeSynergyBtns"><img src="RES/IMG/arrowDown_.png" alt="arrow down" class="downArrows">
+						                         </div>
+												 <div class="row"> <!-- row 13 starts -->
+												     <div class="col-sm-10 col-sm-offset-1 championContainerHiddenAshe">
+													     <div class="row"> <!-- row 14 starts -->
+														     <div class="col-sm-2 asheHiddenPicContainer">
+												             </div>
+                                                             <div id="synergyAsheSlider" class="col-sm-9 col-sm-offset-1 sliderSuitable">
+                                                                 <div class="sliderField1 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField2 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField3 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField4 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField5 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField6 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField7 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField8 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField9 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField10 sliderSteps">
+							                                     </div>
+												             </div>
+											             </div> <!-- row 14 ends -->
+                                                         <div class="row"> <!-- row 15 starts -->
+					                                         <div class="col-sm-10 col-sm-offset-1 matchUps_synergiesDescription">
+                                                                 <h4>Erklärung zu den Synergien mit Ashe</h4>
+                                                                 <p id="synergyAsheDiscription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                                                 </p>
+                                                             </div>
+												         </div> <!-- row 15 ends -->
+												     </div>
+												 </div> <!-- row 13 ends -->
+					                             <div class="clearFix">
+						                         </div>
+											 </div>
+                                         </div> 
+									 
+									 
+					                 <!-- Caitlyn -->
+									 <div class="col-sm-10 col-sm-offset-1 championCaitlynSynergyContainer">
+                                         <div id="synergyCaitlyn" class="synergyRowWrapper minimized">
+                                             <h4 class="synergy_heading">Caitlyn</h4>
+											 <div class="minimizeMaximizeSynergyBtns"><img src="RES/IMG/arrowDown_.png" alt="arrow down" class="downArrows">
+						                     </div>
+											 <div class="row"> <!-- row 13 starts -->
+												     <div class="col-sm-10 col-sm-offset-1 championContainerHiddenCaitlyn">
+													     <div class="row"> <!-- row 14 starts -->
+														     <div class="col-sm-2 caitlynHiddenPicContainer">
+												             </div>                            
+                                                             <div id="synergyCaitlynSlider" class="col-sm-9 col-sm-offset-1 sliderSuitable">
+                                                                 <div class="sliderField1 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField2 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField3 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField4 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField5 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField6 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField7 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField8 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField9 sliderSteps">
+							                                     </div>
+                                                                 <div class="sliderField10 sliderSteps">
+							                                     </div>
+                                                             </div>
+														 </div> <!-- row 14 ends -->
+														 <div class="row"> <!-- row 15 starts -->
+                                                             <div class="col-sm-10 col-sm-offset-1 matchUps_synergiesDescription">
+                                                                 <h4>Erklärung zu den Synergien mit Caitlyn</h4>
+                                                                 <p id="synergyCaitlynDiscription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                                                 </p>
+                                                             </div>
+													     </div> <!-- row 15 ends -->
+                                                         <div class="clearFix">
+						                                 </div>
+                                                     </div>
+					                         </div> <!-- row 13 ends -->
+					                     </div> <!-- row 12 ends -->
 					 <!-- Corki -->
                      <div id="synergyCorki" class="synergyRowWrapper minimized">
                          <h4>Corki</h4>
@@ -1226,25 +1261,81 @@
 						 </div>
                      </div>
                  </div>
-	 
-	             <!-- synergy description -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents2" id="synergyDescriptionContainer">
-                     <h3>Erklärung zu den Synergien</h3>
-                     <p id="matchUps_synergiesDescription" class="editables">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                     </p>
-                 </div>
-	 			 
-				 <!-- fazit -->
-                 <div class="col-sm-8 col-sm-offset-2 editorComponents3">
-                     <h3>Fazit</h3>
-                     <p id="fazit" class="editables">
-                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
-                       Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                     </p>
-                 </div>
-	 </div> <!-- row 1 ende -->
+				 </div>
+				 </div>
+				 
+				 
+
+	                 <!-- synergy description -->
+                     <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="synergyDescriptionContainer">
+                         <h3>Erklärung zu den Synergien</h3>
+                         <p id="matchUps_synergiesDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                         </p>
+                     </div>
+					 <!-- fazit -->
+                     <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription">
+                         <h3>Fazit</h3>
+                         <p id="fazit" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+                                                         Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                         </p>
+                     </div>
+					 		 	
+				 </div><!-- row 2 ends -->
+	 </div> <!-- wrapper ends --> 
+					 <!--Bottom Navigationbar-->
+		             <div class="row">
+					     <div class="col-sm-12">
+		                     <nav class="navbar navbar-default navbar-inverse nav_bar" role="navigation">
+			                     <div class="navbar-header">
+				                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse1">
+					                     <span class="sr-only">Toggle Navigation</span>
+					                     <span class="icon-bar"></span>
+					                     <span class="icon-bar"></span>
+					                     <span class="icon-bar"></span>
+					                 </button>
+				                 </div>
+				                 <div class="collapse navbar-collapse" id="collapse1">
+				                     <ul class="nav navbar-nav nav_bar">
+					                     <li><a>&copyGuide-Cloud</a></li>
+						                 <li><a href="#">Forum</a></li>
+						                 <li><a href="#">Über Uns</a></li>
+						                 <li><a href="#">Kontakt</a></li>
+                                         <li><a href="#">Datenschutz</a></li>
+						                 <li><a href="#">Archiv</a></li>
+                                     </ul>	
+                                 </div>	
+			                 </nav>
+						 </div>
+		             </div>
+		             <a href="#"><img src="RES/bilder/fb_btn.png" class="fb_like_btn img-responsive"></a> 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+				 
+		
            
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
              <div id="adviceBox" class="hide">
                  <div class="closeBtns">X</div>
                 <h1>_____Hinweis_____</h1>
@@ -1257,64 +1348,14 @@
              <div id="tooltipContainer" class="hide">
              </div>
 			 
-			  <!-- guide info -->
-                     <div class="col-sm-8 col-sm-offset-2 editorComponents" id="guideInfos">
-				         <p>Autor: Pläscha</p>
-					     <p id="timeStamp"></p>
-                         <h3 id="guideTitle" class="editables">Hier kannst du deinem Guide einen Namen geben...</h3>
-                     </div>
-					 
-					     <div id="abilityPrio">
-                         <div class="labelAbilities">Skillreihenfolge</div>
-                         <div class="level1"></div>
-                         <div class="level2"></div>
-                         <div class="level3"></div>
-                         <div class="level4"></div>
-                         <div class="level5"></div>
-                         <div class="level6"></div>
-                         <div class="level7"></div>
-                         <div class="level8"></div>
-                         <div class="level9"></div>
-                         <div class="level10"></div>
-                         <div class="level11"></div>
-                         <div class="level12"></div>
-                         <div class="level13"></div>
-                         <div class="level14"></div>
-                         <div class="level15"></div>
-                         <div class="level16"></div>
-                         <div class="level17"></div>
-                         <div class="level18"></div>
-                         <div class="clearFix"></div>
-                     </div>
+			
+		
 			 
-	     <!--Bottom Navigationbar-->
-		 <div class="row">
-		     <nav class="navbar navbar-default navbar-inverse nav_bar" role="navigation">
-			     <div class="navbar-header">
-				     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse1">
-					     <span class="sr-only">Toggle Navigation</span>
-					     <span class="icon-bar"></span>
-					     <span class="icon-bar"></span>
-					     <span class="icon-bar"></span>
-					 </button>
-				 </div>
-				 <div class="collapse navbar-collapse" id="collapse1">
-				     <ul class="nav navbar-nav nav_bar">
-					     <li><a>&copyGuide-Cloud</a></li>
-						 <li><a href="#">Forum</a></li>
-						 <li><a href="#">Über Uns</a></li>
-						 <li><a href="#">Kontakt</a></li>
-                         <li><a href="#">Datenschutz</a></li>
-						 <li><a href="#">Archiv</a></li>
-                     </ul>	
-                 </div>	
-			 </nav>
-		 </div>
-		 <a href="#"><img src="RES/bilder/fb_btn.png" class="fb_like_btn img-responsive"></a> 
+	   
         
 		
 		
-		</div>
+		
 		
 		<!--jQuery Google CDN-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -1322,5 +1363,6 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <!--My personal javascript -->
 		<script type="text/javascript" src="JS/handleUI.js"></script>
+		<script type="text/javascript" src="JS/guideEditor_2.js"></script>
     </body>
 </html>
