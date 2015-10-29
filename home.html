@@ -11,6 +11,9 @@
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	 <!-- Eigene CSS Datei -->
 	 <link rel="stylesheet" href="CSS/style_a.css" type="text/css">
+	<link rel="stylesheet" href="CSS/championSprites.css" type="text/css">
+	<link rel="stylesheet" href="CSS/regStyle.css" type="text/css">
+
 	 <!--Google Fonts-->
 	 <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
 	 <link href='https://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
@@ -164,6 +167,63 @@
 			 </nav>
 		 </div>
 		 <a href="#"><img src="RES/bilder/fb_btn.png" class="fb_like_btn img-responsive"></a>
+	 </div>
+
+	 <!-- R E G I S T R A T I O N -->
+	 <div id="registrationPopup">
+		 <a class="closeBtn">X</a>
+		 <div class="row">
+			 <div class="col-xs-offset-1 col-xs-6" id="registrationBox">
+				 <form action="Php/handleRequests.php" method="post">
+					 <div class="row">
+						 <h1>Werde Teil einer Bewegung</h1>
+						 <hr>
+						 <!--prevent Chrome from autofillin...-->
+						 <input type="email" style="display:none">
+						 <input type="password" style="display:none" >
+
+						 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+							 <input type="text"  name="firstname" id="firstname" placeholder="Vorname *" required>
+						 </div>
+						 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+							 <input type="text"  name="lastname" id="lastname" placeholder="Nachname">
+						 </div>
+						 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+							 <input type="text"  name="username" id="username" placeholder="Username *" required>
+						 </div>
+						 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+							 <input type="date"  name="dateOfBirth" id="dateOfBirth" placeholder="default">
+						 </div>
+						 <!-- erstmal raus
+                          <input type="text" class="form-control" name="state" id="state" placeholder="...">
+                        <input type="text" class="form-control" name="city" id="city" placeholder="...">
+                        <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="...">-->
+						 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+							 <input type="email"  name="email" id="email" placeholder="Maxmustermann@test.de*"required>
+						 </div>
+						 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+							 <input type="password" name="password" id="password" placeholder="Passwort*" required >
+						 </div>
+						 <hr>
+						 <button type="submit" class="btn btn-default col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6" id="regBtn" name="regBtn">Mitglied werden</button>
+					 </div>
+				 </form>
+			 </div>
+			 <div class="col-xs-4" id="regInfo">
+				 <h2>Wieso solltest du dich registrieren?</h2>
+				 <ul>
+					 <li>Guides erstellen</li>
+					 <li>Teil einer wunderbaren Community</li>
+					 <li>Tausche dich mit begeisterten Gamern aus</li>
+					 <li>Nimm an atemberaubenden Tunieren teil</li>
+					 <li>Halte dich immer auf dem neustem Stand</li>
+					 <li>yada..</li>
+					 <li>yada...</li>
+					 <li>yada....</li>
+				 </ul>
+			 </div>
+		 </div>
+
 	 </div>
  	<!-- jQuery Google CDN -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

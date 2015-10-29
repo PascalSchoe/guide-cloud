@@ -12,60 +12,58 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
     <body>
-    <form action="Php/handleRequests.php" method="post" id="registerBox">
-        <div class="form-group">
-            <label for="firstname">Vorname</label>
-            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="..." required>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-6" id="registrationBox">
+            <form action="Php/handleRequests.php" method="post">
+                <div class="row">
+                    <h1>Werde Teil einer Bewegung</h1>
+                    <hr>
+                    <!--prevent Chrome from autofillin...-->
+                    <input type="email" style="display:none">
+                    <input type="password" style="display:none" >
+
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+                        <input type="text"  name="firstname" id="firstname" placeholder="Vorname *" required>
+                    </div>
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+                        <input type="text"  name="lastname" id="lastname" placeholder="Nachname">
+                    </div>
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+                        <input type="text"  name="username" id="username" placeholder="Username *" required>
+                    </div>
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+                        <input type="date"  name="dateOfBirth" id="dateOfBirth" placeholder="default">
+                    </div>
+                    <!-- erstmal raus
+                     <input type="text" class="form-control" name="state" id="state" placeholder="...">
+                   <input type="text" class="form-control" name="city" id="city" placeholder="...">
+                   <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="...">-->
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+                        <input type="email"  name="email" id="email" placeholder="Maxmustermann@test.de*"required>
+                    </div>
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+                        <input type="password" name="password" id="password" placeholder="Passwort*" required >
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-default col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6" id="regBtn" name="regBtn">Mitglied werden</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="lastname">Nachname</label>
-            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="...">
+        <div class="col-xs-5" id="regInfo">
+            <h2>Wieso solltest du dich registrieren?</h2>
+            <hr>
+            <ul>
+                <li>Guides erstellen</li>
+                <li>Teil einer wunderbaren Community</li>
+                <li>Tausche dich mit begeisterten Gamern aus</li>
+                <li>Nimm an atemberaubenden Tunieren teil</li>
+                <li>Halte dich immer auf dem neustem Stand</li>
+                <li>yada..</li>
+                <li>yada...</li>
+                <li>yada....</li>
+            </ul>
         </div>
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" name="username" id="username" placeholder="..." required>
-        </div>
-        <div class="form-group">
-            <label for="dateOfBirth">Geburtstag</label>
-            <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="...">
-        </div>
-        <div class="form-group">
-            <label for="country">Land</label>
-            <input type="text" class="form-control" name="country" id="country" placeholder="...">
-        </div>
-        <div class="form-group">
-            <label for="state">State</label>
-            <input type="text" class="form-control" name="state" id="state" placeholder="...">
-        </div>
-        <div class="form-group">
-            <label for="city">Stadt</label>
-            <input type="text" class="form-control" name="city" id="city" placeholder="...">
-        </div>
-        <div class="form-group">
-            <label for="zipCode">Zipcode</label>
-            <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="...">
-        </div>
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control"  name="email" id="email" placeholder="..." required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="..." required>
-        </div>
-        <div class="form-group">
-            <label for="test">hacki unso</label>
-            <input type="text" class="form-control" name="test" id="test" placeholder="uuups!" required>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="radio" name="gender" value="female"> weiblich
-            </label>
-            <label>
-                <input type="radio" name="gender" value="male"> männlich
-            </label>
-        </div>
-        <button type="submit" class="btn btn-default" name="regBtn">Registrieren</button>
-    </form>
+    </div>
+
     </body>
 </html>

@@ -31,9 +31,10 @@ function displayF2PChamps()
                         "background-image":"url('RES/IMG/champIcons/" + this.imageData.sprite +"')",
                         "background-repeat":"no-repeat",
                         "background-position": "-" + this.imageData.x + "px -" + this.imageData.y + "px",
-                        "width": this.imageData.w + "px",
+                        "width": this.imageData.w  + "px",
                         "height": this.imageData.h + "px"
                     });
+                    $("#champ_" + counter).addClass("icon-small");
                     counter++;
                 });
             }

@@ -11,13 +11,15 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
      <!-- Eigene CSS Datei -->
 	 <link rel="stylesheet" href="CSS/style_a.css" type="text/css">
+	<link rel="stylesheet" href="CSS/regStyle.css" type="text/css">
 	 <!--Google Fonts-->
 	  <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript" src="JS/handleUI.js"></script>
 	<script type="text/javascript" src="JS/loadRiotContents.js"></script>
  </head>
- 
+
+<body>
      <div class="container-fluid">
 	 <!-- row 1: top navigationsbar -->
 	     <div class="row">
@@ -60,39 +62,39 @@
 		 <!--Competetive League of Legends Icon Container-->
 		 <div class="comp_container" id="comp_container">
 		     <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/eu_lcs.png" class="comp_pic"></img>
+			     <img> src="RES/bilder/eu_lcs.png" class="comp_pic">
 				 <p class="comp_title">EU LCS</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/na_lcs.png" class="comp_pic_na"></img>
+			     <img src="RES/bilder/na_lcs.png" class="comp_pic_na">
 				 <p class="comp_title">NA LCS</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/lck_logo.png" class="comp_pic_lck"></img>
+			     <img src="RES/bilder/lck_logo.png" class="comp_pic_lck">
 				 <p class="comp_title comp_title_lck">LCK KOREA</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/lpl_logo.png" class="comp_pic"></img>
+			     <img src="RES/bilder/lpl_logo.png" class="comp_pic">
 				 <p class="comp_title comp_title_lpl">LPL CHINA</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/lms_logo.png" class="comp_pic_lms"></img>
+			     <img src="RES/bilder/lms_logo.png" class="comp_pic_lms">
 				 <p class="comp_title comp_title_lms">LMS TAIWAN</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/eu_cs.png" class="comp_pic"></img>
+			     <img src="RES/bilder/eu_cs.png" class="comp_pic">
 				 <p class="comp_title comp_title_euCS">EU CHALLENGER SERIES</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/na_cs.png" class="comp_pic_naCS"></img>
+			     <img src="RES/bilder/na_cs.png" class="comp_pic_naCS">
 				 <p class="comp_title comp_title_euCS">NA CHALLENGER SERIES</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			     <img src="RES/bilder/msi_logo.png" class="comp_pic_msi"></img>
+			     <img src="RES/bilder/msi_logo.png" class="comp_pic_msi">
 				 <p class="comp_title comp_title_msi">MID-SEASON INVITATIONAL</p>
 			 </div>
 			 <div class="icon1" onclick="location" href="#" style="cursor: pointer">
-			      <img src="RES/bilder/wm_logo.png" class="comp_pic_wm"></img>
+			      <img src="RES/bilder/wm_logo.png" class="comp_pic_wm">
 				 <p class="comp_title comp_title_wm">WELTMEISTERSCHAFT</p>
 			 </div>
 		 </div>
@@ -118,7 +120,7 @@
 		  <!--row 2: header-->
 		 <div class="row">
 		     <div class="header col-sm-12">
-			     <img src="RES/bilder/gcLogoTrans.png" class="img-responsive gc_pic"></img>
+			     <img src="RES/bilder/gcLogoTrans.png" class="img-responsive gc_pic">
 				 <h1 class="gc_heading">Guide-Cloud</h1>
 				 <div class="clearfix"></div>
 			 </div>
@@ -304,17 +306,62 @@
 			 </nav>
 		 </div>
 		 <a href="#"><img src="RES/bilder/fb_btn.png" class="fb_like_btn img-responsive"></a>
-		 
-     
-	 
-	 
-	 
+
+		 <!-- R E G I S T R A T I O N -->
+		 <div id="registrationPopup">
+			 <a class="closeBtn">X</a>
+			 <div class="row">
+				 <div class="col-xs-offset-1 col-xs-6" id="registrationBox">
+					 <form action="Php/handleRequests.php" method="post">
+						 <div class="row">
+							 <h1>Werde Teil einer Bewegung</h1>
+							 <hr>
+							 <!--prevent Chrome from autofillin...-->
+							 <input type="email" style="display:none">
+							 <input type="password" style="display:none" >
+
+							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+								 <input type="text"  name="firstname" id="firstname" placeholder="Vorname *" required>
+							 </div>
+							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+								 <input type="text"  name="lastname" id="lastname" placeholder="Nachname">
+							 </div>
+							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+								 <input type="text"  name="username" id="username" placeholder="Username *" required>
+							 </div>
+							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+								 <input type="date"  name="dateOfBirth" id="dateOfBirth" placeholder="default">
+							 </div>
+							 <!-- erstmal raus
+                              <input type="text" class="form-control" name="state" id="state" placeholder="...">
+                            <input type="text" class="form-control" name="city" id="city" placeholder="...">
+                            <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="...">-->
+							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+								 <input type="email"  name="email" id="email" placeholder="Maxmustermann@test.de*"required>
+							 </div>
+							 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6">
+								 <input type="password" name="password" id="password" placeholder="Passwort*" required >
+							 </div>
+							 <hr>
+							 <button type="submit" class="btn btn-default col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6" id="regBtn" name="regBtn">Mitglied werden</button>
+						 </div>
+					 </form>
+				 </div>
+				 <div class="col-xs-4" id="regInfo">
+					 <h2>Wieso solltest du dich registrieren?</h2>
+					 <ul>
+						 <li>Guides erstellen</li>
+						 <li>Teil einer wunderbaren Community</li>
+						 <li>Tausche dich mit begeisterten Gamern aus</li>
+						 <li>Nimm an atemberaubenden Tunieren teil</li>
+						 <li>Halte dich immer auf dem neustem Stand</li>
+						 <li>yada..</li>
+						 <li>yada...</li>
+						 <li>yada....</li>
+					 </ul>
+				 </div>
+			 </div>
 	 </div>
- 
-     
- 
- <body>
- 
      <!-- jQuery Google CDN -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
      <!-- Latest compiled and minified JavaScript (CDN) -->
