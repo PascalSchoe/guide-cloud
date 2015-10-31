@@ -22,7 +22,7 @@ class UserTable extends BaseTable
 
     private $userInstance;
 
-    public function __construct($uInstance)
+    public function __construct($uInstance=null)
     {
         $this->userInstance = $uInstance;
         $this->dbm = new DBManager();
@@ -76,6 +76,30 @@ class UserTable extends BaseTable
         unset($this->dbm);
     }
 
+    public function isAvailable($col,$value)
+    {
+        $uID = null;
+
+        $this->dbm->stmt = $this->dbm->mysqli->prepare($this->dbm->getPredesignedQueries()["UserQueries"]["already_in_use_" . $col]);
+        $this->signature = 's';
+        $this->dbm->stmt->bind_param(
+            $this->signature,
+            $value
+        );
+        $this->dbm->stmt->execute();
+
+        $this->dbm->stmt->bind_result(
+            $this->retrievedUserID
+        );
+
+        if($this->dbm->stmt->fetch())
+        {
+            return false;
+        }
+
+        return true;
+    }
+
     public function getData($searchCol, $value)
     {
         if($searchCol == "ID")
@@ -88,7 +112,7 @@ class UserTable extends BaseTable
         }
         else
         {
-            echo __CLASS__ . " - getData()... Wrong searchCol: " .$searchCol;
+            //echo __CLASS__ . " - getData()... Wrong searchCol: " .$searchCol;
         }
 
         $this->dbm->stmt = $this->dbm->mysqli->prepare($this->dbm->getPredesignedQueries()['UserQueries']['findUserBy' . $searchCol]);
@@ -116,20 +140,6 @@ class UserTable extends BaseTable
 
         if($this->dbm->stmt->fetch())
         {
-            echo $this->retrievedUserID."<br />";
-            echo $this->retrievedFname."<br />";
-            echo $this->retrievedLname."<br />";
-            echo $this->retrievedUname."<br />";
-            echo $this->retrievedDOB."<br />";
-            echo $this->retrievedDOR."<br />";
-            echo $this->retrievedGender."<br />";
-            echo $this->retrievedCountry."<br />";
-            echo $this->retrievedState."<br />";
-            echo $this->retrievedCity."<br />";
-            echo $this->retrievedZIP."<br />";
-            echo $this->retrievedEmail."<br />";
-            echo $this->retrievedPassword."<br />";
-
             $this->userInstance->remoteAccess = true;
             $this->userInstance->setUserID($this->retrievedUserID);
             $this->userInstance->setDor($this->retrievedDOR);
@@ -152,7 +162,13 @@ class UserTable extends BaseTable
 
     public function insertRecord($obj=null)
     {
-        $this->signature ="ssssssssssss";
+        //echo __METHOD__. "<br />" .$obj ."<br />";
+
+        if(isset($obj))
+        {
+            $this->userInstance = $obj;
+        }
+        $this->signature ="sssssss";
         $this->dbm->stmt = $this->dbm->mysqli->prepare($this->dbm->getPredesignedQueries()['UserQueries']['addUser']);
         $this->dbm->stmt->bind_param(
             $this->signature,
@@ -161,11 +177,6 @@ class UserTable extends BaseTable
             $this->userInstance->getUsername(),
             $this->userInstance->getDob(),
             $this->userInstance->getDor(),
-            $this->userInstance->getGender(),
-            $this->userInstance->getCountry(),
-            $this->userInstance->getState(),
-            $this->userInstance->getCity(),
-            $this->userInstance->getZip(),
             $this->userInstance->getEmail(),
             $this->userInstance->getPassword()
         );

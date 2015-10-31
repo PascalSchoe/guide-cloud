@@ -10,12 +10,12 @@ class System
     {
         $this->callOrign = $callOrign;
 
-        echo "An object of class: " . __CLASS__ . " has been initialized...<br />";
+       // echo "An object of class: " . __CLASS__ . " has been initialized...<br />";
     }
 
     public function createPassword($email,$password)
     {
-        echo __CLASS__ . " - crypt()<br />";
+        //echo __CLASS__ . " - crypt()<br />";
 
         $string = hash_hmac('whirlpool', str_pad($password, strlen( $password ) * 4, sha1( $email ), STR_PAD_BOTH), SALT,true);
         $salt = substr(str_shuffle('./0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),0,22);
@@ -32,22 +32,32 @@ class System
      */
     public function checkPassword($email,$password)
     {
+        $response = array();
 
         $string = hash_hmac ( "whirlpool", str_pad ( $password, strlen ( $password ) * 4, sha1 ( $email ), STR_PAD_BOTH ), SALT, true );
 
-        //echo "gespeichert ist: " . $stored . " und erzeugt wurde: " . crypt($string, substr($stored,0,30)) ."<br />";
-
         $ut = new UserTable($this->callOrign);
         $ut-> getData("Email",$email);
+
         unset($ut);
+
         if($this->callOrign->getPassword() == crypt($string, substr($this->callOrign->getPassword(),0,30)))
         {
-            echo "Willkommen du hast dich erfolgreich eingeloggt...";
+            //session_start();
+            $response['success'] = intval(true);
+            $response['msg'] = 'Willkommen du hast dich erfolgreich eingeloggt';
+            $_SESSION['user']= $this->callOrign->getUserID();
+            $_SESSION['username'] =  $this->callOrign->getUsername();
+            return $response;
         }
         else
         {
-            echo "Die angegebene Password/Email - Kombination ist uns unbekannt...";
+            $response['success'] = intval(false);
+            $response['errors'] = 'Die angegebene Password/Email - Kombination ist uns unbekannt';
+            //destroying userObject which holds private Data
             unset($this->callOrign);
+            return $response;
+
         }
 
         /**
@@ -60,11 +70,46 @@ class System
 
     }
 
-    public function checkUserInput($rawData, $dbCol)
-    {
-        $colMaxLength = 0;
-        $_rawData = null;
+    /**
+     *  This method checks several scenarios:
+     *          > Input holds values
+     *          > Input contains no tags
+     *          > Input contains no unnecessary whitespace
+     *          > Input does not exceed column length
+     *
+     *  After this tests it returns the sanitized Data or an error message.
+     *
+     * @param $rawData -/- Userinput which will be checked and sanitized
+     * @param $dbCol string Name of Database column, which will host the input
+     * @param $type string  Type of input
+     * @return string Errormessage or cleaned Data
+     */
 
+
+    /**
+     *  This method looks for the specified column within the right table and checks if the value
+     *  not taken already.
+     *
+     * @param $table string Important to select the right predesignedQuery
+     * @param $col string Which column to check
+     * @param $value string Value to check whether it is already in use or not
+     * @return bool
+     */
+    public function isAvailable($table,$col,$value)
+    {
+
+
+        return false;
+    }
+
+    public function checkUserInput($rawData,$dbCol, $type, $call=null)
+    {
+        $colMaxLength = 150;
+        $_rawData = null;
+        $type  = 'is_' .$type;
+        $response = array();
+        $response['success'] = intval(true);
+        $response['errors'] = array();
         /*
          * HARDCODED ...
          * Later I mma fix this and get me the col length from the right *Table class obj
@@ -86,36 +131,73 @@ class System
             case "email":
                 $colMaxLength = 256;
                 break;
+            case "password":
+            case "dateOfBirth":
+                //wayn
+                break;
             default:
-                echo __METHOD__ . " - Error when setting length auf column";
+                echo __METHOD__ . " - Error when setting length of column: " .$dbCol ."<br/>";
                 break;
 
         }
 
-
-
-        if (isset($rawData))
+        if (!(isset($rawData)))
         {
-            $_rawData = $rawData;
-            //stl check
-            if (strlen($_rawData) <= $colMaxLength)
-            {
-                //Striptags
-                if (true)
-                {
-                    //$data = new
-                    //trim
-                    if (true)
-                    {
-                        //$data = new
-                        //return data
-
-                    }
-                }
-            }
-
-            return false;
+            $response['success'] = intval(false);
+            $response['errors'][] = 'Es wurde kein Wert für: ' . $dbCol . ' angegeben!';
         }
+
+        /**
+         * Does Input have correct DataType?
+         */
+        if (!($type($rawData)))
+        {
+            $response['success'] = intval(false);
+            $response['errors'][] = 'Der Datentyp für Ihre Eingabe:'. $rawData .' entspricht nicht dem geforderten Format.';
+        }
+
+        /**
+         * Does the input exceed column length?
+         */
+        if (!(strlen($rawData) <= $colMaxLength))
+        {
+            $response['success'] = intval(false);
+            $response['errors'][] = 'Ihre Eingabe: ' . $rawData .' ist zu lang, maximal zulässing sind ' . $colMaxLength . ' Zeichen.';
+
+        }
+
+        /**
+         * Is value already taken?
+         */
+        if($dbCol === "username")
+        {
+            //|| $dbCol === "email"
+            $ut = new UserTable();
+            if (!($ut->isAvailable($dbCol, $rawData)))
+            {
+                $response['success'] = intval(false);
+                $response['errors'][] =  $dbCol . " wird schon verwendet.";
+            }
+        }
+
+        if($response['success']== intval(true))
+        {
+            //Striptags
+            $_rawData = strip_tags($rawData);
+            $_rawData = trim($_rawData);
+
+            //trim and return clean Input
+            $response['data'] = $_rawData;
+
+        }
+
+        return $response;
     }
 }
+
+//$s = new System();
+//$s->checkUserInput("pascggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggal","firstname", "string");
+//$s->checkUserInput( 13345435457485748577845788888888888555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555558888888888888888888888888888888888888888888888888888888888888888888,"firstname","string");
+//$s->checkUserInput("mToTheIcky","username","int");
+//$s->checkUserInput("micky","firstname","string");
 ?>

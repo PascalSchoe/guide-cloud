@@ -45,50 +45,6 @@ p {
 #collapse ul li a.active_btn {
 	 color: white;
 }
-
-
-/*Login Container*/
-.login_container {
-	 display: none;
-	 height: 180px;
-	 width: 260px;
-	 background: linear-gradient(to top, #5C5A5A 0%, #363131 50%, #0D0D0D 100%);
-	 z-index: 60000;
-	 position: absolute;
-	 top: 4em;
-	 right: 2em;
-	 border: 0.1em solid #000;
-	 border-radius: 0.6em;
-	 box-shadow: 30px 30px 30px #000;
-}
-.login_field label {
-	 float: left;
-	 width: 6em;
-	 line-height: 1.2em;
-	 text-align: right;
-	 color: #FFF;
-	 margin-top: 2em;
-	 margin-left: 0.5em;
-	 
-}
-.login_field input {
-	 width: 10em;
-	 margin-top: 1.6em;
-	 margin-left: 0.5em;
-	 
-}
-.cancel_input {
-	 margin: 1.5em 0.5em 0em 3em;
-}
-.cancel_input:hover {
-	 color: #FFF;
-	 background: #000;
-}
-.submit_input:hover {
-	 color: #FFF;
-	 background: #000;
-}
-
 /*Competetive League Container*/
 .comp_container {
 	 display: none;
@@ -401,8 +357,12 @@ a.heading_link {
 	 color: yellow;
 	font-size: 1em;
 }
-
-
+#surfaceBtn
+{
+	display:none;
+	color: yellow;
+	font-weight: bold;
+}
 
 
 

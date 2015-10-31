@@ -190,7 +190,7 @@
                 }
 
                 if (!$foundChampion) {
-                    echo "Leider kein Treffer für deinen Suchbegriff...";
+                   // echo "Leider kein Treffer für deinen Suchbegriff...";
                 }
 
             }

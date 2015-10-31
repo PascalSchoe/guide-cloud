@@ -30,35 +30,21 @@
     text-align: center;
 
 }
-#regInfo h2
+#regInfo h2, #login_container h2
 {
     color: #337ab7;
+}
+#serverResponse h3
+{
+    color: #337ab7;
+    margin-bottom: 0.5em;
+    text-align: center;
 }
 #regInfo ul
 {
     list-style: none;
 }
-/*
-#registrationBox input[type="password"],#registrationBox input[type="text"],#registrationBox input[type="email"],#registrationBox input[type="date"]
-{
-    border:0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 0.1em solid #ffa200;
-
-    margin-bottom: 3em;
-    text-align: center;
-    line-height: 2em;
-    color: #aaa;
-    width: 100%;
-
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-}
-*/
-#regBtn
+#regBtn,.submit_input
 {
     background: #222;
     border: 1px solid #111;
@@ -71,10 +57,6 @@ a[class^="closeBtn"]
     font-weight: bold;
     font-size: 2em;
     color: #222;
-    /*
-    oder color:#337ab7;;
-    dann aber  keinen text-shadow
-    */
     text-shadow: 1px 1px 0px #444;
     position: absolute;
     right: 2%;
@@ -82,23 +64,8 @@ a[class^="closeBtn"]
     text-decoration: none;
     cursor: pointer;
 }
-/*
-#registrationBox input[type=text]:focus,#registrationBox input[type="password"]:focus,#registrationBox input[type="email"]:focus,#registrationBox input[type="date"]:focus
-{
-    box-shadow: inset 0 0 10px rgba(255, 150, 0, 1);
-    border: 1px solid rgba(255, 150, 0, 1);
-    border-bottom-width: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-}
-*/
 
-/**
-    VARIANTE zwei wachsende border bottom
-*/
-
-#registrationBox input[type="password"],#registrationBox input[type="text"],#registrationBox input[type="email"],#registrationBox input[type="date"]
+#registrationBox input[type="password"],#login_container input[type="password"],#registrationBox input[type="text"],#registrationBox input[type="email"],#login_container input[type="email"],#registrationBox input[type="date"]
 {
     border:0;
     outline: 0;
@@ -117,10 +84,9 @@ a[class^="closeBtn"]
     transition: all 1000ms;
 
 }
-#registrationBox input[type=text]:focus,#registrationBox input[type="password"]:focus,#registrationBox input[type="email"]:focus,#registrationBox input[type="date"]:focus
+#registrationBox input[type=text]:focus,#registrationBox input[type="password"]:focus,#login_container input[type="password"]:focus,#registrationBox input[type="email"]:focus,#login_container input[type="email"]:focus,#registrationBox input[type="date"]:focus
 {
-    box-shadow: inset 0 0 10px rgba(255, 150, 0, 1);
-    border: solid 2px rgba(255, 150, 0, 1);
+    border-bottom: solid 2px #ffa200;
     -webkit-transform: scaleX(1.5);
     -ms-transform: scaleX(1.5);
     transform: scaleX(1.5);
@@ -132,4 +98,45 @@ hr{
     box-shadow: 1px 1px 0 #555;
     border: 1px solid #222;
     width:84%;
+}
+#serverResponse
+{
+    position: fixed;
+    width: 30%;
+    left:35%;
+    top:20%;
+    background: #333;
+    z-index: 69999;
+    padding: 2em;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display:none;
+    box-shadow: 0px 0px 0px 2000px rgba(0,0,0,0.7);
+}
+#msgBox
+{
+    text-align: center;
+}
+#msgBox p:before
+{
+    content: '> ';
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+/*Login Container*/
+#login_container
+{
+    width:30%;
+    position: absolute;
+    top:5%;
+    left:65%;
+    display:none;
+    background: #333;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 2000px rgba(0,0,0,0.7);
+    padding: 0.5em;
+    text-align: center;
 }

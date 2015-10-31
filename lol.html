@@ -54,6 +54,7 @@
 						     </ul></li>
 						 <li class="league_btn"><a id="league_btn" href="#">Leagues <span class="caret"></span></a>
 						 <li class="reg_btn" id="reg_btn"><a class="register_btn" href="#">REGISTRIEREN</a></li>
+						 <li ><a id="surfaceBtn" href="#"></a></li>
 						 <li class="login_btn"><a class="log_btn" id="login_btn" href="#">EINLOGGEN</a></li>
 					 </ul>
 				 </div>
@@ -97,24 +98,6 @@
 			      <img src="RES/bilder/wm_logo.png" class="comp_pic_wm">
 				 <p class="comp_title comp_title_wm">WELTMEISTERSCHAFT</p>
 			 </div>
-		 </div>
-		 
-		 <!--Login Container-->
-		 <div class="login_container" id="login_container">
-			 <a class="closeBtn">X</a>
-			 <form action="Php/handleRequests.php" method="post">
-				 <fieldset class="login_field">
-					 <p>
-						 <label for="e_mail">E-mail:</label>
-						 <input type="email" name="email" id="e_mail">
-					 </p>
-					 <p>
-						 <label for="pw_input">Passwort:</label>
-						 <input type="password" name="password" id="pw_input">
-					 </p>
-				 </fieldset>
-				 <input class="submit_input" type="submit" value="Einloggen" name="loginBtn">
-			 </form>
 		 </div>
 
 		  <!--row 2: header-->
@@ -312,7 +295,7 @@
 			 <a class="closeBtn">X</a>
 			 <div class="row">
 				 <div class="col-xs-offset-1 col-xs-6" id="registrationBox">
-					 <form action="Php/handleRequests.php" method="post">
+					 <form id="registrationForm" action="Php/handleRequests.php" method="post">
 						 <div class="row">
 							 <h1>Werde Teil einer Bewegung</h1>
 							 <hr>
@@ -360,12 +343,45 @@
 				 </div>
 			 </div>
 	 </div>
- </div>
+	 <!--Login Container-->
+	 <div id="login_container">
+		 <a class="closeBtn">X</a>
+		 <h2>Login</h2>
+
+		 <form id="loginForm" action="Php/handleRequests.php" method="post">
+			 <fieldset id="login_field">
+				 <div class="row">
+					 <div class="col-xs-offset-2 	col-xs-8">
+						 <input type="email" name="login_email" id="e_mail" placeholder="Email...">
+					 </div>
+				 </div>
+				 <div class="row">
+					 <div class="col-xs-offset-2 col-xs-8">
+						 <input type="password" name="login_password" id="pw_input" placeholder="Passwort...">
+					 </div>
+				 </div>
+				 <hr>
+				 <div class="row">
+					 <div class="col-xs-offset-1 col-xs-10">
+						 <button class="btn btn-default submit_input" type="submit" name="loginBtn">Einloggen</button>
+					 </div>
+				 </div>
+			 </fieldset>
+		 </form>
+	 </div>
+	 <div id="serverResponse">
+		 <a class="closeBtn">X</a>
+		 <h3>Servermeldung</h3>
+		 <hr>
+		 <div id="msgBox">
+
+		 </div>
+	 </div>
      <!-- jQuery Google CDN -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
      <!-- Latest compiled and minified JavaScript (CDN) -->
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+	 </div>
 </body>
 
 </html>

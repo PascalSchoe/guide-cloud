@@ -60,7 +60,6 @@ function displayChampions(filter)
             success: function(data)
             {
                 var championImages = $.parseJSON( data );
-                console.log(championImages[counter].sprite);
                 $(".champIcon").each(function(){
                     $(this).css({
                         "background-image":"url('RES/IMG/champIcons/" +championImages[counter].sprite +"')",
@@ -69,7 +68,6 @@ function displayChampions(filter)
                         "width": championImages[counter].w+5 + "px",
                         "height": championImages[counter].h+5 + "px"
                     });
-                    console.log(counter);
                     counter++;
 
                 });

@@ -54,7 +54,7 @@ class DBManager
             "findUserByID"          => "SELECT * FROM Users WHERE userID=?",
             "findUserByEmail"       => "SELECT * FROM Users WHERE email=?",
             "findUserByUsername"    => "SELECT * FROM Users WHERE username=?",
-            "addUser"               => "INSERT INTO Users VALUES('null',?,?,?,?,?,?,?,?,?,?,?,?)",
+            "addUser"               => "INSERT INTO Users(firstname,lastname,username,dateOfBirth,dateOfReg,email,password) VALUES(?,?,?,?,?,?,?)",
             "modifyUserFirstname"   => "UPDATE Users SET firstname = ? WHERE userID = ?",
             "modifyUserLastname"    => "UPDATE Users SET lastname = ? WHERE userID = ?",
             "modifyUserDOB"         => "UPDATE Users SET dateOfBirth = ? WHERE userID = ?",
@@ -64,7 +64,9 @@ class DBManager
             "modifyUserCity"        => "UPDATE Users SET city = ? WHERE userID = ?",
             "modifyUserZIP"         => "UPDATE Users SET zipCode = ? WHERE userID = ?",
             "modifyUserPassword"    => "UPDATE Users SET password = ? WHERE userID = ?",
-            "getUserPassword"       => "SELECT password FROM Users WHERE email = ?"
+            "getUserPassword"       => "SELECT password FROM Users WHERE email = ?",
+            "already_in_use_username"  => "SELECT userID FROM  Users WHERE username= ?",
+            "already_in_use_email"     => "SELECT userID FROM  Users WHERE email= ?"
 
         ),
         "GuideQueries" => array(
@@ -89,7 +91,7 @@ class DBManager
             die("Es ist ein Fehler beim Aufbauen der Datenbankverbindung aufgetreten..." . $this->mysqli->connect_error);
         }
 
-        echo "Ein Objekt der Klasse: ". __CLASS__ . " wurde erfolgreich erzeugt...<br />";
+       // echo "Ein Objekt der Klasse: ". __CLASS__ . " wurde erfolgreich erzeugt...<br />";
     }
 
     public function __destruct()
@@ -239,7 +241,7 @@ class DBManager
      */
     public function doQuery()
     {
-        echo __CLASS__ . " doQuery()<br />";
+        //echo __CLASS__ . " doQuery()<br />";
 
         $this->stmt->execute();
 
@@ -281,14 +283,14 @@ class DBManager
                 $this->callOrign->remoteAccess = false;
                 break;
             case "getUserPW":
-                echo "doQuery für pw fast fertig!";
+               // echo "doQuery für pw fast fertig!";
                 $this->stmt->bind_result(
                     $this->rTemp_1
                 );
 
                 if($this->stmt->fetch())
                 {
-                    echo "doQuery für pw fertig!";
+                    //echo "doQuery für pw fertig!";
                     return $this->rTemp_1;
                 }
                 break;

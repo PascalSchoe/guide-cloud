@@ -1,38 +1,184 @@
 <?php
-
+    session_start();
     include('usefulStuff.php');
     include('riotAPI.php');
     include('user.php');
     include('userTable.php');
-    
-    $rApi = new RiotApi("euw");
 
-    if(isset($_POST['loginBtn']))
+
+    $rApi = new RiotApi("euw");
+    $sys = new System();
+    $response = array();
+    $errors = array();
+
+    if(isset($_POST['isAlreadyLoggedIn']))
     {
-        $user = new User();
-        $user->login($_POST['email'],$_POST['password']);
-        //header("Location: ../home.html");
-        exit;
+        if(isset($_SESSION['user']) != "")
+        {
+            $response['success'] = true;
+            $response['username'] = $_SESSION['username'];
+
+        }
+        else
+        {
+            $response['success'] = false;
+        }
+
+        echo json_encode($response);
     }
 
-    if(isset($_POST['regBtn']))
+    if(isset($_POST['login_email']))
     {
-        echo " hier war ich aber auch drinne";
-        $user = new User();
-        $user->registerUser(
-            $_POST['firstname'],
-            $_POST['email'],
-            $_POST['password'],
-            $_POST['username'],
-            $_POST['lastname'],
-            $_POST['dateOfBirth'],
-            $_POST['gender'],
-            $_POST['country'],
-            $_POST['state'],
-            $_POST['city'],
-            $_POST['zipCode']
-        );
+        $response['success'] = intval(true);
 
+        $email = $sys->checkUserInput($_POST['login_email'],"email","string","login");
+        $pw = $sys->checkUserInput($_POST['login_password'],"password","string","login");
+
+        //Occurs if the input is not valid
+        if($email['success'] == intval(false))
+        {
+            $response['success'] =intval(false);
+            foreach($email['errors'] as $error)
+            {
+                $errors[] = $error;
+            }
+        }
+        //Occurs if the input is not valid
+        if($pw['success'] == intval(false))
+        {
+            $response['success'] =intval(false);
+            foreach($pw['errors'] as $error)
+            {
+                $errors[] = $error;
+            }
+        }
+
+
+        if($response['success'] == intval(true))
+        {
+            $user = new User();
+            $response = $user->login($email['data'], $pw['data']);
+            //if success
+                // contains success, msg
+            //if failure
+                // contains success, errors
+            echo json_encode($response);
+        }
+        else
+        {
+            $response['errors'] = $errors;
+            echo json_encode($response);
+        }
+    }
+
+    if(isset($_POST['firstname']))
+    {
+        $response['success'] =intval(true);
+
+        $fname = $sys->checkUserInput($_POST["firstname"],"firstname", "string");
+        $lname;
+        $uname = $sys->checkUserInput($_POST["username"],"username", "string");
+        $email = $sys->checkUserInput($_POST["email"],"email", "string");
+        $pw = $sys->checkUserInput($_POST["password"],"password", "string");
+
+        $dob;
+        if(isset($_POST["dateOfBirth"]))
+        {
+            $dob = $sys->checkUserInput($_POST["dateOfBirth"],"dateOfBirth", "string");
+        }
+        else
+        {
+            $dob = null;
+
+        }
+        if(isset($_POST["lastname"]))
+        {
+            $lname = $sys->checkUserInput($_POST["lastname"],"lastname", "string");
+        }
+        else
+        {
+            $lname = null;
+        }
+
+        /**
+         * At this point we have to check whether all Data is valid or not
+         *      > If valid register user with given values
+         *          > if registration is a success display success to user
+         *      > If not valid display errors
+         */
+        if($fname['success'] == intval(false))
+        {
+            $response['success'] =intval(false);
+            foreach($fname['errors'] as $error)
+            {
+                $errors[] = $error;
+            }
+        }
+
+        if($lname['success'] == intval(false))
+        {
+            $response['success'] =intval(false);
+            foreach($lname['errors'] as $error)
+            {
+                $errors[] = $error;
+            }
+        }
+
+        if($uname['success'] == intval(false))
+        {
+            $response['success'] =intval(false);
+            foreach($uname['errors'] as $error)
+            {
+                $errors[] = $error;
+            }
+        }
+
+        if($email['success'] == intval(false))
+        {
+            $response['success'] = intval(false);
+            foreach($email['errors'] as $error)
+            {
+                $errors[] = $error;
+            }
+        }
+
+        if($pw['success'] == intval(false))
+        {
+            $response['success'] =intval(false);
+            foreach($pw['errors'] as $error)
+            {
+                $errors[] = $error;
+            }
+        }
+
+        if($dob['success'] == intval(false))
+        {
+            $response['success'] =intval(false);
+            foreach($dob['errors'] as $error)
+            {
+                $errors[] = $error;
+            }
+        }
+
+        if($response['success'] == intval(false))
+        {
+            $response['errors'] = $errors;
+        }
+        else
+        {
+            $user = new User();
+            $user->registerUser(
+                $fname['data'],
+                $email['data'],
+                $pw['data'],
+                $uname['data'],
+                $lname['data'],
+                $dob['data']
+            );
+
+            $response['msg'] = "Du bist nun registriert";
+        }
+        echo json_encode($response);
     }
 
     if(isset($_GET['getRiotContents']))

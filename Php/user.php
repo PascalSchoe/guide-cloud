@@ -30,7 +30,7 @@ class User
 
     public function __construct()
     {
-        echo "An object of class: " . __CLASS__ . " has been initialized...<br />";
+       // echo "An object of class: " . __CLASS__ . " has been initialized...<br />";
     }
 
     /**
@@ -50,18 +50,13 @@ class User
     public function createTeam(){}
     public function assignToTeam(){}
 
-    public function registerUser($fname,$email,$pw,$uname,$lname,$dob,$gender,$country,$state,$city,$zip)
+    public function registerUser($fname,$email,$pw,$uname,$lname,$dob)
     {
         $this->fname = $fname;
         $this->lname= $lname;
         $this->uname= $uname;
         $this->dob = $dob;
-        $this->dor = date("d-m-Y H:i:s");
-        $this->gender = $gender;
-        $this->country = $country;
-        $this->state = $state;
-        $this->city = $city;
-        $this->zip = $zip;
+        $this->dor = date("Y-m-d H:i:s");
         $this->email = $email;
 
         $sys = new System();
@@ -71,6 +66,8 @@ class User
         $ut = new UserTable($this);
         $ut->insertRecord($this);
         unset($ut);
+
+        //echo __METHOD__ . "<br />" .$this ."<br />";
     }
 
     public function login($email,$password)
@@ -92,7 +89,7 @@ class User
     {
         if(!$this->remoteAccess)
         {
-            echo __CLASS__ . " - saveUserData()<br />";
+            //echo __CLASS__ . " - saveUserData()<br />";
 
             $this->userTable = new UserTable();
             $this->userTable->updateRecord($this->uID, $changedCol, $newValue);
@@ -107,6 +104,7 @@ class User
 
     public function printInfo()
     {
+        /*
         echo "Class " . __Class__ . " PRINTING USER....<br />";
         echo "UserID: " . $this->uID . "<br />";
         echo "firstname: " .$this->fname . "<br />";
@@ -121,6 +119,7 @@ class User
         echo "zicode: " .$this->zip . "<br />";
         echo "email: " .$this->email . "<br />";
         echo "password: " .$this->password . "<br />";
+    */
     }
 
     //__________Setter
