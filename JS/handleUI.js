@@ -80,6 +80,7 @@ $(document).ready(function(){
             {
                 $('#surfaceBtn').show();
                 $('#surfaceBtn').html(srv_response['username']);
+                //location.reload();
             }
 
         }
@@ -96,8 +97,7 @@ $(document).ready(function(){
             success: function(data)
             {
 
-                console.log(data);
-                //var srv_response = $.parseJSON( data );
+                var srv_response = $.parseJSON( data );
                 var msg_color = '#';
 
                 $('#msgBox').empty();
