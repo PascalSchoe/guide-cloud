@@ -35,6 +35,9 @@ h4
 	font-weight: bold;
     font-size: 1.1em;
 }
+ul {
+	 list-style-type: none;
+}
 
 /*Umliegende Divs*/
 
@@ -92,19 +95,21 @@ h4
 }
 .champName {
 	 font-weight: bold;
-	 float: left;
-	 margin-top: 3.5em;
-	 margin-left: 0.2em;
 	 color: orange;
+	 text-align: left;
+	 margin-top: 2em;
 }
 .role {
-	 margin-top: 0.4em;
+	 font-weight: bold;
+	 text-align: left;
+	 float: left;
 	 border: 0.1em solid #000;
 	 border-radius: 0.5em;
 	 background: rgba(255, 255, 255, 0.2);
 	 color: #fff;
 	 padding: 0.2em 0.1em 0.1em 0.3em;
 	 text-decoration: none;
+	 margin-right: 1em;
 }
 .role:hover {
 	 text-decoration: none;
@@ -128,6 +133,13 @@ h4
 hr {
 	 margin-top: 0;
 	 margin-bottom: 1.5em;
+}
+.contentTableListContainer a {
+	 font-weight: bold;
+	 font-size: 1.1em;
+}
+.contentTableListWrapper {
+	 text-align: center;
 }
 .splashArtInput {
 	 font-family: Helvetica;
