@@ -72,6 +72,9 @@ class User
 
     public function login($email,$password)
     {
+        //echo $email . "<br/>";
+        //echo $password . "<br/>";
+
         $sys = new System($this);
         $sys->checkPassword($email,$password);
         unset($sys);

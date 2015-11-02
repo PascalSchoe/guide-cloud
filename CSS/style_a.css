@@ -14,7 +14,7 @@ p {
 	 width: 100%;
 	 margin: 0;
 }
-#collapse ul li a.register_btn {
+#collapse ul li a.register_btn{
 	 color: yellow;
 	 font-weight: bold;
 }
@@ -359,7 +359,6 @@ a.heading_link {
 }
 #surfaceBtn
 {
-	display:none;
 	color: yellow;
 	font-weight: bold;
 }

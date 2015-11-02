@@ -4,7 +4,21 @@ $(document).ready(function(){
      * BUTTONS
      */
 
+    $('#logoutBtn').on('click',function(){
+        $.ajax({
+            url:    'Php/handleRequests.php',
+            type:   'post',
+            data:
+            {
+                'loggOut': 'wayn'
+            },
+            success: function(data)
+            {
+                location.reload();
+            }
 
+        });
+    });
 
 
     /**
@@ -74,13 +88,16 @@ $(document).ready(function(){
         },
         success: function(data)
         {
+            console.log("ich habe eine Antwort vom Server erhalten sie lautet: " + data);
             var srv_response = $.parseJSON( data );
             //console.log(data);
             if(srv_response.success == 1)
             {
-                $('#surfaceBtn').show();
+                $('#login_btn').parent().attr("id", "");
+                $('#login_btn').attr("id","logoutBtn");
+                $('#logoutBtn').html("AUSLOGGEN");
+                $('#register_btn').attr("id","surfaceBtn");
                 $('#surfaceBtn').html(srv_response['username']);
-                //location.reload();
             }
 
         }
@@ -96,7 +113,6 @@ $(document).ready(function(){
             data:   $(this).serialize(),
             success: function(data)
             {
-
                 var srv_response = $.parseJSON( data );
                 var msg_color = '#';
 
@@ -104,22 +120,24 @@ $(document).ready(function(){
                 if(srv_response.success == 0)
                 {
                     msg_color += 'f00';
-                    $.each(srv_response['errors'],function(){
-                        $('#msgBox').append("<p>" + this + "</p>");
-                    });
-                    location.reload();
+                    $('#msgBox').append("<p>" + srv_response['errors'] + "</p>");
+                    $('#msgBox p').css("color",msg_color);
+                    $('#serverResponse').fadeIn();
                 }
                 else
                 {
-                    msg_color += '0f0';
-                    $('#msgBox').append("<p>" + srv_response['msg'] + "</p>");
-                    $('#reg').fadeOut();
-                    $('#reg_btn').hide();
                     location.reload();
                 }
-
-                $('#msgBox p').css("color",msg_color);
-                $('#serverResponse').fadeIn();
+                /* Do we want to respond when successful logged in ?
+                 else
+                 {
+                 msg_color += '0f0';
+                 $('#msgBox').append("<p>" + srv_response['msg'] + "</p>");
+                 $('#reg').fadeOut();
+                 $('#reg_btn').hide();
+                 location.reload();
+                 }
+                 */
             }
         });
     });

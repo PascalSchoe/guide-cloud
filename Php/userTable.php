@@ -102,6 +102,8 @@ class UserTable extends BaseTable
 
     public function getData($searchCol, $value)
     {
+       // echo $searchCol . " " . $value;
+
         if($searchCol == "ID")
         {
             $this->signature = 'i';
@@ -140,6 +142,9 @@ class UserTable extends BaseTable
 
         if($this->dbm->stmt->fetch())
         {
+           // echo "hab ne antwort";
+           // echo $this->retrievedUserID;
+
             $this->userInstance->remoteAccess = true;
             $this->userInstance->setUserID($this->retrievedUserID);
             $this->userInstance->setDor($this->retrievedDOR);
@@ -157,6 +162,7 @@ class UserTable extends BaseTable
             $this->userInstance->remoteAccess = false;
 
         }
+        //echo $this->userInstance->getUserID();
     }
 
 

@@ -32,6 +32,8 @@ class System
      */
     public function checkPassword($email,$password)
     {
+        //echo $email . "<br />";
+        //echo $password . "<br />";
         $response = array();
 
         $string = hash_hmac ( "whirlpool", str_pad ( $password, strlen ( $password ) * 4, sha1 ( $email ), STR_PAD_BOTH ), SALT, true );
@@ -39,16 +41,16 @@ class System
         $ut = new UserTable($this->callOrign);
         $ut-> getData("Email",$email);
 
-        unset($ut);
-
-        if($this->callOrign->getPassword() == crypt($string, substr($this->callOrign->getPassword(),0,30)))
+        if($this->callOrign->getPassword() === crypt($string, substr($this->callOrign->getPassword(),0,30)))
         {
+           // echo "pw ist das gleiche yay!";
             //session_start();
             $response['success'] = intval(true);
             $response['msg'] = 'Willkommen du hast dich erfolgreich eingeloggt';
             $_SESSION['user']= $this->callOrign->getUserID();
             $_SESSION['username'] =  $this->callOrign->getUsername();
-            return $response;
+           echo json_encode($response);
+            //return $response;
         }
         else
         {
@@ -56,7 +58,8 @@ class System
             $response['errors'] = 'Die angegebene Password/Email - Kombination ist uns unbekannt';
             //destroying userObject which holds private Data
             unset($this->callOrign);
-            return $response;
+            echo json_encode($response);
+            //return $response;
 
         }
 
@@ -66,12 +69,11 @@ class System
          *
          * If it fails the calling userobject is destroyed
          */
-
-
+        unset($ut);
     }
 
     /**
-     *  This method checks several scenarios:
+        * This method checks several scenarios:
      *          > Input holds values
      *          > Input contains no tags
      *          > Input contains no unnecessary whitespace
@@ -79,29 +81,12 @@ class System
      *
      *  After this tests it returns the sanitized Data or an error message.
      *
-     * @param $rawData -/- Userinput which will be checked and sanitized
+     * @param $rawData / Userinput which will be checked and sanitized
      * @param $dbCol string Name of Database column, which will host the input
-     * @param $type string  Type of input
-     * @return string Errormessage or cleaned Data
+     * @param $type  string  Type of input
+     * @param null $call
+     * @return array
      */
-
-
-    /**
-     *  This method looks for the specified column within the right table and checks if the value
-     *  not taken already.
-     *
-     * @param $table string Important to select the right predesignedQuery
-     * @param $col string Which column to check
-     * @param $value string Value to check whether it is already in use or not
-     * @return bool
-     */
-    public function isAvailable($table,$col,$value)
-    {
-
-
-        return false;
-    }
-
     public function checkUserInput($rawData,$dbCol, $type, $call=null)
     {
         $colMaxLength = 150;
@@ -169,9 +154,8 @@ class System
         /**
          * Is value already taken?
          */
-        if($dbCol === "username")
+        if(($call === "registration")&& ($dbCol === "username"|| $dbCol === "email"))
         {
-            //|| $dbCol === "email"
             $ut = new UserTable();
             if (!($ut->isAvailable($dbCol, $rawData)))
             {

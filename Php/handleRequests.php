@@ -10,6 +10,11 @@
     $sys = new System();
     $response = array();
     $errors = array();
+    if(isset($_POST['loggOut']))
+    {
+        session_destroy();
+        echo "pewpew";
+    }
 
     if(isset($_POST['isAlreadyLoggedIn']))
     {
@@ -23,16 +28,18 @@
         {
             $response['success'] = false;
         }
-
         echo json_encode($response);
     }
 
+/**
+ *  TODO maybe rework code cuz it only checks for length, type etc but the input wont be stored to db anyways and we just need  trimming
+ */
     if(isset($_POST['login_email']))
     {
         $response['success'] = intval(true);
 
-        $email = $sys->checkUserInput($_POST['login_email'],"email","string","login");
-        $pw = $sys->checkUserInput($_POST['login_password'],"password","string","login");
+        $email = $sys->checkUserInput($_POST['login_email'],"email","string");
+        $pw = $sys->checkUserInput($_POST['login_password'],"password","string");
 
         //Occurs if the input is not valid
         if($email['success'] == intval(false))
@@ -62,12 +69,12 @@
                 // contains success, msg
             //if failure
                 // contains success, errors
-            echo json_encode($response);
+            //echo json_encode($response);
         }
         else
         {
-            $response['errors'] = $errors;
-            echo json_encode($response);
+            //$response['errors'] = $errors;
+            //echo json_encode($response);
         }
     }
 
@@ -77,8 +84,9 @@
 
         $fname = $sys->checkUserInput($_POST["firstname"],"firstname", "string");
         $lname;
-        $uname = $sys->checkUserInput($_POST["username"],"username", "string");
-        $email = $sys->checkUserInput($_POST["email"],"email", "string");
+        // ,"registration" is  important because email and username should only be used once !
+        $uname = $sys->checkUserInput($_POST["username"],"username", "string","registration");
+        $email = $sys->checkUserInput($_POST["email"],"email", "string","registration");
         $pw = $sys->checkUserInput($_POST["password"],"password", "string");
 
         $dob;
