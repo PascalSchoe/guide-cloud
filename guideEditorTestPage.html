@@ -97,24 +97,6 @@
 				     <p class="comp_title comp_title_wm">WELTMEISTERSCHAFT</p>
 			     </div>
 		     </div>
-		     <!--Login Container-->
-		     <div class="login_container" id="login_container">
-		         <form action="Php/handleRequests.php" method="post">
-		             <fieldset class="login_field">
-		                 <p>
-			                 <label for="e_mail">E-mail:</label>
-				             <input type="email" name="email" id="e_mail">
-			             </p>
-			             <p>
-			                 <label for="pw_input">Passwort:</label>
-				             <input type="password" name="password" id="pw_input">
-			             </p>
-			         </fieldset>
-				     <input class="cancel_input" id="cancelLogin" type="button" value="Abbrechen">
-		             <input class="submit_input" type="submit" value="Einloggen" name="loginBtn">
-		         </form>
-		     </div>
-	     </div>
 		 
 		  <!--row 2: header-->
 		 <div class="row">
@@ -125,25 +107,27 @@
 			 </div>
 		 </div>
 		 
-		 <!-- Guide Information -->
+		 
+		 
+		 <!-- Main Content -->
 		 <div class="container-fluid"> <!-- container-fluid starts -->
 		     <div class="row"> <!-- row 1 starts -->
-			     <div class="col-sm-8 col-sm-offset-2 wrapper"> <!-- wrapper starts -->
+			     <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 wrapper"> <!-- wrapper starts -->
 				 
-				 
+				     <!-- Guide Information -->
 				     <div class="row"> <!-- row 2 starts -->
-					     <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 editorNavigation" id="guideInfos">
+					     <div class="col-sm-12 editorNavigation" id="guideInfos">
 						     <h2 id="guideTitle" class="editables">Hier kannst du deinem Guide einen Titel geben!</h2>
 							 <hr>
 							 <p class="author">Author: Pläscha</p>
 							 <input class="splashArtInput" type="button" value="Splash Art ändern"/>
 							 <div class="row"> <!-- row 3 starts -->
-							     <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 contentTable">
+							     <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 contentTable">
 								     <div class="row"> <!-- row 4 starts -->
-									     <div class="col-xs-6 col-sm-6">
+									     <div class="col-xs-6 col-sm-4">
 										     <div class="row"> <!-- row 5 starts -->
-										         <div class="col-xs-12 col-sm-11 champIconContainer">
-										             <img src="RES/IMG/champIcons/AnnieSquare.png" class="img-responsive champIcon"/>
+										         <div class="col-xs-12 col-sm-12 champIconContainer">
+										             <img src="RES/IMG/champIcons/AnnieSquare.png" class="champIcon"/>
 											     </div>
 										     </div> <!-- row 5 ends -->
 										 </div> 
@@ -182,6 +166,132 @@
 							 </div> <!-- row 3 ends -->
 						 </div>
 				     </div> <!-- row 2 ends -->
+					 <!-- Summonerspells Choice -->
+					 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="summonerSpells">
+					     <h2>Beschwörerzauber</h2>
+						 <hr class="headingLine">
+						 <div class="row"> <!-- row 8 starts -->
+						     <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 option_1_container">
+							     <p class="optionsHeading">Option A</p>
+								 <div class="row"> <!-- row 9 starts -->
+								     <div class="col-xs-2 col-xs-offset-3 col-sm-3 col-sm-offset-2 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 summonerSpellContainer" id="summonerSpell1">
+									 </div>
+									 <div class="col-xs-2 col-xs-offset-2 col-sm-3 col-sm-offset-2 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 summonerSpellContainer" id="summonerSpell2">
+									 </div>
+								 </div> <!-- row 9 ends -->
+							 </div>
+							 <div class="col-xs-12 col-sm-6 col-md-5 option_2_container">
+							     <p class="optionsHeading">Option B</p>
+								 <div class="row"> <!-- row 10 starts -->
+								     <div class="col-xs-2 col-xs-offset-3 col-sm-3 col-sm-offset-2 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 summonerSpellContainer" id="summonerSpell3">
+									 </div>
+									 <div class="col-xs-2 col-xs-offset-2 col-sm-3 col-sm-offset-2 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 summonerSpellContainer" id="summonerSpell4">
+									 </div>
+								 </div> <!-- row 10 ends -->
+						     </div>
+					     </div> <!-- row 8 ends -->
+					 </div>
+					 <!-- Summonerspells Description -->
+                     <div class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="summonerSpellDescriptionContainer">
+                         <h3>Erklärung zu den Beschwörerzaubern</h3>
+                         <p id="summonerSpellDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                         </p>
+                     </div>
+					 <!-- Runes Choice -->
+                     <div class="col-sm-10 col-sm-offset-1 editorComponents" id="runenContainer">
+                         <h3>Runen</h3>
+                         <div id="zeichen">
+					     </div>
+                         <div id="siegel">
+		     	         </div>
+                         <div id="glyphen">
+			             </div>
+                         <div id="essenzen">
+	     		         </div>
+                         <div id="runenEffects">
+                         </div>
+                     </div>		 
+			         <!-- Runes Description -->
+                     <div  class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="runenDescriptionContainer">
+                         <h3>Erklärung zu der Runenwahl</h3>
+                         <p id="runenDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                         </p>
+                     </div>
+					 <!-- Mastery -->
+                     <div class="col-sm-10 col-sm-offset-1 editorComponents" id="masteries">
+                         <h2>Meisterschaftspunkte</h2>
+                             <div class="dropdown">
+                                 <button class="btn btn-default dropdown-toggle" type="button" id="masteryBGChooser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Lieblings Splashart <span class="caret"></span></button>
+                                     <ul class="dropdown-menu" aria-labelledby="masteryBGChooser">
+                                         <li><a href="#" id="_0" class="skinOptions">Klassich</a></li>
+                                         <li><a href="#" id="_1" class="skinOptions">Frostfeuer - Annie</a></li>
+                                         <li><a href="#" id="_2" class="skinOptions">Rollentausch - Annie</a></li>
+                                         <li><a href="#" id="_3" class="skinOptions">Panda - Annie</a></li>
+                                         <li><a href="#" id="_4" class="skinOptions">Herzblatt - Annie</a></li>
+                                     </ul>
+                             </div>
+						     <div class="row"> <!-- row 11 starts -->
+                                 <div id="offTree" class="col-xs-12 col-sm-12 col-md-4 col-lg-4  trees">
+						         </div>
+                                 <div id="deffTree" class="col-xs-12 col-sm-12 col-md-4 col-lg-4  trees">
+				                 </div>
+                                 <div id="utilTree" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 trees">
+		    		             </div>
+						     </div> <!-- row 11 ends -->                    
+                     </div>
+					 <!-- Mastery Description -->
+                     <div  class="col-sm-10 col-sm-offset-1 editorComponentsDescription" id="masteryDescriptionContainer">
+                         <h3>Erklärung zu den Meisterschaftspunkten</h3>
+                         <p id="masteryDescription" class="editables">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                         </p>
+                     </div>	
+					 <!-- Early Game Items -->
+					 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="items">
+					     <h2>Start-Items</h2>
+					 </div>
+					 
+					    <!-- early game items -->
+                                 <div class="col-sm-10 col-sm-offset-1 editorComponents" id="items">
+                                     <h2>Start-Items</h2>
+									 <div class="row"> <!-- row 6 starts -->
+									     <div class="col-sm-10 col-sm-offset-1">
+										     <div class="itemWrapperContainer">
+                                                 <div class="itemWrappers">
+                                                     <div id="item1early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item2early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item3early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item4early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item5early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item6early" class="itemContainers">
+							                         </div>
+                                                 </div>
+                                                 <div class="itemWrappers">
+                                                     <div id="item7early" class="itemContainers">
+							                         </div>
+                                                </div>
+										     </div>
+										 </div>
+								     </div> <!-- row 6 ends -->
+								 </div>
+						 
+						 
+						 
+						 
 					 
 					 
 				 </div> <!-- wrapper ends -->	 
@@ -193,47 +303,7 @@
 		 
 		 
 		 
-		 <!-- Main Content -->
-         <div class="container-fluid">
-		     <div class="row"> <!-- row 1 starts-->
-			     <div class="col-sm-8 col-sm-offset-2 wrapper"><!--wrapper starts-->
-				     <div class="row"><!-- row 2 starts -->					     
-						 <div class="col-sm-10 col-sm-offset-1 editorNavigation" id="guideInfos">
-						     <h2 id="guideTitle" class="editables">Hier gibst du deinem Guide einen Titel!</h2>
-						     <hr>
-							 <p class="author">Author: Pläscha</p>
-							 <input class="splashArtInput" type="button" value="Splash Art ändern">
-							 <div class="row"> <!-- row 3 starts -->
-							     <div class="col-sm-4 col-sm-offset-4 contentTable">
-								     <img src="RES/IMG/champIcons/AnnieSquare.png" class="img-responsive champIcon"/>
-								     <p class="champName">Annie - <br> Das Kind der Finsternis</p>
-									 <li class="dropdown"><a class="champName role" data-toggle="dropdown">Support<span class="caret"></span></a>
-									     <ul class="dropdown-menu">
-										     <li><a>Support</a></li>
-											 <li><a>ADC</a></li>
-											 <li><a>Midlane</a></li>
-											 <li><a>Jungle</a></li>
-											 <li><a>Toplane</a></li>
-											 <li><a>Generell</a></li>
-										 </ul></li>								     
-									 <div class="clearfix"></div>
-									 <p class="navigationText">Navigation</p>
-									 <hr>
-									 <ul>
-									     <li><a href="#">1.Beschwörerzauber</a></li>
-										 <li><a href="#">2.Runen</a></li>
-										 <li><a href="#">3.Meisterschaften</a></li>
-										 <li><a href="#">4.Items</a></li>									
-										 <li><a href="#">5.Skillreihenfolge</a></li>
-										 <li><a href="#">6.Synergien/Matchups</a></li>
-										 <li><a href="#">7.Fazit</a></li>
-									 </ul>
-								 </div>
-							 </div>	 <!-- row 3 ends -->					 
-						 </div>	
-					 </div> <!-- row 2 ends -->
-				 </div> <!-- row 1 ends -->
-			 </div> <!-- container ends -->
+		
 						 
 						 
 						 
@@ -244,7 +314,7 @@
          <!--My personal javascript -->
 		 <script type="text/javascript" src="JS/handleUI.js"></script>
 		 
-		 <!-- <script type="text/javascript" src="JS/guideEditor_2.js"></script> -->
+		 <!--<script type="text/javascript" src="JS/guideEditor_2.js"></script>-->
 						 
 						 
 </body>
