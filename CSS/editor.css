@@ -160,7 +160,7 @@ hr {
 	 background: #000;
 	 cursor: pointer;
 	 margin-bottom: 1.5em;
-     border: 0.1em solid #fff;
+     border: 1em solid #fff;
      border-radius: 0.5em;
 }
 .summonerSpellContainer:hover {
@@ -205,6 +205,9 @@ hr {
     border: 0.1em solid #fff;
     border-radius: 0.5em;
     position: relative;
+}
+.bigWrapper {
+	 background: blue;
 }
 .itemContainers:hover {
 	 box-shadow: 0px 0px 15px red;
@@ -869,6 +872,20 @@ h2, h3 {
 	 text-align: center;
 	 margin-top: 1em;
 }
+/*Early Game Items*/
+.itemContainers
+{
+    width: 80px;
+    height: 80px;
+    background: #000;
+    cursor: pointer;
+	float: left;
+    display: inline-block;
+    border: 0.1em solid #fff;
+    border-radius: 0.5em;
+    position: relative;
+}
+
     
 /*Media Queries Guide Information*/
 @media screen and (min-width:320px) and (max-width:768px) {
@@ -885,6 +902,14 @@ h2, h3 {
 		 height: 60px;
 	 }
 }
+/*Media Queries Items*/
+@media screen and (min-width:320px) and (max-width:768px) {
+	 .itemContainers {
+		  width: 50px;
+		  height: 50px;
+	 }
+}
+
 
 
 
