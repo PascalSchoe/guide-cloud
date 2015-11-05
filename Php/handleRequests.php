@@ -10,6 +10,7 @@
     $sys = new System();
     $response = array();
     $errors = array();
+
     if(isset($_POST['loggOut']))
     {
         session_destroy();

@@ -4,23 +4,6 @@ $(document).ready(function(){
      * BUTTONS
      */
 
-    $('#logoutBtn').on('click',function(){
-        $.ajax({
-            url:    'Php/handleRequests.php',
-            type:   'post',
-            data:
-            {
-                'loggOut': 'wayn'
-            },
-            success: function(data)
-            {
-                location.reload();
-            }
-
-        });
-    });
-
-
     /**
      * OPENING Elements
      */
@@ -32,7 +15,7 @@ $(document).ready(function(){
         $('#comp_container').fadeIn();
     });
 
-    $('#reg_btn').on('click', function(){
+    $('#register_btn').on('click', function(){
        $('#registrationPopup').fadeIn();
     });
 
@@ -48,7 +31,7 @@ $(document).ready(function(){
              > e.target is not one of its childs
              > e.target is not the pop-up's calling element
          */
-        if ( $('#login_container').is(':visible') && !$('#login_container').is(e.target) && !$('#login_container').has(e.target).length && !$(e.target).is('#login_btn'))
+        if ( $('#login_container').is(':visible') && !$('#login_container').is(e.target) && !$('#login_container').has(e.target).length && !$(e.target).is('#login_btn') && !$('#login_btn').has(e.target).length)
         {
             $('#login_container').fadeOut();
         }
@@ -57,7 +40,7 @@ $(document).ready(function(){
         {
             $('#comp_container').fadeOut();
         }
-        else if( $('#registrationPopup').is(':visible') && !$('#registrationPopup').is(e.target) && !$('#registrationPopup').has(e.target).length && !$(e.target).is('#reg_btn') && !$('#reg_btn').has(e.target).length && !$(e.target).is('#serverResponse') && !$('#serverResponse').has(e.target).length)
+        else if( $('#registrationPopup').is(':visible') && !$('#registrationPopup').is(e.target) && !$('#registrationPopup').has(e.target).length && !$(e.target).is('#register_btn') && !$('#register_btn').has(e.target).length && !$(e.target).is('#serverResponse') && !$('#serverResponse').has(e.target).length)
         {
             $('#registrationPopup').fadeOut();
         }
@@ -93,11 +76,33 @@ $(document).ready(function(){
             //console.log(data);
             if(srv_response.success == 1)
             {
-                $('#login_btn').parent().attr("id", "");
+                $('#login_btn').off("click");
                 $('#login_btn').attr("id","logoutBtn");
-                $('#logoutBtn').html("AUSLOGGEN");
+                $('#logoutBtn').html("<a>AUSLOGGEN</a>");
+
+
+                $('#register_btn').off("click");
                 $('#register_btn').attr("id","surfaceBtn");
-                $('#surfaceBtn').html(srv_response['username']);
+                $('#surfaceBtn').html("<a>" + srv_response['username'] + "</a>");
+
+                $('#surfaceBtn').on("click",function(){
+                    alert("hier folgt bald ein episches Surface !");
+                });
+                $('#logoutBtn').on('click',function(){
+                    $.ajax({
+                        url:    'Php/handleRequests.php',
+                        type:   'post',
+                        data:
+                        {
+                            'loggOut': 'wayn'
+                        },
+                        success: function(data)
+                        {
+                            console.log(data);
+                            location.reload();
+                        }
+                    });
+                });
             }
 
         }

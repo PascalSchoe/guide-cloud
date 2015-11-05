@@ -14,26 +14,24 @@ p {
 	 width: 100%;
 	 margin: 0;
 }
-#collapse ul li a.register_btn{
+#collapse ul li a{
 	 color: yellow;
-	 font-weight: bold;
 }
-#collapse ul li a.log_btn {
-	 color: yellow;
-	 font-weight: bold;
+.boldNavigationItems {
+	font-weight: bold;
 }
-#collapse ul li a.register_btn:hover {
+#collapse ul #register_btn:hover a{
 	 color: white;
 	 text-decoration: underline;
 }
-#collapse ul li a.log_btn:hover {
+#collapse ul #login_btn:hover a{
 	 color: white;
 	 text-decoration: underline;
 }
-#collapse ul li.reg_btn {
+#collapse ul #register_btn {
 	 float: right;
 }
-#collapse ul li.login_btn {
+#collapse ul #login_btn {
 	 float: right;
 }
 #collapse ul ul li a {
@@ -357,11 +355,6 @@ a.heading_link {
 	 color: yellow;
 	font-size: 1em;
 }
-#surfaceBtn
-{
-	color: yellow;
-	font-weight: bold;
-}
 
 
 
@@ -392,10 +385,10 @@ a.heading_link {
 	 #collapse ul ul li a.lol_a_text {
 	     color: white;
      }
-	 #collapse ul li.reg_btn {
+	 #collapse ul #register_btn {
 		 float: none;
 	 }
-	 #collapse ul li.login_btn {
+	 #collapse ul #login_btn {
 		 float: none;
 	 }
 	 .gc_heading {
@@ -409,10 +402,10 @@ a.heading_link {
 	 }
 }
 @media screen and (min-width:320px) and (max-width:480px) {
-	 #collapse ul li.reg_btn {
+	 #collapse ul #register_btn {
 		 float: none;
 	 }
-	 #collapse ul li.login_btn {
+	 #collapse ul #login_btn {
 		 float: none;
 	 }
 	 .gc_pic {
